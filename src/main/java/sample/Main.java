@@ -6,14 +6,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.zip.ZipFile;
+
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
        // DirectoryChoosers directoryChoosers = new DirectoryChoosers();
-//        OpenFileChooser openFileChooser = new OpenFileChooser();
-//        openFileChooser.start(primaryStage);
-        new ZipI();
-       // new ZipO();
+        OpenFileChooser openFileChooser = new OpenFileChooser();
+        openFileChooser.start(primaryStage);
     }
 
     public static void main(String[] args) {

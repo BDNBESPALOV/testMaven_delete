@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import filezip.UnzipUtil;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -18,6 +19,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class OpenFileChooser extends Application {
+    public static  String FILES=null;
 
     private Desktop desktop = Desktop.getDesktop();
 
@@ -30,9 +32,10 @@ public class OpenFileChooser extends Application {
         final TextArea textArea = new TextArea();
         textArea.setMinHeight(70);
 
-        Button button1 = new Button("Select One File and Open");
+        Button button1 = new Button("Открыть свеженький патч");
+        Button button2 = new Button("Выполнить");
 
-        Button buttonM = new Button("Select Multi Files");
+
 
         button1.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -42,33 +45,46 @@ public class OpenFileChooser extends Application {
                 File file = fileChooser.showOpenDialog(primaryStage);
 
                 if (file != null) {
-                    openFile(file);
+                    FILES=file.getPath();
+                    System.out.println(file.getPath());
+                    //openFile(file);
                     List<File> files = Arrays.asList(file);
                     printLog(textArea, files);
                 }
             }
         });
 
-        buttonM.setOnAction(new EventHandler<ActionEvent>() {
+        button2.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent event) {
-                textArea.clear();
-                List<File> files = fileChooser.showOpenMultipleDialog(primaryStage);
-
-                printLog(textArea, files);
+               new UnzipUtil().start();
             }
         });
 
+
+ //       Button buttonM = new Button("Select Multi Files");
+//        buttonM.setOnAction(new EventHandler<ActionEvent>() {
+////
+////            @Override
+////            public void handle(ActionEvent event) {
+////                textArea.clear();
+////                List<File> files = fileChooser.showOpenMultipleDialog(primaryStage);
+////
+////                printLog(textArea, files);
+////            }
+////        });
+
         VBox root = new VBox();
+
         root.setPadding(new Insets(10));
         root.setSpacing(5);
 
-        root.getChildren().addAll(textArea, button1, buttonM);
+        root.getChildren().addAll(textArea, button1,button2/*, buttonM*/);
 
         Scene scene = new Scene(root, 400, 200);
 
-        primaryStage.setTitle("JavaFX FileChooser (o7planning.org)");
+        primaryStage.setTitle("Преобразование патча под особенности БО");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -82,24 +98,24 @@ public class OpenFileChooser extends Application {
         }
     }
 
-    private void openFile(File file) {
-        try {
-            this.desktop.open(file);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    private void openFile(File file) {
+//        try {
+//            this.desktop.open(file);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     private void configuringFileChooser(FileChooser fileChooser) {
         // Set title for FileChooser
-        fileChooser.setTitle("Select Pictures");
+        fileChooser.setTitle("Выбери свеженький патч");
 
         // Set Initial Directory
-      //  fileChooser.setInitialDirectory(new File("C:/Users/tran/Pictures"));
+        fileChooser.setInitialDirectory(new File("D:\\E\\ff\\ttttt"));
 
         // Add Extension Filters
         fileChooser.getExtensionFilters().addAll(//
-                //new FileChooser.ExtensionFilter("All Files", "*.*"), //
+                new FileChooser.ExtensionFilter("All Files", "*.*"), //
                 new FileChooser.ExtensionFilter("ZIP", "*.zip"));
     }
 
