@@ -4,14 +4,22 @@ import org.apache.commons.io.IOUtils;
 
 import java.io.*;
 
-public class ChangeXML {
+public class ChangeXML   {
 
-    ChangeXML(){
-        try{
+    String folder = OpenFileChooser.FILES.replaceAll(".zip(.*)","");
+    String track = OpenFileChooser.FILES.replaceAll("patch(.*)","");
+    String newFile = OpenFileChooser.FILES.replaceAll("(.*)patch","patch");
+    String strFunc = /*track+*/"\\"+folder+"\\XML\\funcat.xml";
 
-            InputStream skolkovo = new FileInputStream("E:/skolkovo.xml");
-            InputStream funcat = new FileInputStream("E:/funcat.xml");
-            InputStream addskolkovoX = new FileInputStream("E:/addskolkovo.xml");
+
+
+
+    ChangeXML() throws IOException{
+
+
+            InputStream skolkovo = new FileInputStream("D:/E/skolkovo.xml"); //текст перед которым будет втавка
+            InputStream funcat = new FileInputStream(strFunc); //исходный файл
+            InputStream addskolkovoX = new FileInputStream("D:/E/addskolkovo.xml"); //блок для вставки
 
             String theString = IOUtils.toString(skolkovo, "UTF-8");
             String addskolkovo = IOUtils.toString(addskolkovoX, "UTF-8");
@@ -23,15 +31,16 @@ public class ChangeXML {
 
             String a= theStringfuncat.replace(theString,addskolkovo);
 
-            OutputStream os = new FileOutputStream("E:/ff/funcat.xml");
+            File file = new File(strFunc);
+            file.delete();
+
+            OutputStream os = new FileOutputStream(strFunc);
             os.write(a.getBytes("Cp1251"));
 
             skolkovo.close();
             funcat.close();
             os.close();
 
-        } catch (IOException e){
 
-        }
     }
 }

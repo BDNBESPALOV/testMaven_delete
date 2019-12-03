@@ -1,12 +1,15 @@
 package sample;
 
 import java.awt.Desktop;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
+import java.util.Enumeration;
 import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
 
 import filezip.UnzipUtil;
+import filezip.ZipUtil;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -23,17 +26,21 @@ public class OpenFileChooser extends Application {
 
     private Desktop desktop = Desktop.getDesktop();
 
+    final TextArea textArea = new TextArea();
+
     @Override
     public void start(final Stage primaryStage) throws Exception {
 
         final FileChooser fileChooser = new FileChooser();
         configuringFileChooser(fileChooser);
 
-        final TextArea textArea = new TextArea();
+
         textArea.setMinHeight(70);
 
         Button button1 = new Button("Открыть свеженький патч");
-        Button button2 = new Button("Выполнить");
+        Button button2 = new Button("Распокавать");
+        Button button3 = new Button("Преобразование патча...");
+        Button button4 = new Button("Упаковать");
 
 
 
@@ -58,29 +65,41 @@ public class OpenFileChooser extends Application {
 
             @Override
             public void handle(ActionEvent event) {
-               new UnzipUtil().start();
+               start();
+            }
+        });
+
+        button3.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    new ChangeXML();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        button4.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    new ZipUtil().start();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
 
- //       Button buttonM = new Button("Select Multi Files");
-//        buttonM.setOnAction(new EventHandler<ActionEvent>() {
-////
-////            @Override
-////            public void handle(ActionEvent event) {
-////                textArea.clear();
-////                List<File> files = fileChooser.showOpenMultipleDialog(primaryStage);
-////
-////                printLog(textArea, files);
-////            }
-////        });
+
 
         VBox root = new VBox();
 
         root.setPadding(new Insets(10));
         root.setSpacing(5);
 
-        root.getChildren().addAll(textArea, button1,button2/*, buttonM*/);
+        root.getChildren().addAll(textArea, button1,button2,button3,button4/*, buttonM*/);
 
         Scene scene = new Scene(root, 400, 200);
 
@@ -117,6 +136,56 @@ public class OpenFileChooser extends Application {
         fileChooser.getExtensionFilters().addAll(//
                 new FileChooser.ExtensionFilter("All Files", "*.*"), //
                 new FileChooser.ExtensionFilter("ZIP", "*.zip"));
+    }
+
+
+/////////////////////////////////////////////////////////////////////
+
+    public  void start() {
+        String folder = FILES.replaceAll("(.*)patch","patch").replaceAll(".zip(.*)","");
+        String cutZip = FILES.replaceAll(".zip(.*)","");
+        String newFolder = cutZip+"\\"+folder;
+
+
+        File file = new File(newFolder);
+//        if (!file.exists() || !file.canRead()) {
+//            System.out.println("File cannot be read");
+//            return;
+//        }
+
+        try {
+
+            ZipFile zip = new ZipFile(FILES);
+           // file.mkdir();
+            Enumeration entries = zip.entries();
+
+            while (entries.hasMoreElements()) {
+                ZipEntry entry = (ZipEntry) entries.nextElement();
+                textArea.appendText(entry.getName() + "\n");
+               // System.out.println(entry.getName());
+
+                if (entry.isDirectory()) {
+                    new File(file.getParent(), entry.getName()).mkdirs();
+                } else {
+                    write(zip.getInputStream(entry),
+                            new BufferedOutputStream(new FileOutputStream(
+                                    new File(file.getParent(), entry.getName()))));
+                }
+            }
+
+            zip.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void write(InputStream in, OutputStream out) throws IOException {
+        byte[] buffer = new byte[102400];
+        int len;
+        while ((len = in.read(buffer)) >= 0)
+            out.write(buffer, 0, len);
+        out.close();
+        in.close();
     }
 
 

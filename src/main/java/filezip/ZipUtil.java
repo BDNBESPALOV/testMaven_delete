@@ -1,14 +1,23 @@
 package filezip;
 
+import sample.OpenFileChooser;
+
 import java.io.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 public class ZipUtil {
-    public static void main(String[] args) throws Exception {
-        ZipOutputStream out = new ZipOutputStream(new FileOutputStream("D:\\E\\ff\\archive2.zip"));
 
-        File file = new File("D:\\E\\ff\\folder");
+    public void start() throws IOException {
+        String folder = OpenFileChooser.FILES.replaceAll(".zip(.*)","");
+        String folder2 = OpenFileChooser.FILES.replaceAll("(.*)patch","patch").replaceAll(".zip(.*)","");
+        String track = OpenFileChooser.FILES.replaceAll("patch(.*)","");
+        String newFile = OpenFileChooser.FILES.replaceAll("(.*)patch","patch");
+
+        ZipOutputStream out = new ZipOutputStream(new FileOutputStream( track+"new_"+newFile));
+
+
+        File file = new File(folder2);
 
         doZip(file, out);
 
