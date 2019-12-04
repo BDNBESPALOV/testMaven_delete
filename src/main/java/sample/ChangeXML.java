@@ -17,9 +17,9 @@ public class ChangeXML   {
     ChangeXML() throws IOException{
 
 
-            InputStream skolkovo = new FileInputStream(".\\target\\classes\\skolkovo.xml"); //текст перед которым будет втавка
+            InputStream skolkovo  = getClass().getResourceAsStream("/skolkovo.xml"); /*new FileInputStream("skolkovo.xml"); *///текст перед которым будет втавка
             InputStream funcat = new FileInputStream(strFunc); //исходный файл
-            InputStream addskolkovoX = new FileInputStream(".\\target\\classes\\addskolkovo.xml"); //блок для вставки
+            InputStream addskolkovoX = getClass().getResourceAsStream("/addskolkovo.xml");  /*new FileInputStream("addskolkovo.xml");*/ //блок для вставки
 
             String theString = IOUtils.toString(skolkovo, "UTF-8");
             String addskolkovo = IOUtils.toString(addskolkovoX, "UTF-8");
