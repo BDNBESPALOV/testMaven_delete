@@ -10,6 +10,7 @@ public class ChangeXML   {
     String track = OpenFileChooser.FILES.replaceAll("patch(.*)","");
     String newFile = OpenFileChooser.FILES.replaceAll("(.*)patch","patch");
     String strFunc = /*track+*/"\\"+folder+"\\XML\\funcat.xml";
+    String appobj = /*track+*/"\\"+folder+"\\XML\\module\\bft.gz\\appobj.xml";
 
 
 
@@ -40,6 +41,38 @@ public class ChangeXML   {
             skolkovo.close();
             funcat.close();
             os.close();
+            addskolkovoX.close();
+
+
+  /////////////////////////////////////////////////////////////
+
+        InputStream addReportsBO  = getClass().getResourceAsStream("/addReportsBO.xml"); /*new FileInputStream("skolkovo.xml"); *///текст перед которым будет втавка
+        InputStream appobjInput = new FileInputStream(appobj); //исходный файл
+        InputStream firstReportAppobj = getClass().getResourceAsStream("/firstReportAppobj.xml");  /*new FileInputStream("addskolkovo.xml");*/ //блок для вставки
+
+        String addReportsBOString = IOUtils.toString(addReportsBO, "UTF-8");
+        String firstReportAppobjString = IOUtils.toString(firstReportAppobj, "UTF-8");
+        String appobjString = IOUtils.toString(appobjInput, "Cp1251");
+
+        System.out.println(appobjString.contains(firstReportAppobjString));
+        System.out.println(appobjString.contains("belContractsRep"));
+        System.out.println(firstReportAppobjString);
+
+        String a2= appobjString.replace(firstReportAppobjString,addReportsBOString);
+
+        File file2 = new File(appobj);
+        file2.delete();
+
+        OutputStream os2 = new FileOutputStream(appobj);
+        os2.write(a2.getBytes("Cp1251"));
+
+        addReportsBO.close();
+        appobjInput.close();
+        firstReportAppobj.close();
+        os2.close();
+
+
+
 
 
     }

@@ -1,0 +1,96 @@
+                 <prop name="clientObj" val="REP_BEL_CONTRACT"/>
+              </properties>
+            </object>
+			
+			<object name="my_rep" caption="Информация по продукции в заключенных контрактах(Белгородская область)" stype="5">
+               <properties>
+                 <prop name="lic_modules" val="beloblrep"/>
+                 <prop name="form" val="app:report/my_rep.form"/>
+                 <prop name="data" val="app:report/my_rep.data"/>
+                 <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+                 <prop name="template" val="app:reports/my_rep.rptdesign"/>
+               </properties>
+             </object>
+			 
+			 <object name="my_new_df" caption="Информация об освоении средств учреждений Белгородской области" stype="5">
+               <properties>
+                 <prop name="lic_modules" val="beloblrep"/>
+                 <prop name="form" val="app:report/my_new_df.form"/>
+                 <prop name="data" val="app:report/my_new_df.data"/>
+                 <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+                 <prop name="template" val="app:reports/my_new_df.rptdesign"/>
+               </properties>
+             </object>
+			 
+			  <object name="my_request" caption="Информация о поступивших на согласование ЗнЗ (Белгородская область)" stype="5">
+              <properties>
+               <prop name="lic_modules" val="beloblrep"/>
+               <prop name="data" val="app:report/my_request.data"/>
+               <prop name="form" val="app:report/my_request.form"/>
+               <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+               <prop name="template" val="app:reports/my_request.rptdesign"/>
+              </properties>
+            </object>
+			
+			<object name="my_city_request" caption="Информация о поступивших на согласование ЗнЗ(г. Белгород)" stype="5">
+              <properties>
+               <prop name="lic_modules" val="beloblrep"/>
+               <prop name="data" val="app:report/my_city_request.data"/>
+               <prop name="form" val="app:report/my_city_request.form"/>
+               <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+               <prop name="template" val="app:reports/my_city_request.rptdesign"/>
+              </properties>
+            </object>
+			
+			<object name="my_ugz_user_activity" caption="Список пользователей не работающих в системе за период времени" stype="5">
+              <properties>
+               <prop name="lic_modules" val="beloblrep"/>
+               <prop name="data" val="app:report/my_ugz_user_activity.data"/>
+               <prop name="form" val="app:report/my_ugz_user_activity.form"/>
+               <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+               <prop name="template" val="app:reports/my_ugz_user_activity.rptdesign"/>
+              </properties>
+            </object>
+			<object name="my_ugz_contract" caption="Список контрактов без родительского документа" stype="5">
+              <properties>
+               <prop name="lic_modules" val="beloblrep"/>
+               <prop name="data" val="app:report/my_ugz_contract.data"/>
+               <prop name="form" val="app:report/my_ugz_contract.form"/>
+               <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+               <prop name="template" val="app:reports/my_ugz_contract.rptdesign"/>
+              </properties>
+            </object> 
+			
+			<object name="my_personali" caption="Информация о контрактной службе (Белгородская область)" stype="5">
+               <properties>
+                 <prop name="lic_modules" val="beloblrep"/>
+                 <prop name="form" val="app:report/my_personali.form"/>
+                 <prop name="data" val="app:report/my_personali.data"/>
+                 <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+                 <prop name="template" val="app:reports/otchet_personali.rptdesign"/>
+               </properties>
+             </object>
+			 
+			  <object name="my_cmd" caption="Детальный отчет по СМП Белгородской области" stype="5">
+               <properties>
+                 <prop name="lic_modules" val="beloblrep"/>
+                 <prop name="form" val="app:report/my_cmp.form"/>
+                 <prop name="data" val="app:report/my_cmp.data"/>
+                 <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+                 <prop name="template" val="app:reports/my_cmp.rptdesign"/>
+               </properties>
+             </object>
+			 
+			 <object name="my_cmd_full" caption="Отчет по СМП Белгородской области" stype="5">
+               <properties>
+                 <prop name="lic_modules" val="beloblrep"/>
+                 <prop name="form" val="app:report/my_cmp_full.form"/>
+                 <prop name="data" val="app:report/my_cmp_full.data"/>
+                 <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+                 <prop name="template" val="app:reports/my_full_cmp.rptdesign"/>
+               </properties>
+             </object> 
+
+			
+			
+			 
