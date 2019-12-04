@@ -37,10 +37,10 @@ public class OpenFileChooser extends Application {
 
         textArea.setMinHeight(70);
 
-        Button button1 = new Button("Открыть свеженький патч");
-        Button button2 = new Button("Распокавать");
-        Button button3 = new Button("Преобразование патча...");
-        Button button4 = new Button("Упаковать");
+        Button button1 = new Button("Open patch");
+        Button button2 = new Button("unzip");
+//        Button button3 = new Button("magick");
+//        Button button4 = new Button("zip");
 
 
 
@@ -61,37 +61,43 @@ public class OpenFileChooser extends Application {
             }
         });
 
-        button2.setOnAction(new EventHandler<ActionEvent>() {
+        button2.setOnAction(new EventHandler<ActionEvent>()  {
 
             @Override
             public void handle(ActionEvent event) {
                start();
-            }
-        });
 
-        button3.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
                 try {
                     new ChangeXML();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        button4.setOnAction(new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent event) {
-                try {
                     new ZipUtil().start();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    textArea.appendText(e.toString());
+
                 }
             }
         });
 
-
+//        button3.setOnAction(new EventHandler<ActionEvent>() {
+//            @Override
+//            public void handle(ActionEvent event) {
+//                try {
+//                    new ChangeXML();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
+//        button4.setOnAction(new EventHandler<ActionEvent>() {
+//
+//            @Override
+//            public void handle(ActionEvent event) {
+//                try {
+//                    new ZipUtil().start();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
 
 
         VBox root = new VBox();
@@ -99,13 +105,17 @@ public class OpenFileChooser extends Application {
         root.setPadding(new Insets(10));
         root.setSpacing(5);
 
-        root.getChildren().addAll(textArea, button1,button2,button3,button4/*, buttonM*/);
+        root.getChildren().addAll(textArea, button1,button2/*,button3,button4, buttonM*/);
 
         Scene scene = new Scene(root, 400, 200);
 
-        primaryStage.setTitle("Преобразование патча под особенности БО");
+        primaryStage.setTitle("Convert the patch to the features of BO");
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    public  void printLog(String str) {
+            textArea.appendText(str + "\n" +"--- ");
     }
 
     private void printLog(TextArea textArea, List<File> files) {
@@ -127,10 +137,10 @@ public class OpenFileChooser extends Application {
 
     private void configuringFileChooser(FileChooser fileChooser) {
         // Set title for FileChooser
-        fileChooser.setTitle("Выбери свеженький патч");
+        fileChooser.setTitle("Choose a fresh patch");
 
         // Set Initial Directory
-        fileChooser.setInitialDirectory(new File("D:\\E\\ff\\ttttt"));
+      //  fileChooser.setInitialDirectory(new File("D:\\E\\ff\\ttttt"));
 
         // Add Extension Filters
         fileChooser.getExtensionFilters().addAll(//
@@ -148,15 +158,12 @@ public class OpenFileChooser extends Application {
 
 
         File file = new File(newFolder);
-//        if (!file.exists() || !file.canRead()) {
-//            System.out.println("File cannot be read");
-//            return;
-//        }
+
 
         try {
 
             ZipFile zip = new ZipFile(FILES);
-           // file.mkdir();
+
             Enumeration entries = zip.entries();
 
             while (entries.hasMoreElements()) {

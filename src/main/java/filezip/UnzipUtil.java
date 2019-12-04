@@ -13,8 +13,8 @@ public class UnzipUtil {
 //            System.out.println("Usage: UnzipUtil [zipfile]");
 //            return;
 //        }
-
-      File file = new File(OpenFileChooser.FILES);
+        OpenFileChooser openFileChooser =  new  OpenFileChooser();
+      File file = new File(openFileChooser.FILES);
       ///  File file = new File("D:\\E\\ff\\archive.zip");
         if (!file.exists() || !file.canRead()) {
             System.out.println("File cannot be read");
@@ -28,7 +28,8 @@ public class UnzipUtil {
 
             while (entries.hasMoreElements()) {
                 ZipEntry entry = (ZipEntry) entries.nextElement();
-                System.out.println(entry.getName());
+            //    System.out.println(entry.getName());
+                openFileChooser.printLog(entry.getName());
 
                 if (entry.isDirectory()) {
                     new File(file.getParent(), entry.getName()).mkdirs();
@@ -46,7 +47,7 @@ public class UnzipUtil {
     }
 
     private static void write(InputStream in, OutputStream out) throws IOException {
-        byte[] buffer = new byte[102400];
+        byte[] buffer = new byte[1024];
         int len;
         while ((len = in.read(buffer)) >= 0)
             out.write(buffer, 0, len);
