@@ -6,11 +6,18 @@ import java.io.*;
 
 public class ChangeXML   {
 
-    String folder = OpenFileChooser.FILES.replaceAll(".zip(.*)","");
-    String track = OpenFileChooser.FILES.replaceAll("patch(.*)","");
-    String newFile = OpenFileChooser.FILES.replaceAll("(.*)patch","patch");
+//    String folder = OpenFileChooser.FILES.replaceAll(".zip(.*)","");
+//    String track = OpenFileChooser.FILES.replaceAll("patch(.*)","");
+//    String newFile = OpenFileChooser.FILES.replaceAll("(.*)patch","patch");
+//    String strFunc = /*track+*/"\\"+folder+"\\XML\\funcat.xml";
+//    String appobj = /*track+*/"\\"+folder+"\\XML\\module\\bft.gz\\appobj.xml";
+
+    String folder = Controller.FILES.replaceAll(".zip(.*)","");
+    String track = Controller.FILES.replaceAll("patch(.*)","");
+    String newFile = Controller.FILES.replaceAll("(.*)patch","patch");
     String strFunc = /*track+*/"\\"+folder+"\\XML\\funcat.xml";
     String appobj = /*track+*/"\\"+folder+"\\XML\\module\\bft.gz\\appobj.xml";
+
 
 
 
