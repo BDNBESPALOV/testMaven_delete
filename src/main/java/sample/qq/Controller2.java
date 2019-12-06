@@ -1,15 +1,17 @@
-package sample;
+package sample.qq;
+
+
 
 import filezip.ZipUtil;
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import sample.ChangeXML;
+
 
 import java.io.*;
 import java.util.Arrays;
@@ -18,7 +20,7 @@ import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-public class Controller {
+public class Controller2 {
     public static  String FILES=null;
     final TextArea textArea = new TextArea();
 
@@ -27,43 +29,26 @@ public class Controller {
     Button button1 = new Button("Open patch");
     Button button2 = new Button("Convert");
 
-    @FXML
-    ProgressBar progressBar = new ProgressBar(0.4);
-
-
-    @FXML
     public void buttonOpenFile(ActionEvent event) {
-        progressBar.setProgress(0.4);
         textArea.clear();
         File file = fileChooser.showOpenDialog(new Stage());
-
         if (file != null) {
             FILES=file.getPath();
             System.out.println(file.getPath());
-
             List<File> files = Arrays.asList(file);
-               printLog(textArea, files);
+            printLog(textArea, files);
         }
     }
 
-
-
-
-
-        public void setButton2Convert(ActionEvent event) {
-            start();
-
-            try {
-                new ChangeXML();
-                new ZipUtil().start();
-            } catch (IOException e) {
-                textArea.appendText(e.toString());
-
-            }
+    public void setButton2Convert(ActionEvent event) {
+        start();
+        try {
+            new ChangeXML();
+            new ZipUtil().start();
+        } catch (IOException e) {
+            textArea.appendText(e.toString());
         }
-
-
-
+    }
 
     ///////////******************////////////////
 
@@ -72,6 +57,8 @@ public class Controller {
     }
 
     private void printLog(TextArea textArea, List<File> files) {
+
+
         if (files == null || files.isEmpty()) {
             return;
         }
@@ -79,14 +66,6 @@ public class Controller {
             textArea.appendText(file.getAbsolutePath() + "\n");
         }
     }
-
-//    private void openFile(File file) {
-//        try {
-//            this.desktop.open(file);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     private void configuringFileChooser(FileChooser fileChooser) {
         // Set title for FileChooser
@@ -149,9 +128,5 @@ public class Controller {
     }
 
 
-
-
-
-
-
 }
+

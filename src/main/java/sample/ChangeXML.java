@@ -12,6 +12,8 @@ public class ChangeXML   {
 //    String strFunc = /*track+*/"\\"+folder+"\\XML\\funcat.xml";
 //    String appobj = /*track+*/"\\"+folder+"\\XML\\module\\bft.gz\\appobj.xml";
 
+
+
     String folder = Controller.FILES.replaceAll(".zip(.*)","");
     String track = Controller.FILES.replaceAll("patch(.*)","");
     String newFile = Controller.FILES.replaceAll("(.*)patch","patch");
@@ -22,7 +24,7 @@ public class ChangeXML   {
 
 
 
-    ChangeXML() throws IOException{
+    public ChangeXML() throws IOException{
 
 
             InputStream skolkovo  = getClass().getResourceAsStream("/skolkovo.xml"); /*new FileInputStream("skolkovo.xml"); *///текст перед которым будет втавка
