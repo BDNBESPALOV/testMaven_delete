@@ -26,7 +26,7 @@ public class ProgressAndTaskDemo extends Application {
 
         final Label label = new Label("Copy files:");
         final ProgressBar progressBar = new ProgressBar(0);
-        final ProgressIndicator progressIndicator = new ProgressIndicator(0);
+      //  final ProgressIndicator progressIndicator = new ProgressIndicator(0);
 
         final Button startButton = new Button("Start");
         final Button cancelButton = new Button("Cancel");
@@ -41,7 +41,7 @@ public class ProgressAndTaskDemo extends Application {
             public void handle(ActionEvent event) {
                 startButton.setDisable(true);
                 progressBar.setProgress(0);
-                progressIndicator.setProgress(0);
+             //   progressIndicator.setProgress(0);
                 cancelButton.setDisable(false);
 
                 // Create a Task.
@@ -54,10 +54,10 @@ public class ProgressAndTaskDemo extends Application {
                 progressBar.progressProperty().bind(copyTask.progressProperty());
 
                 // Hủy bỏ kết nối thuộc tính progress
-                progressIndicator.progressProperty().unbind();
+             //   progressIndicator.progressProperty().unbind();
 
                 // Bind progress property.
-                progressIndicator.progressProperty().bind(copyTask.progressProperty());
+             //   progressIndicator.progressProperty().bind(copyTask.progressProperty());
 
                 // Unbind text property for Label.
                 statusLabel.textProperty().unbind();
@@ -82,7 +82,8 @@ public class ProgressAndTaskDemo extends Application {
                 new Thread(copyTask).start();
 
             }
-        });
+        }
+        );
 
         // Cancel
         cancelButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -92,11 +93,11 @@ public class ProgressAndTaskDemo extends Application {
                 cancelButton.setDisable(true);
                 copyTask.cancel(true);
                 progressBar.progressProperty().unbind();
-                progressIndicator.progressProperty().unbind();
+              //  progressIndicator.progressProperty().unbind();
                 statusLabel.textProperty().unbind();
                 //
                 progressBar.setProgress(0);
-                progressIndicator.setProgress(0);
+            //    progressIndicator.setProgress(0);
             }
         });
 
@@ -104,7 +105,7 @@ public class ProgressAndTaskDemo extends Application {
         root.setPadding(new Insets(10));
         root.setHgap(10);
 
-        root.getChildren().addAll(label, progressBar, progressIndicator, //
+        root.getChildren().addAll(label, progressBar, /*progressIndicator,*/ //
                 statusLabel, startButton, cancelButton);
 
         Scene scene = new Scene(root, 500, 120, Color.WHITE);

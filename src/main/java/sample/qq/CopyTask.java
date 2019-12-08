@@ -13,8 +13,6 @@ public class CopyTask extends Task<List<File>> {
     protected List<File> call() throws Exception {
         List<File> copied = new ArrayList<>();
 
-
-
         File dir = new File("D:\\E\\ff");
         File[] files = dir.listFiles();
         int count = files.length;

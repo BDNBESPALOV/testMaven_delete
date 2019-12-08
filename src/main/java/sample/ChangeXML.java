@@ -1,8 +1,12 @@
 package sample;
 
 import org.apache.commons.io.IOUtils;
-
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.FileInputStream;
 
 public class ChangeXML   {
 
@@ -14,9 +18,9 @@ public class ChangeXML   {
 
 
 
-    String folder = Controller.FILES.replaceAll(".zip(.*)","");
-    String track = Controller.FILES.replaceAll("patch(.*)","");
-    String newFile = Controller.FILES.replaceAll("(.*)patch","patch");
+    String folder = Controller3.FILES.replaceAll(".zip(.*)","");
+    String track = Controller3.FILES.replaceAll("patch(.*)","");
+    String newFile = Controller3.FILES.replaceAll("(.*)patch","patch");
     String strFunc = /*track+*/"\\"+folder+"\\XML\\funcat.xml";
     String appobj = /*track+*/"\\"+folder+"\\XML\\module\\bft.gz\\appobj.xml";
 
@@ -49,8 +53,9 @@ public class ChangeXML   {
 
             skolkovo.close();
             funcat.close();
-            os.close();
             addskolkovoX.close();
+            os.close();
+
 
 
   /////////////////////////////////////////////////////////////
@@ -75,14 +80,12 @@ public class ChangeXML   {
         OutputStream os2 = new FileOutputStream(appobj);
         os2.write(a2.getBytes("Cp1251"));
 
+
+
         addReportsBO.close();
         appobjInput.close();
         firstReportAppobj.close();
         os2.close();
-
-
-
-
 
     }
 }
