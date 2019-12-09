@@ -13,7 +13,7 @@ public class ZipUtil extends Task<List<File>> {
 
     String folder = Controller3.FILES.replaceAll(".zip(.*)","");
     File file = new File(folder);
-    File[] files = file.listFiles();
+   // File[] files = file.listFiles();
     int count = countPro(file); /*files.length*/;
     int i = 0;
     private static List<File> copied = new ArrayList<>();
@@ -42,8 +42,8 @@ public class ZipUtil extends Task<List<File>> {
         ZipOutputStream out = new ZipOutputStream(new FileOutputStream( track+"new_"+newFile));
 
         doZip(file, out);
-
-        out.close();
+//
+       out.close();
         return copied;
     }
 
