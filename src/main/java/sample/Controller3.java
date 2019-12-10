@@ -2,12 +2,19 @@ package sample;
 
 import filezip.UnzipUtil;
 
-import filezip.ZipUtil;
+
+import javafx.application.Application;
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.MotionBlur;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -16,14 +23,15 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.List;
 
-public class Controller3 {
+public class Controller3  {
     public static  String FILES=null;
     final TextArea textArea = new TextArea();
 
     final  FileChooser fileChooser = new FileChooser();
-
-    Button button1 = new Button("Open patch");
-    Button button2 = new Button("Convert");
+    @FXML
+    Button button1 = new Button();
+    @FXML
+    Button button2 = new Button();
     @FXML
     Label statusLabel = new Label();
     @FXML
@@ -31,18 +39,29 @@ public class Controller3 {
     @FXML
     ProgressIndicator progressIndicator = new ProgressIndicator(0);
 
+    final  DropShadow shadow = new DropShadow();
+    final MotionBlur motionBlur = new MotionBlur();
+
+
+
+
     public void buttonOpenFile(ActionEvent event) {
-        textArea.clear();
+      // textArea.clear();
+        configuringFileChooser(fileChooser);
         File file = fileChooser.showOpenDialog(new Stage());
 
-        configuringFileChooser(new FileChooser());
         if (file != null) {
             FILES=file.getPath();
             System.out.println(file.getPath());
 
-            List<File> files = Arrays.asList(file);
-            printLog(textArea, files);
+//            List<File> files = Arrays.asList(file);
+//            printLog(textArea, files);
         }
+        if(FILES!=null){
+            button2.setDisable(false);
+        }
+
+
     }
 
     public void setButton2Convert(ActionEvent event) throws InterruptedException, FileNotFoundException {
@@ -53,7 +72,11 @@ public class Controller3 {
         statusLabel.setTextFill(Color.BLUE);
 
         this.unzipTh(new UnzipUtil());
+        button2.setDisable(true);
+
     }
+
+
 
     private void unzipTh(final UnzipUtil uq) {
                 progressBar.progressProperty().unbind();
@@ -68,10 +91,22 @@ public class Controller3 {
                             public void handle(WorkerStateEvent t) {
                                 List<File> copied = uq.getValue();
                                 statusLabel.textProperty().unbind();
-                                statusLabel.setText("Copied: " + copied.size());
+                                statusLabel.setText("");
                             }
                         });
         new Thread(uq).start();
+    }
+    private void configuringFileChooser(FileChooser fileChooser) {
+        // Set title for FileChooser
+        fileChooser.setTitle("Choose a fresh patch");
+
+        // Set Initial Directory
+       // fileChooser.setInitialDirectory(new File("D:\\E\\ff\\ttttt"));
+
+        // Add Extension Filters
+        fileChooser.getExtensionFilters().addAll(//
+              //  new FileChooser.ExtensionFilter("All Files", "*.*"), //
+                new FileChooser.ExtensionFilter("ZIP", "patch_[абв].zip"));
     }
 
 
@@ -91,18 +126,9 @@ public class Controller3 {
     }
 
 
-    private void configuringFileChooser(FileChooser fileChooser) {
-        // Set title for FileChooser
-        fileChooser.setTitle("Choose a fresh patch");
 
-        // Set Initial Directory
-         fileChooser.setInitialDirectory(new File("D:\\E\\ff\\ttttt"));
 
-        // Add Extension Filters
-        fileChooser.getExtensionFilters().addAll(//
-                new FileChooser.ExtensionFilter("All Files", "*.*"), //
-                new FileChooser.ExtensionFilter("ZIP", "*.zip"));
-    }
+
 
 
 /////////////////////////////////////////////////////////////////////

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" hgap="10.0" prefHeight="191.96091542968497" prefWidth="280.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller3">
+  <children>
+    <Pane cache="true" cacheHint="DEFAULT" disable="false" focusTraversable="false" prefHeight="191.0" prefWidth="280.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+      <children>
+        <Button  fx:id="button1" defaultButton="false" disable="false" layoutX="14.0" layoutY="171.0" mnemonicParsing="false" onAction="#buttonOpenFile" text="Открыть" />
+        <Button fx:id="button2" cancelButton="false" defaultButton="false" disable="true" layoutX="161.0" layoutY="171.0" mnemonicParsing="false" onAction="#setButton2Convert" text="Преобразовать" underline="false" />
+        <ProgressBar fx:id="progressBar" layoutX="14.0" layoutY="118.0" prefWidth="252.0" progress="0.0" />
+        <Label fx:id="statusLabel" layoutX="14.0" layoutY="141.0" prefWidth="122.0" text="" />
+        <ProgressIndicator fx:id="progressIndicator" layoutX="104.0" layoutY="42.0" prefHeight="61.0" prefWidth="66.0" progress="0.0" />
+        <Label fx:id="version" layoutX="0.0" layoutY="3.0" opacity="0.27" text="Version: 1.0.0" wrapText="false">
+          <font>
+            <Font size="8.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label fx:id="owner" font="$x1" layoutX="0.0" layoutY="14.0" minHeight="5.640625" opacity="0.27" prefHeight="10.640625" text="owner: BDN" />
+      </children>
+    </Pane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>

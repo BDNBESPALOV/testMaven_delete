@@ -16,7 +16,7 @@ import java.util.zip.ZipOutputStream;
 public class UnzipUtil  extends Task<List<File>> {
     private String folderZ = Controller3.FILES.replaceAll(".zip(.*)","");
     private String folder2 = Controller3.FILES.replaceAll("(.*)patch","patch").replaceAll(".zip(.*)","");
-    private File fileZ = new File(folder2);
+    private File fileZ = new File(folderZ);
     private String track = Controller3.FILES.replaceAll("patch(.*)","");
     private String newFile = Controller3.FILES.replaceAll("(.*)patch","patch");
     private ZipOutputStream outs = new ZipOutputStream(new FileOutputStream( track+"new_"+newFile));
@@ -109,6 +109,7 @@ return  copied;
         in.close();
     }
         private  void copy(File file) throws Exception {
-            this.updateMessage("Copying: " + file.getAbsolutePath());
+            this.updateMessage( file.getAbsolutePath());
                }
+
 }
