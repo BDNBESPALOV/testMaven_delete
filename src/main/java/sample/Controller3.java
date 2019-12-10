@@ -31,11 +31,6 @@ public class Controller3 {
     @FXML
     ProgressIndicator progressIndicator = new ProgressIndicator(0);
 
-
-   ZipUtil zipUtil;
-    UnzipUtil unzipUtil;
-
-
     public void buttonOpenFile(ActionEvent event) {
         textArea.clear();
         File file = fileChooser.showOpenDialog(new Stage());
@@ -61,8 +56,6 @@ public class Controller3 {
     }
 
     private void unzipTh(final UnzipUtil uq) {
-
-
                 progressBar.progressProperty().unbind();
                 progressBar.progressProperty().bind(uq.progressProperty());
                 progressIndicator.progressProperty().unbind();
@@ -71,7 +64,6 @@ public class Controller3 {
                 statusLabel.textProperty().bind(uq.messageProperty());
                 uq.addEventHandler(WorkerStateEvent.WORKER_STATE_SUCCEEDED, //
                         new EventHandler<WorkerStateEvent>() {
-
                             @Override
                             public void handle(WorkerStateEvent t) {
                                 List<File> copied = uq.getValue();
@@ -79,33 +71,9 @@ public class Controller3 {
                                 statusLabel.setText("Copied: " + copied.size());
                             }
                         });
-
-
         new Thread(uq).start();
-
-
-
     }
-//    private void zipTh(){
-//        progressBar.progressProperty().unbind();
-//     //   progressBar.progressProperty().bind(zipUtil.progressProperty());
-//        progressIndicator.progressProperty().unbind();
-//     //   progressIndicator.progressProperty().bind(zipUtil.progressProperty());
-//        statusLabel.textProperty().unbind();
-//      //  statusLabel.textProperty().bind(zipUtil.messageProperty());
-//        zipUtil.addEventHandler(WorkerStateEvent.WORKER_STATE_SUCCEEDED, //
-//                new EventHandler<WorkerStateEvent>() {
-//
-//                    @Override
-//                    public void handle(WorkerStateEvent t) {
-//                        List<File> copied = zipUtil.getValue();
-//                        statusLabel.textProperty().unbind();
-//                        statusLabel.setText("Copied: " + copied.size());
-//                    }
-//                });
-//    //      new Thread(zipUtil).start();
-//
-//    }
+
 
     ///////////******************////////////////
 
@@ -138,14 +106,5 @@ public class Controller3 {
 
 
 /////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
 
 }
