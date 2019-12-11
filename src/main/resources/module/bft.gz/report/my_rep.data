@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+    <object name="my_rep" class="" lnama="По продукции (Белгородская область)" >
+    <field name="MIN" type="date" required="true" lname="Дата заключения, от"/>
+    <field name="MAX" type="date" required="true" lname="Дата заключения, до"/>
+    <field name="CUSTOMER_ID_LIST" type="string" required="false" lname="Заказчик"/>
+	<field name="CUSTOMER_CHILD" type="boolean" required="false" lname="Заказчик: Все нижестоящие"/>
+	<field name="PURCHASEMODE_IDS" type="string" required="false" lname="Способ определения поставщика (подрядчика, исполнителя)"/>
+    <field name="GOODS_CODES" type="string" required="false" lname="Код продукции"/>
+	<field name="GOODSGROUP_CODES" type="string" required="false" lname="Группа продукции"/>
+	<field name="GOODSGROUP_ID" type="string" required="false" lname="Идентификатор группы"/>
+    <field name="CAPTION_ID_LIST" type="string" required="false" lname="Страна происхождения товара"/>
+    <field name="BUDGET_ID_LIST1" type="string" required="false" lname="Бюджет"/>
+    <field name="__output_format" type="string"/>
+ 
+   
+</object>

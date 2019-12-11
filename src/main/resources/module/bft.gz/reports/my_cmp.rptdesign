@@ -1,0 +1,1758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.2.v20120213 Build &lt;3.7.2.v20120214-1408></property>
+    <property name="units">in</property>
+    <method name="initialize"><![CDATA[CustomFunctions.BindParameters(this.reportContext);]]></method>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="MIN" id="9">
+            <text-property name="promptText">Дата заключения, от</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2018-01-01</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="MAX" id="10">
+            <text-property name="promptText">по</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2018-12-31</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CUST_ID" id="1383">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">multi-value</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.driver.OracleDriver</property>
+            <property name="odaURL">jdbc:oracle:thin:@localhost:1523:azk</property>
+            <property name="odaUser">GZ_BELGOBL1</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">R1pfQkVMR09CTDE=</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="8">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">MIN</property>
+                    <property name="dataType">date</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">MAX</property>
+                    <property name="dataType">date</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_3</property>
+                    <property name="dataType">decimal</property>
+                    <property name="position">3</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">SUM_AMOUN_PAY</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">PAYDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CONTRACT_ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">SUM_AMOUN_PAY</property>
+                    <property name="nativeName">SUM_AMOUN_PAY</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">PAYDATE</property>
+                    <property name="nativeName">PAYDATE</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">CONTRACT_ID</property>
+                    <property name="nativeName">CONTRACT_ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select sum(amount) as sum_amoun_pay,paydate,contract_id from CONPAYFACT where contract_id in (select id from contractdoc where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+
+or (DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%' and document_id  in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (115)) 
+and PURCHASEMODE_CAPTION in ('Закупка у единственного поставщика (исполнителя, подрядчика)'))
+
+
+) and document_id not in (select f.document_id from docflag f , 
+docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+/* BIND AND customer_id IN ( $CUST_ID ) */
+and dispstatus_id not in (-1,11,24,7,9)
+) and paydate  BETWEEN ?
+AND ? and contract_id = ?  group by paydate,contract_id]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set1" id="62">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">MIN</property>
+                    <property name="dataType">date</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">MAX</property>
+                    <property name="dataType">date</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CUSTOMERNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">DOC_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">KOD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ID</property>
+                    <property name="nativeName">ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CUSTOMERNAME</property>
+                    <property name="nativeName">CUSTOMERNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">DOC_NUMBER</property>
+                    <property name="nativeName">DOC_NUMBER</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">STATUS</property>
+                    <property name="nativeName">STATUS</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">KOD</property>
+                    <property name="nativeName">KOD</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select co.id,co.customername, co.doc_number, (select caption from DISPSTATUS where co.DISPSTATUS_ID=id) as status, (select code from CONTRACTREASON where id=co.SINGLECUSTOMERREASON_ID)as kod 
+ from contractdoc co
+JOIN BUDGET bydget
+ ON co.BUDGET_ID = bydget.Id  
+ 
+
+
+ where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+
+or (DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%' and document_id  in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (115)) 
+and PURCHASEMODE_CAPTION in ('Закупка у единственного поставщика (исполнителя, подрядчика)'))
+
+)and document_id not in (select f.document_id from docflag f , docflagtype ft where 
+f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+  and bydget.caption not like '%223%' and co.DocumentClass_Id = 32
+   /* BIND AND co.customer_id IN ( $CUST_ID ) */ and co.dispstatus_id not in (-1,11,24,7,9) 
+  and co.id in (select contract_id from CONPAYFACT where contract_id in (select id from contractdoc where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+
+or (DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%' and document_id  in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (115)) 
+and PURCHASEMODE_CAPTION in ('Закупка у единственного поставщика (исполнителя, подрядчика)'))
+
+) and document_id not in (select f.document_id from docflag f , docflagtype ft where 
+f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+ /* BIND AND customer_id IN ( $CUST_ID ) */
+and dispstatus_id not in (-1,11,24,7,9)
+) and paydate  BETWEEN ?
+AND ?   group by paydate,contract_id)
+  ]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set2" id="268">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">MIN</property>
+                    <property name="dataType">date</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">MAX</property>
+                    <property name="dataType">date</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_3</property>
+                    <property name="paramName">MIN</property>
+                    <property name="dataType">date</property>
+                    <property name="position">3</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_4</property>
+                    <property name="paramName">MAX</property>
+                    <property name="dataType">date</property>
+                    <property name="position">4</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">KOD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CUSTOMERNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">DOC_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">CONTRACT_ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">SUM_AMOUN_PAY</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">PAYDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">KOD</property>
+                    <property name="nativeName">KOD</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CUSTOMERNAME</property>
+                    <property name="nativeName">CUSTOMERNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">DOC_NUMBER</property>
+                    <property name="nativeName">DOC_NUMBER</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">STATUS</property>
+                    <property name="nativeName">STATUS</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">ID</property>
+                    <property name="nativeName">ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">CONTRACT_ID</property>
+                    <property name="nativeName">CONTRACT_ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">SUM_AMOUN_PAY</property>
+                    <property name="nativeName">SUM_AMOUN_PAY</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">PAYDATE</property>
+                    <property name="nativeName">PAYDATE</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select kod,customername, doc_number,status, id,
+
+contract_id,sum_amoun_pay,paydate
+
+
+
+
+
+
+
+from (select sum(amount) as sum_amoun_pay,paydate,contract_id from CONPAYFACT where contract_id in (select id from contractdoc where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+
+or (DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%')
+
+)and document_id not in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+ and CONPAYFACT.CONTRACT_ID=contractdoc.id 
+ )GROUP by paydate,contract_id) T join (
+
+
+
+select id,customername, doc_number, (select caption from DISPSTATUS where DISPSTATUS_ID=id) as status,
+ (select code from CONTRACTREASON where id=SINGLECUSTOMERREASON_ID)as kod,doc_date 
+   from contractdoc where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+
+or (DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%')
+
+)and document_id not in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+) E on T.contract_id=E.id where T.PAYDATE BETWEEN ? AND ? and doc_date BETWEEN ? AND ? order by id]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="SMPpogran" id="1200">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">MIN</property>
+                    <property name="dataType">date</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_4</property>
+                    <property name="paramName">MAX</property>
+                    <property name="dataType">date</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CUSTOMERNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">DOC_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">KOD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ID</property>
+                    <property name="nativeName">ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CUSTOMERNAME</property>
+                    <property name="nativeName">CUSTOMERNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">DOC_NUMBER</property>
+                    <property name="nativeName">DOC_NUMBER</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">STATUS</property>
+                    <property name="nativeName">STATUS</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">KOD</property>
+                    <property name="nativeName">KOD</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select co.id,co.customername, co.doc_number, (select caption from DISPSTATUS where co.DISPSTATUS_ID=id) as status, (select code from CONTRACTREASON where id=co.SINGLECUSTOMERREASON_ID)as kod 
+ from contractdoc co
+JOIN BUDGET bydget
+ ON co.BUDGET_ID = bydget.Id  
+ 
+
+
+ where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+or (DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%')
+) and document_id not in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+and document_id  in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (115))
+
+  and bydget.caption not like '%223%'
+  and co.DocumentClass_Id = 32   /* BIND AND co.customer_id IN ( $CUST_ID ) */ and co.dispstatus_id not in (-1,11,24,7,9) 
+  and co.id in (select contract_id from CONPAYFACT where contract_id in (select id from contractdoc where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+or ( DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%')
+) and document_id not in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+and document_id in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (115))
+ /* BIND AND customer_id IN ( $CUST_ID ) */
+and dispstatus_id not in (-1,11,24,7,9)
+) and paydate  BETWEEN ?
+AND ? )]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="SMPpriv" id="1304">
+            <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">MIN</property>
+                    <property name="dataType">date</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_4</property>
+                    <property name="paramName">MAX</property>
+                    <property name="dataType">date</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">CUSTOMERNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">DOC_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">KOD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ID</property>
+                    <property name="nativeName">ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">CUSTOMERNAME</property>
+                    <property name="nativeName">CUSTOMERNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">DOC_NUMBER</property>
+                    <property name="nativeName">DOC_NUMBER</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">STATUS</property>
+                    <property name="nativeName">STATUS</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">KOD</property>
+                    <property name="nativeName">KOD</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select co.id,co.customername, co.doc_number, (select caption from DISPSTATUS where co.DISPSTATUS_ID=id) as status, (select code from CONTRACTREASON where id=co.SINGLECUSTOMERREASON_ID)as kod 
+ from contractdoc co
+JOIN BUDGET bydget
+ ON co.BUDGET_ID = bydget.Id  
+ 
+
+
+ where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+or (DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%')
+) and document_id not in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+and document_id  in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (227))
+
+  and bydget.caption not like '%223%'
+  
+  and co.DocumentClass_Id = 32 /* BIND AND co.customer_id IN ( $CUST_ID ) */ and co.dispstatus_id not in (-1,11,24,7,9) 
+  and co.id in (select contract_id from CONPAYFACT where contract_id in (select id from contractdoc where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+or (DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%')
+) and document_id not in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+and document_id in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (227))
+ /* BIND AND customer_id IN ( $CUST_ID ) */
+and dispstatus_id not in (-1,11,24,7,9)
+) and paydate  BETWEEN ?
+AND ?   group by paydate,contract_id)]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="SMPpos2" id="1201">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">MIN</property>
+                    <property name="dataType">date</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">MAX</property>
+                    <property name="dataType">date</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_3</property>
+                    <property name="dataType">decimal</property>
+                    <property name="position">3</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">SUM_AMOUN_PAY</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">PAYDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CONTRACT_ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">SUM_AMOUN_PAY</property>
+                    <property name="nativeName">SUM_AMOUN_PAY</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">PAYDATE</property>
+                    <property name="nativeName">PAYDATE</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">CONTRACT_ID</property>
+                    <property name="nativeName">CONTRACT_ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select sum(amount) as sum_amoun_pay,paydate,contract_id from CONPAYFACT where contract_id in (select id from contractdoc where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+or (DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%')
+) and document_id not in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+and document_id in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (115))
+ /* BIND AND customer_id IN ( $CUST_ID ) */
+and dispstatus_id not in (-1,11,24,7,9)
+) and paydate  BETWEEN ?
+AND ? and contract_id = ?  group by paydate,contract_id]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="SMPpriv2" id="1305">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">MIN</property>
+                    <property name="dataType">date</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">MAX</property>
+                    <property name="dataType">date</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_3</property>
+                    <property name="dataType">decimal</property>
+                    <property name="position">3</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">SUM_AMOUN_PAY</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">PAYDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CONTRACT_ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">SUM_AMOUN_PAY</property>
+                    <property name="nativeName">SUM_AMOUN_PAY</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">PAYDATE</property>
+                    <property name="nativeName">PAYDATE</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">CONTRACT_ID</property>
+                    <property name="nativeName">CONTRACT_ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select sum(amount) as sum_amoun_pay,paydate,contract_id from CONPAYFACT where contract_id in (select id from contractdoc where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+or (DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%')
+) and document_id not in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+and document_id in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (227))
+ /* BIND AND customer_id IN ( $CUST_ID ) */
+and dispstatus_id not in (-1,11,24,7,9)
+) and paydate  BETWEEN ?
+AND ? and contract_id = ?  group by paydate,contract_id]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Orderdoc_gz" id="1386">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="dataType">decimal</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">OOS_DOC_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">OOS_DOC_NUMBER</property>
+                    <property name="nativeName">OOS_DOC_NUMBER</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select oos_doc_number from orderdoc where id in (select order_id from CMPCUSTOMERLOT where PLANPOSITIONNUMBER in (select planpositionnumber from contractdoc where id = ? ))]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="summi" id="1443">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">MIN</property>
+                    <property name="dataType">date</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">MAX</property>
+                    <property name="dataType">date</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_3</property>
+                    <property name="paramName">MIN</property>
+                    <property name="dataType">date</property>
+                    <property name="position">3</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_4</property>
+                    <property name="paramName">MAX</property>
+                    <property name="dataType">date</property>
+                    <property name="position">4</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">SUM_AMOUN_P</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">PAYDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CONTRACT_ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">CUSTOMERNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">DOC_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">KOD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">SUM_AMOUN_P</property>
+                    <property name="nativeName">SUM_AMOUN_P</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">PAYDATE</property>
+                    <property name="nativeName">PAYDATE</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">CONTRACT_ID</property>
+                    <property name="nativeName">CONTRACT_ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">CUSTOMERNAME</property>
+                    <property name="nativeName">CUSTOMERNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">DOC_NUMBER</property>
+                    <property name="nativeName">DOC_NUMBER</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">STATUS</property>
+                    <property name="nativeName">STATUS</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">KOD</property>
+                    <property name="nativeName">KOD</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select sum(sum_amoun_pay) as sum_amoun_P,paydate,contract_id,customername,doc_number,status,kod  from (
+
+
+
+select sum(amount) as sum_amoun_pay,paydate,contract_id from CONPAYFACT where contract_id in (select id from contractdoc where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+or (DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%')
+) and document_id not in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+  /* BIND AND customer_id IN ($CUST_ID) */
+and dispstatus_id not in (-1,11,24,7,9) ) and paydate  BETWEEN ? AND ?   group by paydate,contract_id
+) A join 
+
+
+
+(
+
+select co.id,co.customername, co.doc_number, (select caption from DISPSTATUS where co.DISPSTATUS_ID=id) as status, (select code from CONTRACTREASON where id=co.SINGLECUSTOMERREASON_ID)as kod 
+ from contractdoc co
+JOIN BUDGET bydget
+ ON co.BUDGET_ID = bydget.Id  
+ 
+ where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+or (DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%')
+)and document_id not in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+  and bydget.caption not like '%223%' and co.DocumentClass_Id = 32
+   /* BIND AND co.customer_id IN ($CUST_ID) */ and co.dispstatus_id not in (-1,11,24,7,9) 
+  and co.id in (select contract_id from CONPAYFACT where contract_id in (select id from contractdoc where ( PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
+'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
+'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме','Аукцион в электронной форме')
+or (DESCRIPTION like '%Статья 93%' and DESCRIPTION like '%п.25%')
+) and document_id not in (select f.document_id from docflag f , docflagtype ft where f.docflagtype_id=ft.id  and f.docflagtype_id in (213,214,307) )
+/* BIND AND customer_id IN ($CUST_ID) */
+and dispstatus_id not in (-1,11,24,7,9)
+) and paydate  BETWEEN ? AND ?   group by paydate,contract_id)
+) B
+on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,doc_number,status,kod]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <text id="1376">
+            <property name="fontWeight">bold</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[СГОЗминусИСКЛЮЧЕНИЯ]]></text-property>
+        </text>
+        <table id="1134">
+            <property name="dataSet">Data Set1</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">ID</property>
+                    <text-property name="displayName">ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">CUSTOMERNAME</property>
+                    <text-property name="displayName">CUSTOMERNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">DOC_NUMBER</property>
+                    <text-property name="displayName">DOC_NUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DOC_NUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">STATUS</property>
+                    <text-property name="displayName">STATUS</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["STATUS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KOD</property>
+                    <text-property name="displayName">KOD</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KOD"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="1164"/>
+            <column id="1165"/>
+            <column id="1390"/>
+            <column id="1166"/>
+            <column id="1167">
+                <property name="width">1.09375in</property>
+            </column>
+            <column id="1171">
+                <property name="width">2.9895833333333335in</property>
+            </column>
+            <header>
+                <row id="1135">
+                    <cell id="1138">
+                        <label id="1139">
+                            <text-property name="text">заказчик</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1140">
+                        <label id="1141">
+                            <text-property name="text">номер контракта</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1387">
+                        <label id="1401">
+                            <text-property name="text">номер извещения</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1142">
+                        <label id="1143">
+                            <text-property name="text">статус</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1144">
+                        <label id="1145">
+                            <text-property name="text">Код основания заключения контракта с единственным поставщиком </text-property>
+                        </label>
+                    </cell>
+                    <cell id="1168">
+                        <label id="1194">
+                            <text-property name="text">	Дата платежа Сумма платежа </text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="1146">
+                    <property name="height">0.90625in</property>
+                    <cell id="1149">
+                        <data id="1150">
+                            <property name="resultSetColumn">CUSTOMERNAME</property>
+                        </data>
+                    </cell>
+                    <cell id="1151">
+                        <data id="1152">
+                            <property name="resultSetColumn">DOC_NUMBER</property>
+                        </data>
+                    </cell>
+                    <cell id="1388">
+                        <table id="1422">
+                            <property name="dataSet">Orderdoc_gz</property>
+                            <list-property name="paramBindings">
+                                <structure>
+                                    <property name="paramName">param_1</property>
+                                    <simple-property-list name="expression">
+                                        <value type="javascript">row["ID"]</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">OOS_DOC_NUMBER</property>
+                                    <text-property name="displayName">OOS_DOC_NUMBER</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["OOS_DOC_NUMBER"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                            </list-property>
+                            <column id="1431"/>
+                            <detail>
+                                <row id="1426">
+                                    <cell id="1427">
+                                        <data id="1428">
+                                            <structure name="numberFormat">
+                                                <property name="category">Fixed</property>
+                                                <property name="pattern">###0{RoundingMode=HALF_UP}</property>
+                                            </structure>
+                                            <property name="resultSetColumn">OOS_DOC_NUMBER</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                            </detail>
+                        </table>
+                    </cell>
+                    <cell id="1153">
+                        <data id="1154">
+                            <property name="resultSetColumn">STATUS</property>
+                        </data>
+                    </cell>
+                    <cell id="1155">
+                        <data id="1156">
+                            <property name="resultSetColumn">KOD</property>
+                        </data>
+                    </cell>
+                    <cell id="1169">
+                        <table id="1172">
+                            <property name="dataSet">Data Set</property>
+                            <list-property name="paramBindings">
+                                <structure>
+                                    <property name="paramName">param_3</property>
+                                    <simple-property-list name="expression">
+                                        <value type="javascript">row["ID"]</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">SUM_AMOUN_PAY</property>
+                                    <text-property name="displayName">SUM_AMOUN_PAY</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["SUM_AMOUN_PAY"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">PAYDATE</property>
+                                    <text-property name="displayName">PAYDATE</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["PAYDATE"]</expression>
+                                    <property name="dataType">date-time</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">CONTRACT_ID</property>
+                                    <text-property name="displayName">CONTRACT_ID</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["CONTRACT_ID"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Aggregation</property>
+                                    <property name="dataType">float</property>
+                                    <property name="aggregateFunction">SUM</property>
+                                    <list-property name="arguments">
+                                        <structure>
+                                            <property name="name">Expression</property>
+                                            <expression name="value" type="javascript">row["SUM_AMOUN_PAY"]</expression>
+                                        </structure>
+                                    </list-property>
+                                    <property name="allowExport">true</property>
+                                </structure>
+                            </list-property>
+                            <column id="1197"/>
+                            <column id="1191"/>
+                            <column id="1192"/>
+                            <detail>
+                                <row id="1180">
+                                    <cell id="1195"/>
+                                    <cell id="1181">
+                                        <data id="1184">
+                                            <structure name="dateTimeFormat">
+                                                <property name="category">Medium Date</property>
+                                                <property name="pattern">Medium Date</property>
+                                            </structure>
+                                            <property name="resultSetColumn">PAYDATE</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="1183">
+                                        <data id="1182">
+                                            <property name="resultSetColumn">SUM_AMOUN_PAY</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                            </detail>
+                            <footer>
+                                <row id="1187">
+                                    <cell id="1196">
+                                        <label id="1199">
+                                            <text-property name="text">общая сумма</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="1188">
+                                        <data id="1198">
+                                            <property name="resultSetColumn">Aggregation</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="1189"/>
+                                </row>
+                            </footer>
+                        </table>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="1157">
+                    <cell id="1159"/>
+                    <cell id="1160"/>
+                    <cell id="1389"/>
+                    <cell id="1161"/>
+                    <cell id="1162"/>
+                    <cell id="1170"/>
+                </row>
+            </footer>
+        </table>
+        <text id="1236">
+            <property name="fontWeight">bold</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[1. СМПограничение (Заказ размещался у субъектов малого предпринимательства, социально ориентированных некоммерческих организаций)]]></text-property>
+        </text>
+        <table id="1237">
+            <property name="dataSet">SMPpogran</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">ID</property>
+                    <text-property name="displayName">ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">CUSTOMERNAME</property>
+                    <text-property name="displayName">CUSTOMERNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">DOC_NUMBER</property>
+                    <text-property name="displayName">DOC_NUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DOC_NUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">STATUS</property>
+                    <text-property name="displayName">STATUS</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["STATUS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KOD</property>
+                    <text-property name="displayName">KOD</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KOD"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="1267"/>
+            <column id="1268"/>
+            <column id="1405"/>
+            <column id="1269"/>
+            <column id="1270">
+                <property name="width">1.09375in</property>
+            </column>
+            <column id="1274">
+                <property name="width">2.9895833333333335in</property>
+            </column>
+            <header>
+                <row id="1238">
+                    <cell id="1241">
+                        <label id="1299">
+                            <text-property name="text">заказчик</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1243">
+                        <label id="1300">
+                            <text-property name="text">номер контракта</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1402">
+                        <label id="1411">
+                            <text-property name="text">номер извещения</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1245">
+                        <label id="1301">
+                            <text-property name="text">статус</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1247">
+                        <label id="1302">
+                            <text-property name="text">Код основания заключения контракта с единственным поставщиком </text-property>
+                        </label>
+                    </cell>
+                    <cell id="1271">
+                        <label id="1297">
+                            <text-property name="text">	Дата платежа Сумма платежа </text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="1249">
+                    <property name="height">1.1041666666666667in</property>
+                    <cell id="1252">
+                        <data id="1253">
+                            <property name="resultSetColumn">CUSTOMERNAME</property>
+                        </data>
+                    </cell>
+                    <cell id="1254">
+                        <data id="1255">
+                            <property name="resultSetColumn">DOC_NUMBER</property>
+                        </data>
+                    </cell>
+                    <cell id="1403">
+                        <table id="1432">
+                            <property name="dataSet">Orderdoc_gz</property>
+                            <list-property name="paramBindings">
+                                <structure>
+                                    <property name="paramName">param_1</property>
+                                    <simple-property-list name="expression">
+                                        <value type="javascript">row["ID"]</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">OOS_DOC_NUMBER</property>
+                                    <text-property name="displayName">OOS_DOC_NUMBER</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["OOS_DOC_NUMBER"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                            </list-property>
+                            <column id="1436"/>
+                            <detail>
+                                <row id="1433">
+                                    <cell id="1434">
+                                        <data id="1435">
+                                            <structure name="numberFormat">
+                                                <property name="category">Fixed</property>
+                                                <property name="pattern">###0{RoundingMode=HALF_UP}</property>
+                                            </structure>
+                                            <property name="resultSetColumn">OOS_DOC_NUMBER</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                            </detail>
+                        </table>
+                    </cell>
+                    <cell id="1256">
+                        <data id="1257">
+                            <property name="resultSetColumn">STATUS</property>
+                        </data>
+                    </cell>
+                    <cell id="1258">
+                        <data id="1259">
+                            <property name="resultSetColumn">KOD</property>
+                        </data>
+                    </cell>
+                    <cell id="1272">
+                        <table id="1275">
+                            <property name="dataSet">SMPpos2</property>
+                            <list-property name="paramBindings">
+                                <structure>
+                                    <property name="paramName">param_3</property>
+                                    <simple-property-list name="expression">
+                                        <value type="javascript">row["ID"]</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">SUM_AMOUN_PAY</property>
+                                    <text-property name="displayName">SUM_AMOUN_PAY</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["SUM_AMOUN_PAY"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">PAYDATE</property>
+                                    <text-property name="displayName">PAYDATE</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["PAYDATE"]</expression>
+                                    <property name="dataType">date-time</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">CONTRACT_ID</property>
+                                    <text-property name="displayName">CONTRACT_ID</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["CONTRACT_ID"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Aggregation</property>
+                                    <property name="dataType">float</property>
+                                    <property name="aggregateFunction">SUM</property>
+                                    <list-property name="arguments">
+                                        <structure>
+                                            <property name="name">Expression</property>
+                                            <expression name="value" type="javascript">row["SUM_AMOUN_PAY"]</expression>
+                                        </structure>
+                                    </list-property>
+                                    <property name="allowExport">true</property>
+                                </structure>
+                            </list-property>
+                            <column id="1373"/>
+                            <column id="1294"/>
+                            <column id="1295"/>
+                            <detail>
+                                <row id="1283">
+                                    <cell id="1371"/>
+                                    <cell id="1284">
+                                        <data id="1287">
+                                            <structure name="dateTimeFormat">
+                                                <property name="category">Medium Date</property>
+                                                <property name="pattern">Medium Date</property>
+                                            </structure>
+                                            <property name="resultSetColumn">PAYDATE</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="1286">
+                                        <data id="1285">
+                                            <property name="resultSetColumn">SUM_AMOUN_PAY</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                            </detail>
+                            <footer>
+                                <row id="1290">
+                                    <cell id="1372">
+                                        <label id="1384">
+                                            <text-property name="text">общая сумма</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="1291">
+                                        <data id="1366">
+                                            <property name="resultSetColumn">Aggregation</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="1292"/>
+                                </row>
+                            </footer>
+                        </table>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="1260">
+                    <cell id="1262"/>
+                    <cell id="1263"/>
+                    <cell id="1404"/>
+                    <cell id="1264"/>
+                    <cell id="1265"/>
+                    <cell id="1273"/>
+                </row>
+            </footer>
+        </table>
+        <text id="1303">
+            <property name="fontWeight">bold</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[2. СМПпривлечение (К исполнению договора должны быть привлечены субподрядчики (соисполнители) из числа субъектов малого и (или) среднего предпринимательства)]]></text-property>
+        </text>
+        <table id="1306">
+            <property name="dataSet">SMPpriv</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">ID</property>
+                    <text-property name="displayName">ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">CUSTOMERNAME</property>
+                    <text-property name="displayName">CUSTOMERNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">DOC_NUMBER</property>
+                    <text-property name="displayName">DOC_NUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DOC_NUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">STATUS</property>
+                    <text-property name="displayName">STATUS</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["STATUS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">KOD</property>
+                    <text-property name="displayName">KOD</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["KOD"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="1336"/>
+            <column id="1337"/>
+            <column id="1415"/>
+            <column id="1338"/>
+            <column id="1339">
+                <property name="width">1.09375in</property>
+            </column>
+            <column id="1343">
+                <property name="width">2.9895833333333335in</property>
+            </column>
+            <header>
+                <row id="1307">
+                    <property name="fontWeight">normal</property>
+                    <property name="fontStyle">normal</property>
+                    <cell id="1310">
+                        <label id="1378">
+                            <text-property name="text">заказчик</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1312">
+                        <label id="1379">
+                            <text-property name="text">номер контракта</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1412">
+                        <label id="1421">
+                            <text-property name="text">номер извещения</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1314">
+                        <label id="1380">
+                            <text-property name="text">статус</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1316">
+                        <label id="1381">
+                            <text-property name="text">Код основания заключения контракта с единственным поставщиком </text-property>
+                        </label>
+                    </cell>
+                    <cell id="1340">
+                        <label id="1382">
+                            <text-property name="text">	 Дата платежа Сумма платежа</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="1318">
+                    <property name="height">1.0208333333333333in</property>
+                    <cell id="1321">
+                        <data id="1322">
+                            <property name="resultSetColumn">CUSTOMERNAME</property>
+                        </data>
+                    </cell>
+                    <cell id="1323">
+                        <data id="1324">
+                            <property name="resultSetColumn">DOC_NUMBER</property>
+                        </data>
+                    </cell>
+                    <cell id="1413">
+                        <table id="1437">
+                            <property name="dataSet">Orderdoc_gz</property>
+                            <list-property name="paramBindings">
+                                <structure>
+                                    <property name="paramName">param_1</property>
+                                    <simple-property-list name="expression">
+                                        <value type="javascript">row["ID"]</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">OOS_DOC_NUMBER</property>
+                                    <text-property name="displayName">OOS_DOC_NUMBER</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["OOS_DOC_NUMBER"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                            </list-property>
+                            <column id="1441"/>
+                            <detail>
+                                <row id="1438">
+                                    <cell id="1439">
+                                        <data id="1440">
+                                            <structure name="numberFormat">
+                                                <property name="category">Fixed</property>
+                                                <property name="pattern">###0{RoundingMode=HALF_UP}</property>
+                                            </structure>
+                                            <property name="resultSetColumn">OOS_DOC_NUMBER</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                            </detail>
+                        </table>
+                    </cell>
+                    <cell id="1325">
+                        <data id="1326">
+                            <property name="resultSetColumn">STATUS</property>
+                        </data>
+                    </cell>
+                    <cell id="1327">
+                        <data id="1328">
+                            <property name="resultSetColumn">KOD</property>
+                        </data>
+                    </cell>
+                    <cell id="1341">
+                        <table id="1344">
+                            <property name="dataSet">SMPpriv2</property>
+                            <list-property name="paramBindings">
+                                <structure>
+                                    <property name="paramName">param_3</property>
+                                    <simple-property-list name="expression">
+                                        <value type="javascript">row["ID"]</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">SUM_AMOUN_PAY</property>
+                                    <text-property name="displayName">SUM_AMOUN_PAY</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["SUM_AMOUN_PAY"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">PAYDATE</property>
+                                    <text-property name="displayName">PAYDATE</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["PAYDATE"]</expression>
+                                    <property name="dataType">date-time</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">CONTRACT_ID</property>
+                                    <text-property name="displayName">CONTRACT_ID</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["CONTRACT_ID"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Aggregation</property>
+                                    <property name="dataType">float</property>
+                                    <property name="aggregateFunction">SUM</property>
+                                    <list-property name="arguments">
+                                        <structure>
+                                            <property name="name">Expression</property>
+                                            <expression name="value" type="javascript">row["SUM_AMOUN_PAY"]</expression>
+                                        </structure>
+                                    </list-property>
+                                    <property name="allowExport">true</property>
+                                </structure>
+                            </list-property>
+                            <column id="1370"/>
+                            <column id="1363"/>
+                            <column id="1364"/>
+                            <detail>
+                                <row id="1352">
+                                    <cell id="1368"/>
+                                    <cell id="1353">
+                                        <data id="1356">
+                                            <structure name="dateTimeFormat">
+                                                <property name="category">Medium Date</property>
+                                                <property name="pattern">Medium Date</property>
+                                            </structure>
+                                            <property name="resultSetColumn">PAYDATE</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="1355">
+                                        <data id="1354">
+                                            <property name="resultSetColumn">SUM_AMOUN_PAY</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                            </detail>
+                            <footer>
+                                <row id="1359">
+                                    <cell id="1369">
+                                        <label id="1385">
+                                            <text-property name="text">общая сумма</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="1360">
+                                        <data id="1367">
+                                            <property name="resultSetColumn">Aggregation</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="1361"/>
+                                </row>
+                            </footer>
+                        </table>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="1329">
+                    <cell id="1331"/>
+                    <cell id="1332"/>
+                    <cell id="1414"/>
+                    <cell id="1333"/>
+                    <cell id="1334"/>
+                    <cell id="1342"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

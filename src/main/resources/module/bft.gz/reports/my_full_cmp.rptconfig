@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <list-property name="configVars">
+        <structure>
+            <property name="name">__isdisplay__MIN_9_0</property>
+            <property name="value">01.01.2019</property>
+        </structure>
+        <structure>
+            <property name="name">__isdisplay__MAX_10_1</property>
+            <property name="value">29.03.2019</property>
+        </structure>
+        <structure>
+            <property name="name">__isnull_1383_2</property>
+            <property name="value">CUST_ID_1383</property>
+        </structure>
+        <structure>
+            <property name="name">CUST_ID_1383_type_</property>
+            <property name="value">string</property>
+        </structure>
+        <structure>
+            <property name="name">MAX_10_3</property>
+            <property name="value">2019-03-29</property>
+        </structure>
+        <structure>
+            <property name="name">MAX_10_type_</property>
+            <property name="value">date</property>
+        </structure>
+        <structure>
+            <property name="name">MIN_9_4</property>
+            <property name="value">2019-01-01</property>
+        </structure>
+        <structure>
+            <property name="name">MIN_9_type_</property>
+            <property name="value">date</property>
+        </structure>
+    </list-property>
+</report>

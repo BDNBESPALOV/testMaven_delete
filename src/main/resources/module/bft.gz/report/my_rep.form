@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<repform xmlns="http://www.bftcom.com/gepard/ui/gul"  id="belContractsRep" title="По продукции (Белгородская область)" onvalidate="submit(event);">
+    <fieldbox >
+        <hbox height="46" width="100%">
+            <vbox width="158" height="46">
+                <label value="Дата заключения, от:"/>
+                <datepicker field="MIN"/>
+            </vbox>
+            <vbox width="158" height="46">
+                <label value="по:"/>
+                <datepicker field="MAX"/>
+            </vbox>
+            <vbox width="275" height="46">
+                <referencebox id="refBudget" mode="multi" refonly="true" refappobj="bft.gz.budget" buttons="select,clean" 
+				info="CAPTION" label="Бюджет" flex="1">
+                    <field name="ID" datafield="BUDGET_ID_LIST1"/>
+                    <field name="CAPTION"/>
+                </referencebox>
+            </vbox>
+        </hbox>
+        
+        <hbox height="17" width="100%">
+		  <vbox width="150" height="100%" pack="end">
+                    <hbox height="100%" width="100%">
+                      <checkbox field="CUSTOMER_CHILD" id="CUSTOMER_CHILD" readonly="true"   label="Все нижестоящие"/>
+                    </hbox>
+                  </vbox>
+			</hbox>	     
+				 <hbox height="46" width="100%">  
+            <vbox width="600" height="46">
+                <referencebox refappobj="bft.dict.org" refonly="true" buttons="select.clean" label="Заказчик" 
+				info="CAPTION" mode="multi"  editable="true" 
+				softfilter="ORGROLE_ID='1,4,7,9,14,15'"
+                              hardfilter="FILTER_BY_USER_ROLES='1'"
+				 onchange="onCustomerChanged(event);">
+                    <field name="ID" datafield="CUSTOMER_ID_LIST" />
+					<field name="CAPTION"/>
+                    </referencebox>
+            </vbox>
+        </hbox>
+		 <hbox height="46" width="100%">
+		
+            <vbox width="600" height="46">
+               				<referencebox refappobj="bft.gz.purchaseMode" refonly="true" buttons="select,clean" editable="true"
+                          info="CAPTION" label="Способ определения поставщика (подрядчика, исполнителя)" mode="multi"
+                          id="refPurchaseModes" flex="1" hardfilter="NO_LICENSE_FILTER='1'">
+              <field name="ID" datafield="PURCHASEMODE_IDS"/>
+              <field name="CAPTION"/>
+            </referencebox>
+            </vbox>
+        </hbox>
+        <hbox height="46" width="100%">
+		 <vbox width="600" height="46">
+              <referencebox refappobj="bft.gz.goodsGroup" refonly="true" buttons="select,clean" editable="true"
+                          info="CODE" label="Группа продукции" mode="multi" id="refGoodsGroups" flex="1" 
+						  onchange="onGroupChanged(event);">
+						  <field name="ID" datafield="GOODSGROUP_ID"/>
+              <field name="CODE" datafield="GOODSGROUP_CODES"/>
+            </referencebox>
+		   </vbox>
+        </hbox>
+        <hbox height="46" width="100%">
+             <vbox width="600" height="46">
+              <referencebox refonly="true" refappobj="bft.gz.goods" mode="multi" id="refGoods" editable="true"
+                           label="Код продукции" info="CODE" buttons="select,clean" flex="1" >
+              <field name="CODE" datafield="GOODS_CODES"/>
+            </referencebox>
+         </vbox>
+        </hbox>
+       </fieldbox>
+    <script src="app:/core/formsLib.js"/>
+
+  <script>
+        <![CDATA[
+
+                   function submit(event) {
+                         event.fields.__output_format = "doc";
+                                             
+                       }
+					   
+
+	
+	  function onCustomerChanged(event) {
+      $e("CUSTOMER_CHILD").setReadOnly(event.newValue.length != 1);
+    }
+	
+		function onGroupChanged(event) {
+      var onlyOneGroup = (event.newValue.length == 1);
+      $e("refGoods").setReadOnly(!onlyOneGroup);
+
+      if (!onlyOneGroup) {
+        $e("refGoods").setHardfilter(null);
+        // Выбранные коды продукции имели смысл только когда была выбрана 1 группа
+        $e("refGoods").clearFields();
+      } else {
+        setSafeHardFilter($e("refGoods"), "GROUPCODE", event.newValue[0].CODE);
+      }
+    }
+                ]]>
+    </script>
+</repform>

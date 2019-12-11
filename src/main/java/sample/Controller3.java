@@ -101,12 +101,12 @@ public class Controller3  {
         fileChooser.setTitle("Choose a fresh patch");
 
         // Set Initial Directory
-       // fileChooser.setInitialDirectory(new File("D:\\E\\ff\\ttttt"));
+        fileChooser.setInitialDirectory(new File("./"));
 
         // Add Extension Filters
         fileChooser.getExtensionFilters().addAll(//
               //  new FileChooser.ExtensionFilter("All Files", "*.*"), //
-                new FileChooser.ExtensionFilter("ZIP", "patch_[абв].zip"));
+                new FileChooser.ExtensionFilter("ZIP", "patch_*"));
     }
 
 

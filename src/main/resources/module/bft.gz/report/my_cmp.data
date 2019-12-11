@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+    <object name="my_new_df" class="" lnama="Детальный отчет по СМП Белгородской области" >
+    <field name="MIN" type="date" required="true" lname="Дата заключения, от"/>
+    <field name="MAX" type="date" required="true" lname="Дата заключения, до"/>
+    <field name="CUST_ID" type="string" required="false" lname="Заказчик"/>
+	 <field name="__output_format" type="string"/>
+    
+ 
+</object>

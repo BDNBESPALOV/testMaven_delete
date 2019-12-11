@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.2.v20120213 Build &lt;3.7.2.v20120214-1408></property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">Data Cube.Data Set.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">Data Cube.Data Set.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+    </list-property>
+    <property name="Data Cube.Data Set.x">135</property>
+    <property name="Data Cube.Data Set.y">80</property>
+    <property name="units">in</property>
+    <method name="initialize"><![CDATA[CustomFunctions.BindParameters(this.reportContext);]]></method>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="CUSTOMER_CHILD" id="177">
+            <text-property name="promptText">Все нижестоящие</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">boolean</property>
+            <property name="distinct">false</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">False</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="MIN" id="178">
+            <text-property name="promptText">Дата от</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2015-01-01</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="MAX" id="179">
+            <text-property name="promptText">Дата до</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2098-12-31</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="CUSTOMER_ID_LIST" id="180">
+            <text-property name="promptText">Заказчики</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">false</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">multi-value</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="BUDGET_ID_LIST1" id="181">
+            <text-property name="promptText">Бюджет</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">false</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">multi-value</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="PURCHASEMODE_IDS" id="182">
+            <text-property name="promptText">Способ определения</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">false</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">multi-value</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.driver.OracleDriver</property>
+            <property name="odaURL">jdbc:oracle:thin:@172.22.10.101:1521:azk</property>
+            <property name="odaUser">GZ_BELGOBL_STEND</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">R1pfQkVMR09CTF9TVEVORA==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="8">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">MIN</property>
+                    <property name="paramName">MIN</property>
+                    <property name="dataType">date</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">MAX</property>
+                    <property name="paramName">MAX</property>
+                    <property name="dataType">date</property>
+                    <property name="position">2</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">CUSTOMER_CHILD</property>
+                    <property name="paramName">CUSTOMER_CHILD</property>
+                    <property name="dataType">boolean</property>
+                    <property name="position">3</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">CUSTOMER_CHILD2</property>
+                    <property name="paramName">CUSTOMER_CHILD</property>
+                    <property name="dataType">boolean</property>
+                    <property name="position">4</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Наименование организации</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Кол-во контрактов</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">DEALDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Наименование организации</property>
+                    <property name="nativeName">Наименование организации</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Кол-во контрактов</property>
+                    <property name="nativeName">Кол-во контрактов</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">DEALDATE</property>
+                    <property name="nativeName">DEALDATE</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select 
+(select o.caption from org o where o.id = c.customer_id ) as "Наименование организации"
+--,to_char (c.dealdate,'Month') as "Месяц" 
+,1 as "Кол-во контрактов" 
+,c.dealdate
+from contractdoc c , document d where 
+c.documentclass_id=32
+and c.dispstatus_id in (2,6,9,11,16,24,32,34,49,50,51,52,1016,1017,1025)
+and c.dealdate between (?) and (?)
+and not exists (select 1 from docflag f  where f.docflagtype_id =68 and  f.document_id = c.document_id)
+and d.id=c.document_id 
+and d.parent_id is null
+AND ( 
+ ( 0 = ? 
+/* BIND   AND C.CUSTOMER_ID IN ( $CUSTOMER_ID_LIST ) */
+  ) 
+OR ( 1=  ? 
+/* BIND   AND (( C.CUSTOMER_ID IN ( $CUSTOMER_ID_LIST )) */
+ /* BIND                                   OR ( C.CUSTOMER_ID IN (SELECT OC.CHILD_ID FROM ORGCHILD OC WHERE OC.ORG_ID IN (  $CUSTOMER_ID_LIST )))) */
+))
+/* BIND AND C.BUDGET_ID IN ( $BUDGET_ID_LIST1 ) */
+/* BIND AND C.PURCHASEMODE_ID IN ( $PURCHASEMODE_IDS ) */]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Наименование организации</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>255</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Наименование организации</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Наименование организации</design:label>
+            <design:formattingHints>
+              <design:displaySize>255</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Кол-во контрактов</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>Кол-во контрактов</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Кол-во контрактов</design:label>
+            <design:formattingHints>
+              <design:displaySize>22</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CMONTH</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>3</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CMONTH</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CMONTH</design:label>
+            <design:formattingHints>
+              <design:displaySize>3</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <cubes>
+        <tabular-cube name="Data Cube" id="278">
+            <property name="dimensions">
+                <tabular-dimension name="Group" id="279">
+                    <property name="defaultHierarchy">NewTabularHierarchy</property>
+                    <property name="hierarchies">
+                        <tabular-hierarchy name="NewTabularHierarchy" id="280">
+                            <property name="levels">
+                                <tabular-level name="Наименование организации" id="281">
+                                    <property name="dataType">string</property>
+                                    <property name="columnName">Наименование организации</property>
+                                </tabular-level>
+                            </property>
+                        </tabular-hierarchy>
+                    </property>
+                </tabular-dimension>
+                <tabular-dimension name="Group1" id="282">
+                    <property name="isTimeType">true</property>
+                    <property name="defaultHierarchy">NewTabularHierarchy2</property>
+                    <property name="hierarchies">
+                        <tabular-hierarchy name="NewTabularHierarchy2" id="283">
+                            <property name="levels">
+                                <tabular-level name="Month" id="284">
+                                    <property name="dataType">integer</property>
+                                    <property name="dateTimeLevelType">month</property>
+                                    <property name="dateTimeFormat">MMM yyyy</property>
+                                    <list-property name="attributes">
+                                        <structure>
+                                            <property name="name">DateTime</property>
+                                            <property name="dataType">date-time</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="columnName">DEALDATE</property>
+                                </tabular-level>
+                            </property>
+                        </tabular-hierarchy>
+                    </property>
+                </tabular-dimension>
+            </property>
+            <property name="measureGroups">
+                <tabular-measure-group name="Summary Field" id="285">
+                    <property name="measures">
+                        <tabular-measure name="Кол-во контрактов" id="286">
+                            <expression name="measureExpression" type="javascript">dataSetRow["Кол-во контрактов"]</expression>
+                            <property name="dataType">decimal</property>
+                        </tabular-measure>
+                    </property>
+                </tabular-measure-group>
+            </property>
+            <property name="dataSet">Data Set</property>
+        </tabular-cube>
+    </cubes>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="orientation">landscape</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <extended-item extensionName="Crosstab" extensionVersion="2.5.0" id="287">
+            <property name="cube">Data Cube</property>
+            <property name="measures">
+                <extended-item extensionName="MeasureView" id="299">
+                    <property name="measure">Кол-во контрактов</property>
+                    <property name="detail">
+                        <extended-item extensionName="AggregationCell" id="300">
+                            <property name="aggregationOnRow">Group/Наименование организации</property>
+                            <property name="aggregationOnColumn">Group1/Month</property>
+                            <property name="borderTopWidth">medium</property>
+                            <property name="borderTopColor">#000000</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderLeftColor">#000000</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderBottomColor">#000000</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderRightColor">#000000</property>
+                            <property name="content">
+                                <data id="301">
+                                    <property name="resultSetColumn">Кол-во контрактов_Group/Наименование организации_Group1/Month</property>
+                                </data>
+                            </property>
+                            <property name="height">38px</property>
+                            <property name="width">107px</property>
+                        </extended-item>
+                    </property>
+                    <property name="aggregations">
+                        <extended-item extensionName="AggregationCell" id="305">
+                            <property name="aggregationOnRow">Group/Наименование организации</property>
+                            <property name="borderTopWidth">medium</property>
+                            <property name="borderTopColor">#000000</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderLeftColor">#000000</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderBottomColor">#000000</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderRightColor">#000000</property>
+                            <property name="content">
+                                <data id="306">
+                                    <property name="resultSetColumn">Кол-во контрактов_Group/Наименование организации</property>
+                                </data>
+                            </property>
+                            <property name="width">138px</property>
+                        </extended-item>
+                    </property>
+                    <property name="header">
+                        <extended-item extensionName="CrosstabCell" id="302">
+                            <property name="content">
+                                <label id="303">
+                                    <property name="fontWeight">bold</property>
+                                    <property name="fontStyle">italic</property>
+                                    <text-property name="text">Кол-во контрактов</text-property>
+                                </label>
+                            </property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="borderTopColor">#000000</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderLeftColor">#000000</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderBottomColor">#000000</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderRightColor">#000000</property>
+                        </extended-item>
+                        <extended-item extensionName="CrosstabCell" id="307">
+                            <property name="content">
+                                <label id="308">
+                                    <property name="fontWeight">bold</property>
+                                    <property name="fontStyle">italic</property>
+                                    <text-property name="text">Кол-во контрактов</text-property>
+                                </label>
+                            </property>
+                            <property name="borderTopWidth">thin</property>
+                            <property name="borderTopColor">#000000</property>
+                            <property name="borderLeftWidth">thin</property>
+                            <property name="borderLeftColor">#000000</property>
+                            <property name="borderBottomWidth">thin</property>
+                            <property name="borderBottomColor">#000000</property>
+                            <property name="borderRightWidth">thin</property>
+                            <property name="borderRightColor">#000000</property>
+                        </extended-item>
+                    </property>
+                </extended-item>
+            </property>
+            <property name="rows">
+                <extended-item extensionName="CrosstabView" id="289">
+                    <property name="views">
+                        <extended-item extensionName="DimensionView" id="290">
+                            <property name="dimension">Group</property>
+                            <property name="levels">
+                                <extended-item extensionName="LevelView" name="NewLevel View" id="291">
+                                    <property name="level">Group/Наименование организации</property>
+                                    <property name="sort">
+                                        <sort-element>
+                                            <expression name="key" type="javascript">data["Кол-во контрактов_Group/Наименование организации"]</expression>
+                                            <property name="direction">desc</property>
+                                            <property name="strength">-1</property>
+                                        </sort-element>
+                                    </property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="292">
+                                            <property name="content">
+                                                <data name="Наименование организации" id="293">
+                                                    <property name="resultSetColumn">Наименование организации</property>
+                                                </data>
+                                            </property>
+                                            <property name="borderTopWidth">thin</property>
+                                            <property name="borderTopColor">#000000</property>
+                                            <property name="borderLeftWidth">thin</property>
+                                            <property name="borderLeftColor">#000000</property>
+                                            <property name="borderBottomWidth">thin</property>
+                                            <property name="borderBottomColor">#000000</property>
+                                            <property name="borderRightWidth">thin</property>
+                                            <property name="borderRightColor">#000000</property>
+                                            <property name="width">553px</property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                            </property>
+                        </extended-item>
+                    </property>
+                    <property name="grandTotalLocation">after</property>
+                </extended-item>
+            </property>
+            <property name="columns">
+                <extended-item extensionName="CrosstabView" id="294">
+                    <property name="grandTotal">
+                        <extended-item extensionName="CrosstabCell" id="304">
+                            <property name="content">
+                                <label id="309">
+                                    <property name="fontWeight">bold</property>
+                                    <text-property name="text">Общее за период</text-property>
+                                </label>
+                            </property>
+                            <property name="borderTopWidth">medium</property>
+                            <property name="borderTopColor">#000000</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderLeftColor">#000000</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderBottomColor">#000000</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderRightColor">#000000</property>
+                        </extended-item>
+                    </property>
+                    <property name="views">
+                        <extended-item extensionName="DimensionView" id="295">
+                            <property name="dimension">Group1</property>
+                            <property name="levels">
+                                <extended-item extensionName="LevelView" name="NewLevel View1" id="296">
+                                    <property name="level">Group1/Month</property>
+                                    <property name="member">
+                                        <extended-item extensionName="CrosstabCell" id="297">
+                                            <property name="content">
+                                                <data name="Month" id="298">
+                                                    <property name="fontWeight">bold</property>
+                                                    <structure name="dateTimeFormat">
+                                                        <property name="category">Custom</property>
+                                                        <property name="pattern">MMM yyyy</property>
+                                                    </structure>
+                                                    <property name="resultSetColumn">Month</property>
+                                                </data>
+                                            </property>
+                                            <property name="borderTopWidth">medium</property>
+                                            <property name="borderTopColor">#000000</property>
+                                            <property name="borderLeftWidth">medium</property>
+                                            <property name="borderLeftColor">#000000</property>
+                                            <property name="borderBottomWidth">medium</property>
+                                            <property name="borderBottomColor">#000000</property>
+                                            <property name="borderRightWidth">medium</property>
+                                            <property name="borderRightColor">#000000</property>
+                                        </extended-item>
+                                    </property>
+                                </extended-item>
+                            </property>
+                        </extended-item>
+                    </property>
+                    <property name="grandTotalLocation">before</property>
+                </extended-item>
+            </property>
+            <property name="header">
+                <extended-item extensionName="CrosstabCell" id="288">
+                    <property name="content">
+                        <text id="310">
+                            <property name="fontWeight">bold</property>
+                            <property name="fontStyle">italic</property>
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Наименование орагнизации]]></text-property>
+                        </text>
+                    </property>
+                    <property name="borderTopWidth">medium</property>
+                    <property name="borderTopColor">#000000</property>
+                    <property name="borderLeftWidth">medium</property>
+                    <property name="borderLeftColor">#000000</property>
+                    <property name="borderBottomWidth">medium</property>
+                    <property name="borderBottomColor">#000000</property>
+                    <property name="borderRightWidth">medium</property>
+                    <property name="borderRightColor">#000000</property>
+                </extended-item>
+            </property>
+            <property name="borderTopWidth">medium</property>
+            <property name="borderTopColor">#000000</property>
+            <property name="borderLeftWidth">medium</property>
+            <property name="borderLeftColor">#000000</property>
+            <property name="borderBottomWidth">medium</property>
+            <property name="borderBottomColor">#000000</property>
+            <property name="borderRightWidth">medium</property>
+            <property name="borderRightColor">#000000</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Наименование организации</property>
+                    <expression name="expression">dimension["Group"]["Наименование организации"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Month</property>
+                    <expression name="expression">dimension["Group1"]["Month"]["DateTime"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">Кол-во контрактов_Group/Наименование организации_Group1/Month</property>
+                    <expression name="expression">measure["Кол-во контрактов"]</expression>
+                    <property name="dataType">decimal</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Group/Наименование организации</value>
+                        <value>Group1/Month</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                </structure>
+                <structure>
+                    <property name="name">Кол-во контрактов_Group/Наименование организации</property>
+                    <expression name="expression">measure["Кол-во контрактов"]</expression>
+                    <property name="dataType">float</property>
+                    <simple-property-list name="aggregateOn">
+                        <value>Group/Наименование организации</value>
+                    </simple-property-list>
+                    <property name="aggregateFunction">SUM</property>
+                </structure>
+            </list-property>
+        </extended-item>
+    </body>
+</report>

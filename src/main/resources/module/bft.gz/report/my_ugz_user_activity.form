@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<repform xmlns="http://www.bftcom.com/gepard/ui/gul"  id="my_ugz_user_activity" title="Список пользователей не работающих в системе за период времени" onvalidate="submit(event);">
+    <fieldbox >
+                 <hbox height="46" width="100%">
+            <vbox width="158" height="46">
+                <label value="Дата активности, от:"/>
+                <datepicker field="MIN"/>
+            </vbox>
+            <vbox width="158" height="46">
+                <label value="по:"/>
+                <datepicker field="MAX"/>
+            </vbox>
+          
+        </hbox>
+		    <hbox height="17" width="100%">
+		  <vbox width="350" height="100%" pack="end">
+                    <hbox height="100%" width="100%">
+                      <checkbox field="not_activity_future" id="not_activity_future" readonly="false"   label="Не показывать будущие действия пользователей"/>
+                    </hbox>
+                  </vbox>
+			</hbox>	     
+   
+             </fieldbox>
+    <script src="app:/core/formsLib.js"/>
+
+  <script>
+        <![CDATA[
+
+                   function submit(event) {
+                         event.fields.__output_format = "xls";
+                          event.fields.not_activity_future= $e("not_activity_future").getValue()? 1 : 0;                    
+                       }
+					   
+	
+	                ]]>
+    </script>
+</repform>

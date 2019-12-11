@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.2.v20120213 Build &lt;3.7.2.v20120214-1408></property>
+    <property name="units">in</property>
+    <method name="initialize"><![CDATA[CustomFunctions.BindParameters(this.reportContext);]]></method>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="ORGFORM_ID_LIST" id="102">
+            <text-property name="promptText">ОКОПФ</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">multi-value</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.driver.OracleDriver</property>
+            <property name="odaURL">jdbc:oracle:thin:@localhost:1523:azk</property>
+            <property name="odaUser">STEND_GZ_BELGOBL1</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">U1RFTkRfR1pfQkVMR09CTDE=</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="8">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ROW#</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ROW#</text-property>
+                    <text-property name="heading">ROW#</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ID</text-property>
+                    <text-property name="heading">ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CAPTION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CAPTION</text-property>
+                    <text-property name="heading">CAPTION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CONSERVICEINFO</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CONSERVICEINFO</text-property>
+                    <text-property name="heading">CONSERVICEINFO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PROPFORM_ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">PROPFORM_ID</text-property>
+                    <text-property name="heading">PROPFORM_ID</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ROW#</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CAPTION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">CONSERVICEINFO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">PROPFORM_ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ROW#</property>
+                    <property name="nativeName">ROW#</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">ID</property>
+                    <property name="nativeName">ID</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">CAPTION</property>
+                    <property name="nativeName">CAPTION</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">CONSERVICEINFO</property>
+                    <property name="nativeName">CONSERVICEINFO</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">2005</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">PROPFORM_ID</property>
+                    <property name="nativeName">PROPFORM_ID</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select ROW_NUMBER() OVER(ORDER BY id ASC) AS Row#, id,caption,conserviceinfo,PROPFORM_ID from org where 
+close_date is  null and id in (select org_id from  PERSONAL where id in (select personal_id from ORGPERSONAL ))
+ 
+ /* BIND AND PROPFORM_ID IN ($ORGFORM_ID_LIST) */]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set1" id="9">
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="dataType">decimal</property>
+                    <property name="position">1</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">LASTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">FIRSTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">PATRONYMIC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">APPOINTMENT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">ISTRAINEDFOR44FZ</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">P21</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">LASTNAME</property>
+                    <property name="nativeName">LASTNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">FIRSTNAME</property>
+                    <property name="nativeName">FIRSTNAME</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">PATRONYMIC</property>
+                    <property name="nativeName">PATRONYMIC</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">APPOINTMENT</property>
+                    <property name="nativeName">APPOINTMENT</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">ISTRAINEDFOR44FZ</property>
+                    <property name="nativeName">ISTRAINEDFOR44FZ</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">P21</property>
+                    <property name="nativeName">P21</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">ID</property>
+                    <property name="nativeName">ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select p.lastname,p.firstname,p.patronymic,p.appointment,p.istrainedfor44fz, 
+
+case 
+when EXISTS  (select 1 from  PERSONAL pl where pl.id in 
+(select personal_id from ORGPERSONAL where org_id = p.org_id) and pl.istrainedfor44fz=1)
+then
+'Да'
+else 'Нет'
+
+ END p21,p.id
+
+
+from  PERSONAL p where p.id in 
+(select o.personal_id from ORGPERSONAL o where o.org_id=? )]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="rightMargin">0in</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table id="10">
+            <property name="width">11.208333333333334in</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">ID</property>
+                    <text-property name="displayName">ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">CAPTION</property>
+                    <text-property name="displayName">CAPTION</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CAPTION"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CONSERVICEINFO</property>
+                    <text-property name="displayName">CONSERVICEINFO</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CONSERVICEINFO"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ROW#</property>
+                    <text-property name="displayName">ROW#</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ROW#"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">PROPFORM_ID</property>
+                    <text-property name="displayName">PROPFORM_ID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PROPFORM_ID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <column id="107">
+                <property name="width">0.4375in</property>
+            </column>
+            <column id="77">
+                <property name="width">0.4375in</property>
+            </column>
+            <column id="30">
+                <property name="width">1.4375in</property>
+            </column>
+            <column id="31">
+                <property name="width">1.7291666666666667in</property>
+            </column>
+            <column id="39">
+                <property name="width">7.395833333333333in</property>
+            </column>
+            <header>
+                <row id="11">
+                    <cell id="104">
+                        <label id="108">
+                            <text-property name="text">PROPFORM_ID</text-property>
+                        </label>
+                    </cell>
+                    <cell id="74">
+                        <label id="78">
+                            <text-property name="text">№ пп</text-property>
+                        </label>
+                    </cell>
+                    <cell id="14">
+                        <label id="15">
+                            <text-property name="text">Краткое наименование заказчика</text-property>
+                        </label>
+                    </cell>
+                    <cell id="16">
+                        <label id="17">
+                            <text-property name="text">Реквизиты документа</text-property>
+                        </label>
+                    </cell>
+                    <cell id="36">
+                        <grid id="84">
+                            <property name="width">6.96875in</property>
+                            <column id="85">
+                                <property name="width">0.9375in</property>
+                            </column>
+                            <column id="86">
+                                <property name="width">0.8541666666666666in</property>
+                            </column>
+                            <column id="87">
+                                <property name="width">0.9791666666666666in</property>
+                            </column>
+                            <column id="88">
+                                <property name="width">2.3541666666666665in</property>
+                            </column>
+                            <column id="89">
+                                <property name="width">1.84375in</property>
+                            </column>
+                            <row id="90">
+                                <cell id="91">
+                                    <text id="96">
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[Фамилия]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="92">
+                                    <text id="97">
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[Имя]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="93">
+                                    <text id="98">
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[Отчество]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="94">
+                                    <text id="99">
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[Должность]]></text-property>
+                                    </text>
+                                </cell>
+                                <cell id="95">
+                                    <text id="100">
+                                        <property name="contentType">auto</property>
+                                        <text-property name="content"><![CDATA[Прошел повышение квалификации или переподготовку по 44-ФЗ]]></text-property>
+                                    </text>
+                                </cell>
+                            </row>
+                        </grid>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="18">
+                    <cell id="105">
+                        <data id="109">
+                            <property name="resultSetColumn">PROPFORM_ID</property>
+                        </data>
+                    </cell>
+                    <cell id="75">
+                        <data id="79">
+                            <property name="resultSetColumn">ROW#</property>
+                        </data>
+                    </cell>
+                    <cell id="21">
+                        <data id="22">
+                            <property name="resultSetColumn">CAPTION</property>
+                        </data>
+                    </cell>
+                    <cell id="23">
+                        <data id="24">
+                            <property name="resultSetColumn">CONSERVICEINFO</property>
+                        </data>
+                    </cell>
+                    <cell id="37">
+                        <table id="40">
+                            <property name="width">7.333333333333333in</property>
+                            <property name="dataSet">Data Set1</property>
+                            <list-property name="paramBindings">
+                                <structure>
+                                    <property name="paramName">param_1</property>
+                                    <simple-property-list name="expression">
+                                        <value type="javascript">row["ID"]</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">LASTNAME</property>
+                                    <text-property name="displayName">LASTNAME</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["LASTNAME"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">FIRSTNAME</property>
+                                    <text-property name="displayName">FIRSTNAME</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["FIRSTNAME"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">PATRONYMIC</property>
+                                    <text-property name="displayName">PATRONYMIC</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["PATRONYMIC"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">APPOINTMENT</property>
+                                    <text-property name="displayName">APPOINTMENT</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["APPOINTMENT"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">ISTRAINEDFOR44FZ</property>
+                                    <text-property name="displayName">ISTRAINEDFOR44FZ</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["ISTRAINEDFOR44FZ"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">P21</property>
+                                    <text-property name="displayName">P21</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["P21"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                            </list-property>
+                            <column id="69">
+                                <property name="width">0.9270833333333334in</property>
+                            </column>
+                            <column id="70">
+                                <property name="width">0.8645833333333334in</property>
+                            </column>
+                            <column id="71">
+                                <property name="width">1in</property>
+                            </column>
+                            <column id="72">
+                                <property name="width">2.3854166666666665in</property>
+                            </column>
+                            <column id="82">
+                                <property name="width">1.9895833333333333in</property>
+                            </column>
+                            <detail>
+                                <row id="52">
+                                    <cell id="53">
+                                        <data id="54">
+                                            <property name="resultSetColumn">LASTNAME</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="55">
+                                        <data id="56">
+                                            <property name="resultSetColumn">FIRSTNAME</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="57">
+                                        <data id="58">
+                                            <property name="resultSetColumn">PATRONYMIC</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="59">
+                                        <data id="60">
+                                            <property name="resultSetColumn">APPOINTMENT</property>
+                                        </data>
+                                    </cell>
+                                    <cell id="80">
+                                        <data id="83">
+                                            <property name="resultSetColumn">P21</property>
+                                        </data>
+                                    </cell>
+                                </row>
+                            </detail>
+                            <footer>
+                                <row id="63">
+                                    <cell id="64"/>
+                                    <cell id="65"/>
+                                    <cell id="66"/>
+                                    <cell id="67"/>
+                                    <cell id="81"/>
+                                </row>
+                            </footer>
+                        </table>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="25">
+                    <cell id="106"/>
+                    <cell id="76"/>
+                    <cell id="27"/>
+                    <cell id="28"/>
+                    <cell id="38"/>
+                </row>
+            </footer>
+        </table>
+        <data id="103">
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">ORGFORM_ID_LIST</property>
+                    <expression name="expression" type="javascript">params["ORGFORM_ID_LIST"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="resultSetColumn">ORGFORM_ID_LIST</property>
+        </data>
+    </body>
+</report>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+    <object name="my_ugz_user_activity" class="" lnama="Список пользователей не работающих в системе за период времени" >
+    <field name="MIN" type="date" required="true" lname="Дата заключения, от"/>
+    <field name="MAX" type="date" required="true" lname="Дата заключения, до"/>
+	<field name="not_activity_future" type="boolean" required="false" lname="Не показывать будущие действия пользователей"/>
+    <field name="__output_format" type="string"/>
+ 
+</object>

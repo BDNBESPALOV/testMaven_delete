@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<repform xmlns="http://www.bftcom.com/gepard/ui/gul"  id="belContractsRep" title="По продукции (Белгородская область)" onvalidate="submit(event);">
+    <fieldbox >
+	
+	
+	
+		<hbox height="46" width="100%">  
+            <vbox width="600" height="46">
+                <referencebox refappobj="bft.gz.orgForm" refonly="true" buttons="select.clean" label="ОКОПФ" 
+				info="CAPTION" mode="multi"  editable="true" 
+				hardfilter="FILTER_BY_USER_ROLES='1'"
+                              
+				 >
+                    <field name="ID" datafield="ORGFORM_ID_LIST" />
+					<field name="CAPTION"/>
+                    </referencebox>
+            </vbox>
+        </hbox>
+	
+	
+	
+	
+	
+       </fieldbox>
+    <script src="app:/core/formsLib.js"/>
+
+  <script>
+        <![CDATA[
+
+                   function submit(event) {
+                         event.fields.__output_format = "xls";
+                                             
+                       }
+					   
+
+	
+                ]]>
+    </script>
+</repform>

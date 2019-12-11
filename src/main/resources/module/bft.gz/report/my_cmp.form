@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<repform xmlns="http://www.bftcom.com/gepard/ui/gul"  id="belContractsRep1" title="Детальный отчет по СМП Белгородской области" onvalidate="submit(event);">
+    <fieldbox >
+	
+	
+	<hbox height="46" width="100%">
+            <vbox width="158" height="46">
+                <label value="Дата оплаты, от:"/>
+                <datepicker field="MIN"/>
+            </vbox>
+            <vbox width="158" height="46">
+                <label value="по:"/>
+                <datepicker field="MAX"/>
+            </vbox>
+            
+        </hbox>
+           
+             
+		 <hbox height="46" width="100%">
+            <vbox width="600" height="46">
+                <referencebox refappobj="bft.dict.org" refonly="true" buttons="select,clean" label="Заказчик"
+				info="CAPTION" mode="multi" editable="true" hardfilter="SHOW_CLOSED_ORG='1'">
+                    <field name="ID" datafield="CUST_ID" />
+                    <field name="CAPTION" />
+                </referencebox>
+            </vbox>
+        </hbox>		 
+             </fieldbox>
+			 
+			 
+			 
+			 
+    <script src="app:/core/formsLib.js"/>
+
+  <script>
+        <![CDATA[
+
+                   function submit(event) {
+                         event.fields.__output_format = "xls";
+                                             
+                       } 
+	
+	
+	
+	                ]]>
+    </script>
+</repform>
