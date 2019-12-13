@@ -1,6 +1,8 @@
 package sample;
 
 import org.apache.commons.io.IOUtils;
+import org.slf4j.Logger;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.FileOutputStream;
@@ -9,6 +11,8 @@ import java.io.OutputStream;
 import java.io.FileInputStream;
 
 public class ChangeXML   {
+
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(ChangeXML.class);
 
 //    String folder = OpenFileChooser.FILES.replaceAll(".zip(.*)","");
 //    String track = OpenFileChooser.FILES.replaceAll("patch(.*)","");
@@ -24,10 +28,6 @@ public class ChangeXML   {
     String strFunc = /*track+*/"\\"+folder+"\\XML\\funcat.xml";
     String appobj = /*track+*/"\\"+folder+"\\XML\\module\\bft.gz\\appobj.xml";
 
-
-
-
-
     public ChangeXML() throws IOException{
 
 
@@ -39,9 +39,9 @@ public class ChangeXML   {
             String addskolkovo = IOUtils.toString(addskolkovoX, "UTF-8");
             String theStringfuncat = IOUtils.toString(funcat, "Cp1251");
 
-            System.out.println(theStringfuncat.contains(theString));
-            System.out.println(theStringfuncat.indexOf("skolkovoPurchInfo"));
-            System.out.println(theString);
+            log.info(String.valueOf(theStringfuncat.contains(theString)));
+            log.info(String.valueOf(theStringfuncat.indexOf("skolkovoPurchInfo")));
+            log.info(theString);
 
             String a= theStringfuncat.replace(theString,addskolkovo);
 
@@ -50,6 +50,10 @@ public class ChangeXML   {
 
             OutputStream os = new FileOutputStream(strFunc);
             os.write(a.getBytes("Cp1251"));
+
+           OutputStream test = new FileOutputStream("\\"+folder+"\\XML\\TESTSSSSSSSSSSSSSS.xml");
+           test.write(a.getBytes("Cp1251"));
+           test.close();
 
             skolkovo.close();
             funcat.close();
@@ -68,9 +72,9 @@ public class ChangeXML   {
         String firstReportAppobjString = IOUtils.toString(firstReportAppobj, "UTF-8");
         String appobjString = IOUtils.toString(appobjInput, "Cp1251");
 
-        System.out.println(appobjString.contains(firstReportAppobjString));
-        System.out.println(appobjString.contains("belContractsRep"));
-        System.out.println(firstReportAppobjString);
+        log.info(String.valueOf(appobjString.contains(firstReportAppobjString)));
+        log.info(String.valueOf(appobjString.contains("belContractsRep")));
+        log.info(firstReportAppobjString);
 
         String a2= appobjString.replace(firstReportAppobjString,addReportsBOString);
 
@@ -86,6 +90,14 @@ public class ChangeXML   {
         appobjInput.close();
         firstReportAppobj.close();
         os2.close();
+
+        try {
+            log.info("ChangeXML start ImportRepo!!!!!!!!!");
+            new ImportRepo().startImportFile();
+        } catch (IOException e) {
+            log.error(String.valueOf(e));
+            e.printStackTrace();
+        }
 
     }
 }

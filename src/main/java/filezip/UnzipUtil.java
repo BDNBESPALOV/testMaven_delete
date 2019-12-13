@@ -1,8 +1,10 @@
 package filezip;
 
 import javafx.concurrent.Task;
+import org.slf4j.Logger;
 import sample.ChangeXML;
 import sample.Controller3;
+//import sample.ImportRepo;
 
 
 import java.io.*;
@@ -14,9 +16,12 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
 public class UnzipUtil  extends Task<List<File>> {
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(UnzipUtil.class);
+
     private String folderZ = Controller3.FILES.replaceAll(".zip(.*)","");
     private String folder2 = Controller3.FILES.replaceAll("(.*)patch","patch").replaceAll(".zip(.*)","");
-    private File fileZ = new File(folder2);
+
+    private File fileZ = new File(folderZ);
     private String track = Controller3.FILES.replaceAll("patch(.*)","");
     private String newFile = Controller3.FILES.replaceAll("(.*)patch","patch");
     private ZipOutputStream outs = new ZipOutputStream(new FileOutputStream( track+"new_"+newFile));
@@ -34,17 +39,18 @@ public class UnzipUtil  extends Task<List<File>> {
     }
 
 
-   protected List<File> call() throws Exception {
+    protected List<File> call() throws Exception {
 
          try {
+             log.info("folderZ "+folderZ+"\n"+"folder2 "+folder2);
           ZipFile zip = new ZipFile(Controller3.FILES);
             Enumeration entries = zip.entries();
              count =  zip.size()*2;
-              System.out.println("zip.size() = " + zip.size());
+              log.info("zip.size() = " + zip.size());
             while (entries.hasMoreElements()) {
                 ZipEntry entry = (ZipEntry) entries.nextElement();
 
-                System.out.println(/*"i = " + i + " count = " + count +*/ i+"UnzipUtil  " + entry.getName());
+                log.info(/*"i = " + i + " count = " + count +*/ i+"UnzipUtil  " + entry.getName());
                 if (entry.isDirectory()) {
                     new File(file.getParent(), entry.getName()).mkdirs();
                 } else {
@@ -69,19 +75,22 @@ public class UnzipUtil  extends Task<List<File>> {
 
        doZip(fileZ, outs);
        outs.close();
+
+
+
 return  copied;
 
     }
 
     private  void doZip(File dir, ZipOutputStream outv) throws Exception {
-        System.out.println("dir.listFiles().length = "+dir.listFiles().length);
+        log.info("dir.listFiles().length = "+dir.listFiles().length);
         for (File f : dir.listFiles()) {
             if (f.isFile()) {
                 this.copy(f);
                 copied.add(f);
             }
             i++;
-            System.out.println("i = "+i+" count = "+count+"  "+f.getName());
+            log.info("i = "+i+" count = "+count+"  "+f.getName());
             this.updateProgress(i, count);
             if (f.isDirectory())
                 doZip(f, outv);

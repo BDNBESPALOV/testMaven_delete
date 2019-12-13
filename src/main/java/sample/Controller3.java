@@ -72,6 +72,7 @@ public class Controller3  {
         statusLabel.setTextFill(Color.BLUE);
 
         this.unzipTh(new UnzipUtil());
+
         button2.setDisable(true);
 
     }
