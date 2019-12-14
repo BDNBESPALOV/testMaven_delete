@@ -51,9 +51,7 @@ public class ChangeXML   {
             OutputStream os = new FileOutputStream(strFunc);
             os.write(a.getBytes("Cp1251"));
 
-           OutputStream test = new FileOutputStream("\\"+folder+"\\XML\\TESTSSSSSSSSSSSSSS.xml");
-           test.write(a.getBytes("Cp1251"));
-           test.close();
+
 
             skolkovo.close();
             funcat.close();
@@ -91,13 +89,9 @@ public class ChangeXML   {
         firstReportAppobj.close();
         os2.close();
 
-        try {
-            log.info("ChangeXML start ImportRepo!!!!!!!!!");
-            new ImportRepo().startImportFile();
-        } catch (IOException e) {
-            log.error(String.valueOf(e));
-            e.printStackTrace();
-        }
+
+        new ImportRepo().startImportFile();
+
 
     }
 }

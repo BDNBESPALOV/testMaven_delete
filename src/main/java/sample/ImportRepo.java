@@ -10,15 +10,21 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 public class ImportRepo {
-    private static ArrayList<String> arrayLists=null;
+    private static ArrayList<String> arrayListsReport = new ArrayList<>();
+    private static ArrayList<String> arrayListsReports = new ArrayList<>();
+    private static ArrayList<String> arrayListsLib = new ArrayList<>();
     private static final Logger log = org.slf4j.LoggerFactory.getLogger(ImportRepo.class);
 
-    public void startImportFile()  throws IOException{
-        log.info("startImportFile()");
-        //server SP
+
+   public void startImportFile()  {
+         //заполнение ArrayList
+         readMyResources();
+
         String folderFileRepo = Controller3.FILES.replaceAll(".zip(.*)","");
         String report = "/"+folderFileRepo+"/module/bft.gz/report/";
         String reports = "/"+folderFileRepo+"/module/bft.gz/reports/";
+
+          //server SP
         if(!new File(report).isDirectory() || !new File(reports).isDirectory()){
             new File(report).mkdirs();
             new File(reports).mkdirs();
@@ -26,66 +32,65 @@ public class ImportRepo {
         log.info("report = "+report);
         log.info("report = "+reports);
 
-        new  ImportRepo().insertFile("/module/bft.gz/report/",report);
-        new  ImportRepo().insertFile("/module/bft.gz/reports/",reports);
+        new  ImportRepo().insertFile("/module/bft.gz/report/",report,arrayListsReport);
+        new  ImportRepo().insertFile("/module/bft.gz/reports/",reports,arrayListsReports);
 
-//        //server tomcat
+
+////        //server tomcat
         String reportTom = "/"+folderFileRepo+"/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/report/";
         String reportsTom = "/"+folderFileRepo+"/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/reports/";
         if(!new File(reportTom).isDirectory() || !new File(reportsTom).isDirectory()){
             new File(reportTom).mkdirs();
             new File(reportsTom).mkdirs();
         }
-        new  ImportRepo().insertFile("/module/bft.gz/report/",reportTom);
-        new  ImportRepo().insertFile("/module/bft.gz/reports/",reportsTom);
-//        //bpl client
-        String libClient =  folderFileRepo+"/client/";/*"E:/test00000/"*/
+        new  ImportRepo().insertFile("/module/bft.gz/report/",reportTom,arrayListsReport);
+        new  ImportRepo().insertFile("/module/bft.gz/reports/",reportsTom,arrayListsReports);
+
+
+        //        //bpl client
+        String libClient =  folderFileRepo+"/client/";
         log.info(libClient);
 
         if(!new File(libClient).isDirectory() ){
             new File(libClient).mkdirs();
         }
-     new  ImportRepo().insertFile("/lib/",libClient);
+        new  ImportRepo().insertFile("/lib/",libClient, arrayListsLib);
 
-        try {
-            log.info(" !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            JarFile jar = new JarFile(new File(getClass().getProtectionDomain()
-                    .getCodeSource()
-                    .getLocation()
-                    .getPath()));
-               jar.stream().map(JarEntry::getName).filter(i -> i.startsWith("lib/")).forEach(ImportRepo::ins);
-        }catch (IOException e) {}
+    }
+    private static void insLib(String st){
 
-        try {
-            log.info("=====arrayLists====size=== " + arrayLists.size());
-            for (String s : arrayLists) {
-                log.info("=====arrayLists=======" + s);
+            try {
+                arrayListsLib.add(st.replaceAll("lib/", "") + "");
+            }catch (Exception e){
+                log.error(e.fillInStackTrace()+"");
             }
+
+    }
+    private static void insReport(String s) {
+        try {
+            arrayListsReport.add(s.replaceAll("module/bft.gz/report/", "") + "");
         }catch (Exception e){
             log.error(e.fillInStackTrace()+"");
         }
-
     }
-    public static void ins(String st){
-        if(st.equals("")){
-            log.info("st.equals"+st);
-            arrayLists.add(st.replaceAll("lib/","")+"");
+    private static void insReports(String s) {
+        try {
+            arrayListsReports.add(s.replaceAll("module/bft.gz/reports/", "") + "");
+        }catch (Exception e){
+            log.error(e.fillInStackTrace()+"");
         }
-
-        log.info("============"+st.replaceAll("lib/",""));
-
     }
 
 
-    public void insertFile(String path, String newPath) {
+    public void insertFile(String path, String newPath, ArrayList arrayList) {
         log.info("insertFile "+path+"  "+newPath);
-        ArrayList arrayList = null;
-        arrayList = arrayInputSt(ImportRepo.class.getResourceAsStream(path));
+       // ArrayList arrayList = arrayLists;/*null;*/
+      //  arrayList = arrayInputSt(ImportRepo.class.getResourceAsStream(path));
         log.info("insertFile arrayList "+arrayList+"size()  "+arrayList.size());
-        for(Object s: arrayList){
+        for(int i=1;i< arrayList.size();i++){
             copyFileUsingStreams(ImportRepo.class.getResourceAsStream(
-                    path+s),
-                    new File(newPath+s));
+                    path+arrayList.get(i)),
+                    new File(newPath+arrayList.get(i)));
         }
 
     }
@@ -167,28 +172,36 @@ public class ImportRepo {
         return arrayList;
     }
 
-    public void ReadMyResources() {
-        JarFile jf = null;
+    private void readMyResources() {
         try {
-            String s = new File(this.getClass().getResource("").getPath()).getParent().replaceAll("(!|file:\\\\)", "");
-            jf = new JarFile(s);
-
-            Enumeration<JarEntry> entries = jf.entries();
-            while (entries.hasMoreElements()) {
-                JarEntry je = entries.nextElement();
-                if (je.getName().startsWith("/lib/")) {
-                    log.info("____________"+je.getName());
-                }
-            }
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        } finally {
-            try {
-                jf.close();
-            } catch (Exception e) {
-            }
+            JarFile jar = new JarFile(new File(getClass().getProtectionDomain()
+                    .getCodeSource()
+                    .getLocation()
+                    .getPath()));
+            jar.stream().map(JarEntry::getName).filter(i -> i.startsWith("lib/")).forEach(ImportRepo::insLib);
+        }catch (IOException e) {
+            log.error(e.fillInStackTrace()+"");
+        }
+        try {
+            JarFile jar = new JarFile(new File(getClass().getProtectionDomain()
+                    .getCodeSource()
+                    .getLocation()
+                    .getPath()));
+            jar.stream().map(JarEntry::getName).filter(i -> i.startsWith("module/bft.gz/report/")).forEach(ImportRepo::insReport);
+        }catch (IOException e) {
+            log.error(e.fillInStackTrace()+"");
+        }
+        try {
+            JarFile jar = new JarFile(new File(getClass().getProtectionDomain()
+                    .getCodeSource()
+                    .getLocation()
+                    .getPath()));
+            jar.stream().map(JarEntry::getName).filter(i -> i.startsWith("module/bft.gz/reports/")).forEach(ImportRepo::insReports);
+        }catch (IOException e) {
+            log.error(e.fillInStackTrace()+"");
         }
     }
+
 
 
 }

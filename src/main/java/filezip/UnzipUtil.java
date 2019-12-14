@@ -17,11 +17,12 @@ import java.util.zip.ZipOutputStream;
 
 public class UnzipUtil  extends Task<List<File>> {
     private static final Logger log = org.slf4j.LoggerFactory.getLogger(UnzipUtil.class);
-
+    //упаковка полным путем
     private String folderZ = Controller3.FILES.replaceAll(".zip(.*)","");
+    //упаковка отнасительным путем
     private String folder2 = Controller3.FILES.replaceAll("(.*)patch","patch").replaceAll(".zip(.*)","");
 
-    private File fileZ = new File(folderZ);
+    private File fileZ = new File(folder2);
     private String track = Controller3.FILES.replaceAll("patch(.*)","");
     private String newFile = Controller3.FILES.replaceAll("(.*)patch","patch");
     private ZipOutputStream outs = new ZipOutputStream(new FileOutputStream( track+"new_"+newFile));
