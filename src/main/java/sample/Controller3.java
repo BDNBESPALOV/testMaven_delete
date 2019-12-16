@@ -1,33 +1,30 @@
 package sample;
 
+import annualUpgradeBudget.KVFO;
+import annualUpgradeBudget.RplObjectForGZ;
+import annualUpgradeBudget.RplobjectForFin;
 import filezip.UnzipUtil;
-
-
-import javafx.application.Application;
 import javafx.concurrent.WorkerStateEvent;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.effect.DropShadow;
-import javafx.scene.effect.MotionBlur;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import org.slf4j.Logger;
 
-import java.io.*;
-import java.util.Arrays;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
 
 public class Controller3  {
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(ChangeXML.class);
     public static  String FILES=null;
-    final TextArea textArea = new TextArea();
+
 
     final  FileChooser fileChooser = new FileChooser();
+    //Преобразовать патч
     @FXML
     Button button1 = new Button();
     @FXML
@@ -39,32 +36,30 @@ public class Controller3  {
     @FXML
     ProgressIndicator progressIndicator = new ProgressIndicator(0);
 
-    final  DropShadow shadow = new DropShadow();
-    final MotionBlur motionBlur = new MotionBlur();
-
+    //Генерация RPLOBJECT
+    @FXML
+    TextArea textArea = new TextArea();
+    @FXML
+    Button bGenRplGZ = new Button();
+    @FXML
+    Button bGenRplFIN = new Button();
+    @FXML
+    Button bKVFO = new Button();
 
 
 
     public void buttonOpenFile(ActionEvent event) {
-      // textArea.clear();
         configuringFileChooser(fileChooser);
         File file = fileChooser.showOpenDialog(new Stage());
 
         if (file != null) {
             FILES=file.getPath();
-            System.out.println(file.getPath());
-
-//            List<File> files = Arrays.asList(file);
-//            printLog(textArea, files);
         }
         if(FILES!=null){
             button2.setDisable(false);
         }
-
-
     }
-
-    public void setButton2Convert(ActionEvent event) throws InterruptedException, FileNotFoundException {
+    public void setButton2Convert(ActionEvent event) throws  FileNotFoundException {
 
         progressBar.setProgress(0);
         progressIndicator.setProgress(0);
@@ -77,7 +72,19 @@ public class Controller3  {
 
     }
 
-
+    //Генерация RPLOBJECT
+    public void buttonGenRplGZ(){
+        new RplObjectForGZ().start(textArea.getText());
+        bGenRplGZ.setDisable(true);
+    }
+    public void buttonGenRplFin(){
+        new RplobjectForFin().start(textArea.getText());
+        bGenRplFIN.setDisable(true);
+    }
+    public void buttonKVFO(){
+        new KVFO().start(textArea.getText());
+        bKVFO.setDisable(true);
+    }
 
     private void unzipTh(final UnzipUtil uq) {
                 progressBar.progressProperty().unbind();
@@ -100,10 +107,8 @@ public class Controller3  {
     private void configuringFileChooser(FileChooser fileChooser) {
         // Set title for FileChooser
         fileChooser.setTitle("Choose a fresh patch");
-
         // Set Initial Directory
         fileChooser.setInitialDirectory(new File("./"));
-
         // Add Extension Filters
         fileChooser.getExtensionFilters().addAll(//
               //  new FileChooser.ExtensionFilter("All Files", "*.*"), //
@@ -113,25 +118,7 @@ public class Controller3  {
 
     ///////////******************////////////////
 
-    public  void printLog(String str) {
-        textArea.appendText(str + "\n" +"--- ");
-    }
-
-    private void printLog(TextArea textArea, List<File> files) {
-        if (files == null || files.isEmpty()) {
-            return;
-        }
-        for (File file : files) {
-            textArea.appendText(file.getAbsolutePath() + "\n");
-        }
-    }
 
 
-
-
-
-
-
-/////////////////////////////////////////////////////////////////////
 
 }

@@ -24,13 +24,11 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(Main.class.getResource("/UI/TabPanelGZ.fxml"));
 
         primaryStage.setTitle("Converter patch GZ BO");
-        primaryStage.setScene(new Scene(root, 300, 275));
-
+        //primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
 
     }
-
-
     public static void main(String[] args) {
         launch(args);
     }
