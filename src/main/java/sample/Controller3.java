@@ -12,10 +12,13 @@ import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import org.slf4j.Logger;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.time.LocalDate;
+import java.time.MonthDay;
 import java.util.List;
 
 public class Controller3  {
@@ -45,8 +48,10 @@ public class Controller3  {
     Button bGenRplFIN = new Button();
     @FXML
     Button bKVFO = new Button();
+    @FXML
+    DatePicker finyearId = new DatePicker();
 
-
+        KVFO kvfo = new KVFO();
 
     public void buttonOpenFile(ActionEvent event) {
         configuringFileChooser(fileChooser);
@@ -82,8 +87,35 @@ public class Controller3  {
         bGenRplFIN.setDisable(true);
     }
     public void buttonKVFO(){
-        new KVFO().start(textArea.getText());
+       kvfo.start(textArea.getText());
         bKVFO.setDisable(true);
+    }
+
+
+//    final Callback<DatePicker, DateCell> dayCellFactory = new Callback<DatePicker, DateCell>() {
+//          public DateCell call(final DatePicker datePicker) {
+//              return new DateCell() {
+//                  public void updateItem(LocalDate item, boolean empty) {
+//                      super.updateItem(item, empty);
+//
+//                      if (MonthDay.from(item).equals(MonthDay.of(9, 25))) {
+//                          setTooltip(new Tooltip("Happy Birthday!"));
+//                          setStyle("-fx-background-color: #ff4444;");
+//                      }
+//                      if (item.equals(LocalDate.now().plusDays(1))) {
+//                          // Tomorrow is too soon.
+//                          setDisable(true);
+//                      }
+//                  }
+//              };
+//          }
+//      };
+    public void buttonFinYear(){
+        log.info(String.valueOf(finyearId.getValue()));
+        kvfo.setFinYear(String.valueOf(finyearId.getValue()));
+        bGenRplGZ.setDisable(false);
+        bGenRplFIN.setDisable(false);
+        bKVFO.setDisable(false);
     }
 
     private void unzipTh(final UnzipUtil uq) {
@@ -106,7 +138,7 @@ public class Controller3  {
     }
     private void configuringFileChooser(FileChooser fileChooser) {
         // Set title for FileChooser
-        fileChooser.setTitle("Choose a fresh patch");
+        fileChooser.setTitle("Выберите свежий патч");
         // Set Initial Directory
         fileChooser.setInitialDirectory(new File("./"));
         // Add Extension Filters

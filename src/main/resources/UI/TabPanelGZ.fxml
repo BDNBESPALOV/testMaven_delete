@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.control.*?>
@@ -8,7 +10,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
 
-<TabPane prefHeight="286.0" prefWidth="666.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller3">
+<TabPane prefHeight="286.0" prefWidth="666.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller3">
   <tabs>
     <Tab text="Преобразовать патч">
       <content>
@@ -16,11 +18,14 @@
           <children>
             <Pane cache="true" cacheHint="DEFAULT" disable="false" focusTraversable="false" layoutX="0.0" layoutY="3.0" prefHeight="252.0" prefWidth="666.0">
               <children>
-                <Button fx:id="button1" defaultButton="false" disable="false" layoutX="14.0" layoutY="211.0" mnemonicParsing="false" onAction="#buttonOpenFile" text="Открыть" />
+                <Button fx:id="button1" defaultButton="false" disable="false" layoutX="14.0" layoutY="211.0" mnemonicParsing="false" onAction="#buttonOpenFile" text="Открыть">
+                           <tooltip>
+                              <Tooltip text="Выберите свежий патч" />
+                           </tooltip></Button>
                 <Button fx:id="button2" cancelButton="false" defaultButton="false" disable="true" layoutX="547.0" layoutY="211.0" mnemonicParsing="false" onAction="#setButton2Convert" text="Преобразовать" underline="false" />
                 <ProgressBar fx:id="progressBar" layoutX="14.0" layoutY="152.0" prefWidth="638.0" progress="0.0" />
                 <Label fx:id="statusLabel" layoutX="22.0" layoutY="178.0" prefHeight="20.9609375" prefWidth="122.0" text="" />
-                <ProgressIndicator fx:id="progressIndicator" layoutX="300.0" layoutY="65.0" prefHeight="61.0" prefWidth="66.0" progress="0.0" />
+                <ProgressIndicator fx:id="progressIndicator" layoutX="280.0" layoutY="48.0" prefHeight="79.0" prefWidth="95.0" progress="0.0" />
                 <Label fx:id="version" layoutX="0.0" layoutY="3.0" opacity="0.27" text="Version: 1.0.0" wrapText="false">
                   <font>
                     <Font size="8.0" fx:id="x1" />
@@ -37,10 +42,30 @@
       <content>
         <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
           <children>
-            <TextArea fx:id="textArea" layoutX="14.0" layoutY="14.0" prefHeight="175.0" prefWidth="638.0" wrapText="true" />
-            <Button id="buttonTextArea" fx:id="bGenRplGZ" layoutX="492.0" layoutY="209.0" mnemonicParsing="false" onAction="#buttonGenRplGZ" text="Генерация RPLOBJECT GZ" />
-            <Button id="buttonTextArea" fx:id="bGenRplFIN" layoutX="21.0" layoutY="209.0" mnemonicParsing="false" onAction="#buttonGenRplFin" text="Генерация RPLOBJECT FIN" />
-            <Button id="buttonTextArea" fx:id="bKVFO" layoutX="276.0" layoutY="209.0" mnemonicParsing="false" onAction="#buttonKVFO" text="Генерация КВФО" />
+            <TextArea fx:id="textArea" layoutX="14.0" layoutY="14.0" prefHeight="175.0" prefWidth="638.0" wrapText="true">
+                     <tooltip>
+                        <Tooltip text="Сюда вставь ID бюджетов " />
+                     </tooltip></TextArea>
+            <Button id="buttonTextArea" fx:id="bGenRplGZ" disable="true" layoutX="488.0" layoutY="209.0" mnemonicParsing="false" onAction="#buttonGenRplGZ" text="Генерация RPLOBJECT GZ">
+                     <tooltip>
+                        <Tooltip text="Проверь корректность ID бюджетов" />
+                     </tooltip></Button>
+            <Button id="buttonTextArea" fx:id="bGenRplFIN" disable="true" layoutX="314.0" layoutY="209.0" mnemonicParsing="false" onAction="#buttonGenRplFin" text="Генерация RPLOBJECT FIN">
+                     <tooltip>
+                        <Tooltip text="Проверь корректность ID бюджетов" />
+                     </tooltip></Button>
+            <Button id="buttonTextArea" fx:id="bKVFO" disable="true" layoutX="187.0" layoutY="209.0" mnemonicParsing="false" onAction="#buttonKVFO" text="Генерация КВФО">
+                     <tooltip>
+                        <Tooltip text="Убедись что выбрал нужный год" />
+                     </tooltip></Button>
+                  <DatePicker fx:id="finyearId" layoutX="14.0" layoutY="209.0" onAction="#buttonFinYear" prefHeight="25.0" prefWidth="153.0" promptText="FINYEAR">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <tooltip>
+                        <Tooltip text="Число и месяц не имеет значения, используется только год " />
+                     </tooltip>
+                  </DatePicker>
           </children>
         </AnchorPane>
       </content>

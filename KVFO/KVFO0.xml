@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<REFERENCE BUDGET_ID="1" FINYEAR="2029" SEQORDER="9" SUBSYSTEM="0" action="synchronize" ref_name="BUDGCODE">
+<BUDGCODE CODE="0" DESCRIPTION="Неклассифицированный источник"/>
+<BUDGCODE CODE="1" DESCRIPTION="Деятельность, осуществляемая за счет средств соответствующего бюджета бюджетной системы Российской Федерации (бюджетная деятельность)"/>
+<BUDGCODE CODE="2" DESCRIPTION="Приносящая доход деятельность (собственные доходы учреждения)"/>
+<BUDGCODE CODE="3" DESCRIPTION="Средства во временном распоряжении"/>
+<BUDGCODE CODE="4" DESCRIPTION="Субсидии на выполнение государственного (муниципального) задания"/>
+<BUDGCODE CODE="5" DESCRIPTION="Субсидии на иные цели"/>
+<BUDGCODE CODE="6" DESCRIPTION="Субсидии на цели осуществления капитальных вложений"/>
+<BUDGCODE CODE="7" DESCRIPTION="Средства по обязательному медицинскому страхованию"/>
+<BUDGCODE CODE="8" DESCRIPTION="Средства некоммерческих организаций на лицевых счетах"/>
+<BUDGCODE CODE="9" DESCRIPTION="Средства некоммерческих организаций на отдельных лицевых счетах"/>
+</REFERENCE>

@@ -23,7 +23,7 @@ public class Main extends Application {
       //  Parent root = FXMLLoader.load(Main.class.getResource("/UI/gridPaneXml.fxml"));
         Parent root = FXMLLoader.load(Main.class.getResource("/UI/TabPanelGZ.fxml"));
 
-        primaryStage.setTitle("Converter patch GZ BO");
+        primaryStage.setTitle("Помогатор для 'АЦК-ГосЗаказ'");
         //primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

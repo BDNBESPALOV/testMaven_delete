@@ -16,36 +16,34 @@ import java.io.*;
 import java.util.ArrayList;
 
 
-        /*
-        * <TASK>
-
-<!-- MASTER_ID должен быть АЦК, CLIENT_ID должен быть ГЗ. Заменить в двух блоках -->
-<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize">
-
- <RPL TABLE_NAME="BANK" EXEC_ORDER="2" RPLTYPE="1" NAME="BANK_GZ" />
-
- <!--для выгрузки организаций автономных учреждений необходимо добавить в фильтрацию условия 19/
- <RPL TABLE_NAME="ORG"  EXEC_ORDER="3" RPLTYPE="1" NAME="ORG_GZ" FIELD1_VALUE="0"
- FILTER_CONDITION=""/> -->
-
-  <!--для выгрузки счетов организаций автономных учреждений необходимо добавить в фильтрацию условия 19/ -->
- <RPL TABLE_NAME="ORGACCOUNT" EXEC_ORDER="5" RPLTYPE="1" NAME="ORGACCOUNT_GZ" FIELD1_VALUE="0"
-   FILTER_CONDITION="EXISTS (SELECT null FROM OrgRoles r WHERE r.Org_ID=t.Org_ID AND r.OrgRole_ID in (0,1,4,5,18,19)) AND t.OrgAccType_ID in (1,2,5,6,7,8,9)"/>
-
-
-  <RPL TABLE_NAME="PLAN_DIRECT_GROUP" EXEC_ORDER="9" NAME="PLAN_DIRECT_GROUP" RPLTYPE="1"/>
-  <RPL TABLE_NAME="PL_PERMISSION" SERVERPROCESSOR_NAME="PLPERMISSIONGZRPLPROCESSOR" EXEC_ORDER="10" NAME="PL_PERMISSION" RPLTYPE="1"/>
-
-*
-*
-* СЮДА ВСТАВИТЬ РЕЗУЛЬТАТ ВЫВОДА (потом допилю по человечески * )
-*
-*
-*
-     </RPLOBJECT>
-</TASK>
-        *
-        * *  */
+//        <TASK>
+//
+//<!-- MASTER_ID должен быть АЦК, CLIENT_ID должен быть ГЗ. Заменить в двух блоках -->
+//<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize">
+//
+// <RPL TABLE_NAME="BANK" EXEC_ORDER="2" RPLTYPE="1" NAME="BANK_GZ" />
+//
+// <!--для выгрузки организаций автономных учреждений необходимо добавить в фильтрацию условия 19/
+// <RPL TABLE_NAME="ORG"  EXEC_ORDER="3" RPLTYPE="1" NAME="ORG_GZ" FIELD1_VALUE="0"
+// FILTER_CONDITION=""/> -->
+//
+//  <!--для выгрузки счетов организаций автономных учреждений необходимо добавить в фильтрацию условия 19/ -->
+// <RPL TABLE_NAME="ORGACCOUNT" EXEC_ORDER="5" RPLTYPE="1" NAME="ORGACCOUNT_GZ" FIELD1_VALUE="0"
+//   FILTER_CONDITION="EXISTS (SELECT null FROM OrgRoles r WHERE r.Org_ID=t.Org_ID AND r.OrgRole_ID in (0,1,4,5,18,19)) AND t.OrgAccType_ID in (1,2,5,6,7,8,9)"/>
+//
+//
+//  <RPL TABLE_NAME="PLAN_DIRECT_GROUP" EXEC_ORDER="9" NAME="PLAN_DIRECT_GROUP" RPLTYPE="1"/>
+//  <RPL TABLE_NAME="PL_PERMISSION" SERVERPROCESSOR_NAME="PLPERMISSIONGZRPLPROCESSOR" EXEC_ORDER="10" NAME="PL_PERMISSION" RPLTYPE="1"/>
+//
+//*
+//*
+//
+//*
+//*
+//*
+//     </RPLOBJECT>
+//</TASK>
+//
 
 
 public class RplobjectForFin {
@@ -96,7 +94,6 @@ public class RplobjectForFin {
                 BUDGET_ID = "" + s;
                 int iq=0;
                 if(iq<7){
-
                     KODE=""+ko[iq];
 
                 }
@@ -181,7 +178,7 @@ public class RplobjectForFin {
                 DOMSource source = new DOMSource(doc);
                 transformer.transform(source, result);
                 String xmlString = result.getWriter().toString();
-                System.out.println(xmlString);
+                log.info(xmlString);
 
                 if(!new File("./RPLOBJECT_FOR_FIN").isDirectory()){
                     new File("./RPLOBJECT_FOR_FIN").mkdir();
@@ -191,22 +188,10 @@ public class RplobjectForFin {
                 output.println(xmlString);
                 output.close();
 
-                //transformer.transform( source,file);
-                // System.out.println("CODETYPE" +i + ".xml");
-
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            // for (int j = 0; j < 629; j++) {
-
-            //  }
-
-
         }
-
-
-
-
     }
 
 

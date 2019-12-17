@@ -16,16 +16,15 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import javax.xml.transform.stream.StreamSource;
+import java.io.*;
 import java.util.ArrayList;
 
 public class KVFO {
-    private static final Logger log = org.slf4j.LoggerFactory.getLogger(RplObjectForGZ.class);
+    private  final Logger log = org.slf4j.LoggerFactory.getLogger(RplObjectForGZ.class);
     private static final String REF_NAME = "BUDGCODE";
     private static final String ACTION = "synchronize";
-    private static final String FINYEAR = "2020";
+    private String FINYEAR = "null";
     private static final String SUBSYSTEM = "0";
     private static final String SEQORDER = "9";
 
@@ -35,8 +34,7 @@ public class KVFO {
         DocumentBuilder builder;
 
 
-        //int[] budget = new int[] { 718,728,729,738,739,740 };
-       // int[] budget = budgetK ;
+
         int i=0;
         for (String s: budgetK) {
             try {
@@ -76,8 +74,11 @@ public class KVFO {
 //                TransformerFactory transformerFactory = TransformerFactory.newInstance();
 //                Transformer transformer = transformerFactory.newTransformer();
                 // для красивого вывода в консоль
+
                 transformer.setOutputProperty(OutputKeys.INDENT, "yes");
                 transformer.setOutputProperty(OutputKeys.ENCODING, "windows-1251");
+               // transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-16");
+
 
 
                 //печатаем в консоль или файл
@@ -86,12 +87,13 @@ public class KVFO {
                     new File("./KVFO").mkdir();
                 }
                 StreamResult file = new StreamResult(new File("./KVFO/KVFO" + i + ".xml"));
-                StreamResult file2 = new StreamResult(new File("./KVFO/AllKVFO.xml"));
+              //  StreamResult file2 = new StreamResult(new File("./KVFO/AllKVFO.xml"));
 
                 //записываем данные
-                //  transformer.transform(source, console);
+               // transformer.transform(new DOMSource(doc), new StreamResult(new OutputStreamWriter(new FileOutputStream("./KVFO/KVFO" + i + ".xml"), "windows-1251")));
+               transformer.transform(new DOMSource(doc), file);
 
-                transformer.transform(new DOMSource(doc), file);
+
 
                 System.out.println("KVFO" + i + ".xml");
 
@@ -99,12 +101,17 @@ public class KVFO {
                 try(FileWriter writer = new FileWriter("./KVFO/@AllKVFO.lst", true))
                 {
                     // запись всей строки
-                    writer.write("KVFO" + i + ".xml"+'\n');
+
+                    writer.write("KVFO" + i + ".xml"+"\n");
                     writer.flush();
                 }
                 catch(IOException ex){
                     System.out.println(ex.getMessage());
                 }
+
+
+
+
 
 
             } catch (Exception e) {
@@ -134,6 +141,10 @@ i++;
         Element node = doc.createElement(name);
         node.appendChild(doc.createTextNode(value));
         return node;
+    }
+
+    public void setFinYear(String str){
+        FINYEAR=str.replaceAll("-(.*)", "");
     }
 
 }
