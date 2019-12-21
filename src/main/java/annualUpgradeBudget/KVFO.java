@@ -22,11 +22,11 @@ import java.util.ArrayList;
 
 public class KVFO {
     private  final Logger log = org.slf4j.LoggerFactory.getLogger(RplObjectForGZ.class);
-    private static final String REF_NAME = "BUDGCODE";
-    private static final String ACTION = "synchronize";
+    private  final String REF_NAME = "BUDGCODE";
+    private  final String ACTION = "synchronize";
     private String FINYEAR = "null";
-    private static final String SUBSYSTEM = "0";
-    private static final String SEQORDER = "9";
+    private  final String SUBSYSTEM = "0";
+    private  final String SEQORDER = "9";
 
     public  void start(String budgetId) {
         ArrayList<String> budgetK = new ParseBudgetStr().parseBudgetStr(budgetId);
@@ -68,32 +68,15 @@ public class KVFO {
                 rootElement.appendChild(getLanguage(doc, "9", "Средства некоммерческих организаций на отдельных лицевых счетах"));
 
 
-
-
-                //создаем объект TransformerFactory для печати в консоль
-//                TransformerFactory transformerFactory = TransformerFactory.newInstance();
-//                Transformer transformer = transformerFactory.newTransformer();
-                // для красивого вывода в консоль
-
                 transformer.setOutputProperty(OutputKeys.INDENT, "yes");
                 transformer.setOutputProperty(OutputKeys.ENCODING, "windows-1251");
-               // transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-16");
 
 
-
-                //печатаем в консоль или файл
-                // StreamResult console = new StreamResult(System.out);
                 if(!new File("./KVFO").isDirectory()){
                     new File("./KVFO").mkdir();
                 }
                 StreamResult file = new StreamResult(new File("./KVFO/KVFO" + i + ".xml"));
-              //  StreamResult file2 = new StreamResult(new File("./KVFO/AllKVFO.xml"));
-
-                //записываем данные
-               // transformer.transform(new DOMSource(doc), new StreamResult(new OutputStreamWriter(new FileOutputStream("./KVFO/KVFO" + i + ".xml"), "windows-1251")));
-               transformer.transform(new DOMSource(doc), file);
-
-
+                transformer.transform(new DOMSource(doc), file);
 
                 System.out.println("KVFO" + i + ".xml");
 
@@ -101,25 +84,15 @@ public class KVFO {
                 try(FileWriter writer = new FileWriter("./KVFO/@AllKVFO.lst", true))
                 {
                     // запись всей строки
-
                     writer.write("KVFO" + i + ".xml"+"\n");
                     writer.flush();
                 }
                 catch(IOException ex){
                     System.out.println(ex.getMessage());
                 }
-
-
-
-
-
-
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-
-
 i++;
         }
     }
@@ -133,15 +106,12 @@ i++;
         return language;
     }
 
-
-
-
     // утилитный метод для создание нового узла XML-файла
-    private static Node getLanguageElements(Document doc, Element element, String name, String value) {
-        Element node = doc.createElement(name);
-        node.appendChild(doc.createTextNode(value));
-        return node;
-    }
+//    private static Node getLanguageElements(Document doc, Element element, String name, String value) {
+////        Element node = doc.createElement(name);
+////        node.appendChild(doc.createTextNode(value));
+////        return node;
+////    }
 
     public void setFinYear(String str){
         FINYEAR=str.replaceAll("-(.*)", "");

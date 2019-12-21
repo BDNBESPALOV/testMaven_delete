@@ -92,24 +92,7 @@ public class Controller3  {
     }
 
 
-//    final Callback<DatePicker, DateCell> dayCellFactory = new Callback<DatePicker, DateCell>() {
-//          public DateCell call(final DatePicker datePicker) {
-//              return new DateCell() {
-//                  public void updateItem(LocalDate item, boolean empty) {
-//                      super.updateItem(item, empty);
-//
-//                      if (MonthDay.from(item).equals(MonthDay.of(9, 25))) {
-//                          setTooltip(new Tooltip("Happy Birthday!"));
-//                          setStyle("-fx-background-color: #ff4444;");
-//                      }
-//                      if (item.equals(LocalDate.now().plusDays(1))) {
-//                          // Tomorrow is too soon.
-//                          setDisable(true);
-//                      }
-//                  }
-//              };
-//          }
-//      };
+
     public void buttonFinYear(){
         log.info(String.valueOf(finyearId.getValue()));
         kvfo.setFinYear(String.valueOf(finyearId.getValue()));
@@ -134,7 +117,9 @@ public class Controller3  {
                                 statusLabel.setText("");
                             }
                         });
-        new Thread(uq).start();
+       Thread th =  new Thread(uq);
+       th.setDaemon(true);
+       th.start();
     }
     private void configuringFileChooser(FileChooser fileChooser) {
         // Set title for FileChooser
