@@ -2,8 +2,8 @@ package filezip;
 
 import javafx.concurrent.Task;
 import org.slf4j.Logger;
-import sample.ChangeXML;
-import sample.Controller3;
+import main.ChangeXML;
+import main.Controller3;
 //import sample.ImportRepo;
 
 

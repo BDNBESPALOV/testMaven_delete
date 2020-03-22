@@ -1,51 +1,51 @@
-2019-12-16 13:29:16.990 [JavaFX Application Thread] INFO  sample.ChangeXML - sdsfsdfsdf
-2019-12-16 13:29:16.992 [JavaFX Application Thread] INFO  sample.ChangeXML - sdsfsdfsdfttttt
-2019-12-16 13:32:12.291 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002858"
-2019-12-16 13:32:12.294 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002859"
-2019-12-16 13:32:12.294 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002860"
-2019-12-16 13:32:12.294 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002861"
-2019-12-16 13:32:12.294 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002862"
-2019-12-16 13:32:12.294 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002863"
-2019-12-16 13:33:13.073 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002858"
-2019-12-16 13:33:13.075 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002859"
-2019-12-16 13:33:13.075 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002860"
-2019-12-16 13:33:13.075 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002861"
-2019-12-16 13:33:13.075 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002862"
-2019-12-16 13:33:13.075 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002863"
-2019-12-16 13:34:18.220 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002858"
-2019-12-16 13:34:18.220 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002859"
-2019-12-16 13:34:18.220 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002860"
-2019-12-16 13:34:18.220 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002861"
-2019-12-16 13:34:18.220 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002862"
-2019-12-16 13:34:18.220 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002863"
-2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002858"
-2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002859"
-2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002860"
-2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002861"
-2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002862"
-2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002863"
-2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  sample.ChangeXML - "99999999999"
-2019-12-16 13:34:57.800 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002858"
-2019-12-16 13:34:57.803 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002859"
-2019-12-16 13:34:57.803 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002860"
-2019-12-16 13:34:57.803 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002861"
-2019-12-16 13:34:57.803 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002862"
-2019-12-16 13:34:57.803 [JavaFX Application Thread] INFO  sample.ChangeXML - "600000002863"
-2019-12-16 13:34:57.803 [JavaFX Application Thread] INFO  sample.ChangeXML - "99999999999"
-2019-12-16 13:44:47.145 [JavaFX Application Thread] INFO  sample.ChangeXML - bbbdb
-2019-12-16 13:44:47.148 [JavaFX Application Thread] INFO  sample.ChangeXML - btybnb
-2019-12-16 13:51:00.546 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002858
-2019-12-16 13:51:00.549 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002859
-2019-12-16 13:51:00.549 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002860
-2019-12-16 13:51:00.549 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002861
-2019-12-16 13:51:00.549 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002862
-2019-12-16 13:51:00.549 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002863
-2019-12-16 13:58:19.779 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002858
-2019-12-16 13:58:19.781 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002859
-2019-12-16 13:58:19.781 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002860
-2019-12-16 13:58:19.781 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002861
-2019-12-16 13:58:19.781 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002862
-2019-12-16 13:58:19.782 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002863
+2019-12-16 13:29:16.990 [JavaFX Application Thread] INFO  main.ChangeXML - sdsfsdfsdf
+2019-12-16 13:29:16.992 [JavaFX Application Thread] INFO  main.ChangeXML - sdsfsdfsdfttttt
+2019-12-16 13:32:12.291 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002858"
+2019-12-16 13:32:12.294 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002859"
+2019-12-16 13:32:12.294 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002860"
+2019-12-16 13:32:12.294 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002861"
+2019-12-16 13:32:12.294 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002862"
+2019-12-16 13:32:12.294 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002863"
+2019-12-16 13:33:13.073 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002858"
+2019-12-16 13:33:13.075 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002859"
+2019-12-16 13:33:13.075 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002860"
+2019-12-16 13:33:13.075 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002861"
+2019-12-16 13:33:13.075 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002862"
+2019-12-16 13:33:13.075 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002863"
+2019-12-16 13:34:18.220 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002858"
+2019-12-16 13:34:18.220 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002859"
+2019-12-16 13:34:18.220 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002860"
+2019-12-16 13:34:18.220 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002861"
+2019-12-16 13:34:18.220 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002862"
+2019-12-16 13:34:18.220 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002863"
+2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002858"
+2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002859"
+2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002860"
+2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002861"
+2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002862"
+2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002863"
+2019-12-16 13:34:40.300 [JavaFX Application Thread] INFO  main.ChangeXML - "99999999999"
+2019-12-16 13:34:57.800 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002858"
+2019-12-16 13:34:57.803 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002859"
+2019-12-16 13:34:57.803 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002860"
+2019-12-16 13:34:57.803 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002861"
+2019-12-16 13:34:57.803 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002862"
+2019-12-16 13:34:57.803 [JavaFX Application Thread] INFO  main.ChangeXML - "600000002863"
+2019-12-16 13:34:57.803 [JavaFX Application Thread] INFO  main.ChangeXML - "99999999999"
+2019-12-16 13:44:47.145 [JavaFX Application Thread] INFO  main.ChangeXML - bbbdb
+2019-12-16 13:44:47.148 [JavaFX Application Thread] INFO  main.ChangeXML - btybnb
+2019-12-16 13:51:00.546 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002858
+2019-12-16 13:51:00.549 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002859
+2019-12-16 13:51:00.549 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002860
+2019-12-16 13:51:00.549 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002861
+2019-12-16 13:51:00.549 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002862
+2019-12-16 13:51:00.549 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002863
+2019-12-16 13:58:19.779 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002858
+2019-12-16 13:58:19.781 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002859
+2019-12-16 13:58:19.781 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002860
+2019-12-16 13:58:19.781 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002861
+2019-12-16 13:58:19.781 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002862
+2019-12-16 13:58:19.782 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002863
 2019-12-16 13:58:19.831 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
 <RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize_update">
 <PRL EXEC_ORDER="6" NAME="PL_DIRECTION_600000002858_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLLIABILITYEXPENSE" TABLE_NAME="LIABILITYEXPENSE"/>
@@ -826,36 +826,36 @@ folder2 patch_1.39.0.283_p6_20191209
 2019-12-16 14:13:48.723 [Thread-5] INFO  filezip.UnzipUtil - 666UnzipUtil  SQL/LOG/_13931_zholokh_ppchangereason_field.sql
 2019-12-16 14:13:48.724 [Thread-5] INFO  filezip.UnzipUtil - 667UnzipUtil  SQL/LOG/13939_skuha_control99_documenttype.sql
 2019-12-16 14:13:48.727 [Thread-5] INFO  filezip.UnzipUtil - 668UnzipUtil  SQL/LOG/13851_frolovsky_congoods_nkmi.sql
-2019-12-16 14:13:48.783 [Thread-5] INFO  sample.ChangeXML - true
-2019-12-16 14:13:48.783 [Thread-5] INFO  sample.ChangeXML - 91214
-2019-12-16 14:13:48.783 [Thread-5] INFO  sample.ChangeXML - <UNIT NAME="skolkovoPurchInfo" CAPTION="Информация о закупках инновационной нанотехнологической продукции">
-2019-12-16 14:13:48.812 [Thread-5] INFO  sample.ChangeXML - true
-2019-12-16 14:13:48.813 [Thread-5] INFO  sample.ChangeXML - true
-2019-12-16 14:13:48.813 [Thread-5] INFO  sample.ChangeXML -                 <prop name="clientObj" val="REP_BEL_CONTRACT"/>
+2019-12-16 14:13:48.783 [Thread-5] INFO  main.ChangeXML - true
+2019-12-16 14:13:48.783 [Thread-5] INFO  main.ChangeXML - 91214
+2019-12-16 14:13:48.783 [Thread-5] INFO  main.ChangeXML - <UNIT NAME="skolkovoPurchInfo" CAPTION="Информация о закупках инновационной нанотехнологической продукции">
+2019-12-16 14:13:48.812 [Thread-5] INFO  main.ChangeXML - true
+2019-12-16 14:13:48.813 [Thread-5] INFO  main.ChangeXML - true
+2019-12-16 14:13:48.813 [Thread-5] INFO  main.ChangeXML -                 <prop name="clientObj" val="REP_BEL_CONTRACT"/>
               </properties>
             </object>
-2019-12-16 14:13:48.835 [Thread-5] ERROR sample.ImportRepo - java.io.FileNotFoundException: D:\JAVA_my_\testMaven_delete2\target\classes (Отказано в доступе)
-2019-12-16 14:13:48.835 [Thread-5] ERROR sample.ImportRepo - java.io.FileNotFoundException: D:\JAVA_my_\testMaven_delete2\target\classes (Отказано в доступе)
-2019-12-16 14:13:48.835 [Thread-5] ERROR sample.ImportRepo - java.io.FileNotFoundException: D:\JAVA_my_\testMaven_delete2\target\classes (Отказано в доступе)
-2019-12-16 14:13:48.836 [Thread-5] INFO  sample.ImportRepo - report = /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/report/
-2019-12-16 14:13:48.836 [Thread-5] INFO  sample.ImportRepo - report = /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/reports/
-2019-12-16 14:13:48.836 [Thread-5] INFO  sample.ImportRepo - insertFile /module/bft.gz/report/  /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/report/
-2019-12-16 14:13:48.836 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
-2019-12-16 14:13:48.836 [Thread-5] INFO  sample.ImportRepo - insertFile /module/bft.gz/reports/  /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/reports/
-2019-12-16 14:13:48.836 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
-2019-12-16 14:13:48.837 [Thread-5] INFO  sample.ImportRepo - insertFile /module/bft.gz/report/  /E:\patch_1.39.0.283_p6_20191209/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/report/
-2019-12-16 14:13:48.837 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
-2019-12-16 14:13:48.837 [Thread-5] INFO  sample.ImportRepo - insertFile /module/bft.gz/reports/  /E:\patch_1.39.0.283_p6_20191209/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/reports/
-2019-12-16 14:13:48.837 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
-2019-12-16 14:13:48.837 [Thread-5] INFO  sample.ImportRepo - E:\patch_1.39.0.283_p6_20191209/client/
-2019-12-16 14:13:48.837 [Thread-5] INFO  sample.ImportRepo - insertFile /lib/  E:\patch_1.39.0.283_p6_20191209/client/
-2019-12-16 14:13:48.837 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
-2019-12-16 14:20:10.349 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002858
-2019-12-16 14:20:10.352 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002859
-2019-12-16 14:20:10.352 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002860
-2019-12-16 14:20:10.352 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002861
-2019-12-16 14:20:10.352 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002862
-2019-12-16 14:20:10.352 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002863
+2019-12-16 14:13:48.835 [Thread-5] ERROR main.ImportRepo - java.io.FileNotFoundException: D:\JAVA_my_\testMaven_delete2\target\classes (Отказано в доступе)
+2019-12-16 14:13:48.835 [Thread-5] ERROR main.ImportRepo - java.io.FileNotFoundException: D:\JAVA_my_\testMaven_delete2\target\classes (Отказано в доступе)
+2019-12-16 14:13:48.835 [Thread-5] ERROR main.ImportRepo - java.io.FileNotFoundException: D:\JAVA_my_\testMaven_delete2\target\classes (Отказано в доступе)
+2019-12-16 14:13:48.836 [Thread-5] INFO  main.ImportRepo - report = /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/report/
+2019-12-16 14:13:48.836 [Thread-5] INFO  main.ImportRepo - report = /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/reports/
+2019-12-16 14:13:48.836 [Thread-5] INFO  main.ImportRepo - insertFile /module/bft.gz/report/  /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/report/
+2019-12-16 14:13:48.836 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
+2019-12-16 14:13:48.836 [Thread-5] INFO  main.ImportRepo - insertFile /module/bft.gz/reports/  /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/reports/
+2019-12-16 14:13:48.836 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
+2019-12-16 14:13:48.837 [Thread-5] INFO  main.ImportRepo - insertFile /module/bft.gz/report/  /E:\patch_1.39.0.283_p6_20191209/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/report/
+2019-12-16 14:13:48.837 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
+2019-12-16 14:13:48.837 [Thread-5] INFO  main.ImportRepo - insertFile /module/bft.gz/reports/  /E:\patch_1.39.0.283_p6_20191209/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/reports/
+2019-12-16 14:13:48.837 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
+2019-12-16 14:13:48.837 [Thread-5] INFO  main.ImportRepo - E:\patch_1.39.0.283_p6_20191209/client/
+2019-12-16 14:13:48.837 [Thread-5] INFO  main.ImportRepo - insertFile /lib/  E:\patch_1.39.0.283_p6_20191209/client/
+2019-12-16 14:13:48.837 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
+2019-12-16 14:20:10.349 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002858
+2019-12-16 14:20:10.352 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002859
+2019-12-16 14:20:10.352 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002860
+2019-12-16 14:20:10.352 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002861
+2019-12-16 14:20:10.352 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002862
+2019-12-16 14:20:10.352 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002863
 2019-12-16 14:20:10.384 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
 <RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize_update">
 <PRL EXEC_ORDER="6" NAME="PL_DIRECTION_600000002858_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLLIABILITYEXPENSE" TABLE_NAME="LIABILITYEXPENSE"/>
@@ -964,12 +964,12 @@ folder2 patch_1.39.0.283_p6_20191209
 <PRL EXEC_ORDER="9" NAME="INSTITUTIONLINE_600000002863_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINSTITUTIONLINE" TABLE_NAME="INSTITUTIONLINE"/>
 </RPLOBJECT>
 
-2019-12-16 14:21:40.732 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002858
-2019-12-16 14:21:40.735 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002859
-2019-12-16 14:21:40.735 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002860
-2019-12-16 14:21:40.735 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002861
-2019-12-16 14:21:40.735 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002862
-2019-12-16 14:21:40.735 [JavaFX Application Thread] INFO  sample.ChangeXML - 600000002863
+2019-12-16 14:21:40.732 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002858
+2019-12-16 14:21:40.735 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002859
+2019-12-16 14:21:40.735 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002860
+2019-12-16 14:21:40.735 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002861
+2019-12-16 14:21:40.735 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002862
+2019-12-16 14:21:40.735 [JavaFX Application Thread] INFO  main.ChangeXML - 600000002863
 2019-12-16 14:21:40.765 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
 <RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize_update">
 <PRL EXEC_ORDER="6" NAME="PL_DIRECTION_600000002858_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLLIABILITYEXPENSE" TABLE_NAME="LIABILITYEXPENSE"/>
@@ -1750,30 +1750,30 @@ folder2 patch_1.39.0.283_p6_20191209
 2019-12-16 14:47:11.861 [Thread-5] INFO  filezip.UnzipUtil - 666UnzipUtil  SQL/LOG/_13931_zholokh_ppchangereason_field.sql
 2019-12-16 14:47:11.861 [Thread-5] INFO  filezip.UnzipUtil - 667UnzipUtil  SQL/LOG/13939_skuha_control99_documenttype.sql
 2019-12-16 14:47:11.861 [Thread-5] INFO  filezip.UnzipUtil - 668UnzipUtil  SQL/LOG/13851_frolovsky_congoods_nkmi.sql
-2019-12-16 14:47:11.886 [Thread-5] INFO  sample.ChangeXML - true
-2019-12-16 14:47:11.886 [Thread-5] INFO  sample.ChangeXML - 91214
-2019-12-16 14:47:11.887 [Thread-5] INFO  sample.ChangeXML - <UNIT NAME="skolkovoPurchInfo" CAPTION="Информация о закупках инновационной нанотехнологической продукции">
-2019-12-16 14:47:11.902 [Thread-5] INFO  sample.ChangeXML - true
-2019-12-16 14:47:11.903 [Thread-5] INFO  sample.ChangeXML - true
-2019-12-16 14:47:11.903 [Thread-5] INFO  sample.ChangeXML -                 <prop name="clientObj" val="REP_BEL_CONTRACT"/>
+2019-12-16 14:47:11.886 [Thread-5] INFO  main.ChangeXML - true
+2019-12-16 14:47:11.886 [Thread-5] INFO  main.ChangeXML - 91214
+2019-12-16 14:47:11.887 [Thread-5] INFO  main.ChangeXML - <UNIT NAME="skolkovoPurchInfo" CAPTION="Информация о закупках инновационной нанотехнологической продукции">
+2019-12-16 14:47:11.902 [Thread-5] INFO  main.ChangeXML - true
+2019-12-16 14:47:11.903 [Thread-5] INFO  main.ChangeXML - true
+2019-12-16 14:47:11.903 [Thread-5] INFO  main.ChangeXML -                 <prop name="clientObj" val="REP_BEL_CONTRACT"/>
               </properties>
             </object>
-2019-12-16 14:47:11.913 [Thread-5] ERROR sample.ImportRepo - java.io.FileNotFoundException: D:\JAVA_my_\testMaven_delete2\target\classes (Отказано в доступе)
-2019-12-16 14:47:11.913 [Thread-5] ERROR sample.ImportRepo - java.io.FileNotFoundException: D:\JAVA_my_\testMaven_delete2\target\classes (Отказано в доступе)
-2019-12-16 14:47:11.914 [Thread-5] ERROR sample.ImportRepo - java.io.FileNotFoundException: D:\JAVA_my_\testMaven_delete2\target\classes (Отказано в доступе)
-2019-12-16 14:47:11.914 [Thread-5] INFO  sample.ImportRepo - report = /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/report/
-2019-12-16 14:47:11.914 [Thread-5] INFO  sample.ImportRepo - report = /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/reports/
-2019-12-16 14:47:11.914 [Thread-5] INFO  sample.ImportRepo - insertFile /module/bft.gz/report/  /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/report/
-2019-12-16 14:47:11.914 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
-2019-12-16 14:47:11.914 [Thread-5] INFO  sample.ImportRepo - insertFile /module/bft.gz/reports/  /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/reports/
-2019-12-16 14:47:11.914 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
-2019-12-16 14:47:11.914 [Thread-5] INFO  sample.ImportRepo - insertFile /module/bft.gz/report/  /E:\patch_1.39.0.283_p6_20191209/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/report/
-2019-12-16 14:47:11.914 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
-2019-12-16 14:47:11.914 [Thread-5] INFO  sample.ImportRepo - insertFile /module/bft.gz/reports/  /E:\patch_1.39.0.283_p6_20191209/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/reports/
-2019-12-16 14:47:11.914 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
-2019-12-16 14:47:11.914 [Thread-5] INFO  sample.ImportRepo - E:\patch_1.39.0.283_p6_20191209/client/
-2019-12-16 14:47:11.914 [Thread-5] INFO  sample.ImportRepo - insertFile /lib/  E:\patch_1.39.0.283_p6_20191209/client/
-2019-12-16 14:47:11.914 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
+2019-12-16 14:47:11.913 [Thread-5] ERROR main.ImportRepo - java.io.FileNotFoundException: D:\JAVA_my_\testMaven_delete2\target\classes (Отказано в доступе)
+2019-12-16 14:47:11.913 [Thread-5] ERROR main.ImportRepo - java.io.FileNotFoundException: D:\JAVA_my_\testMaven_delete2\target\classes (Отказано в доступе)
+2019-12-16 14:47:11.914 [Thread-5] ERROR main.ImportRepo - java.io.FileNotFoundException: D:\JAVA_my_\testMaven_delete2\target\classes (Отказано в доступе)
+2019-12-16 14:47:11.914 [Thread-5] INFO  main.ImportRepo - report = /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/report/
+2019-12-16 14:47:11.914 [Thread-5] INFO  main.ImportRepo - report = /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/reports/
+2019-12-16 14:47:11.914 [Thread-5] INFO  main.ImportRepo - insertFile /module/bft.gz/report/  /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/report/
+2019-12-16 14:47:11.914 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
+2019-12-16 14:47:11.914 [Thread-5] INFO  main.ImportRepo - insertFile /module/bft.gz/reports/  /E:\patch_1.39.0.283_p6_20191209/module/bft.gz/reports/
+2019-12-16 14:47:11.914 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
+2019-12-16 14:47:11.914 [Thread-5] INFO  main.ImportRepo - insertFile /module/bft.gz/report/  /E:\patch_1.39.0.283_p6_20191209/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/report/
+2019-12-16 14:47:11.914 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
+2019-12-16 14:47:11.914 [Thread-5] INFO  main.ImportRepo - insertFile /module/bft.gz/reports/  /E:\patch_1.39.0.283_p6_20191209/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/reports/
+2019-12-16 14:47:11.914 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
+2019-12-16 14:47:11.914 [Thread-5] INFO  main.ImportRepo - E:\patch_1.39.0.283_p6_20191209/client/
+2019-12-16 14:47:11.914 [Thread-5] INFO  main.ImportRepo - insertFile /lib/  E:\patch_1.39.0.283_p6_20191209/client/
+2019-12-16 14:47:11.914 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
 2019-12-16 16:09:05.185 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
 <RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize_update">
 <PRL EXEC_ORDER="6" NAME="PL_DIRECTION_600000002858_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLLIABILITYEXPENSE" TABLE_NAME="LIABILITYEXPENSE"/>
@@ -2058,17 +2058,17 @@ folder2 patch_1.39.0.283_p6_20191209
 2019-12-17 10:32:13.757 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - null
 2019-12-17 10:32:13.757 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - null
 2019-12-17 10:32:13.757 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - null
-2019-12-17 16:29:57.969 [JavaFX Application Thread] INFO  sample.ChangeXML - null
-2019-12-17 16:33:00.138 [JavaFX Application Thread] INFO  sample.ChangeXML - null
-2019-12-17 16:33:29.361 [JavaFX Application Thread] INFO  sample.ChangeXML - null
-2019-12-17 16:40:00.775 [JavaFX Application Thread] INFO  sample.ChangeXML - null
-2019-12-17 16:47:41.088 [JavaFX Application Thread] INFO  sample.ChangeXML - null
-2019-12-17 16:50:47.097 [JavaFX Application Thread] INFO  sample.ChangeXML - DatePicker[id=finyearId, styleClass=combo-box-base date-picker]
-2019-12-17 16:55:24.329 [JavaFX Application Thread] INFO  sample.ChangeXML - 2019-12-20
-2019-12-17 16:58:21.096 [JavaFX Application Thread] INFO  sample.ChangeXML - 2019-12-05
-2019-12-17 16:58:45.872 [JavaFX Application Thread] INFO  sample.ChangeXML - 2019
-2019-12-17 17:00:55.335 [JavaFX Application Thread] INFO  sample.ChangeXML - 2032-12-17
-2019-12-17 17:05:12.360 [JavaFX Application Thread] INFO  sample.ChangeXML - 2029-12-28
+2019-12-17 16:29:57.969 [JavaFX Application Thread] INFO  main.ChangeXML - null
+2019-12-17 16:33:00.138 [JavaFX Application Thread] INFO  main.ChangeXML - null
+2019-12-17 16:33:29.361 [JavaFX Application Thread] INFO  main.ChangeXML - null
+2019-12-17 16:40:00.775 [JavaFX Application Thread] INFO  main.ChangeXML - null
+2019-12-17 16:47:41.088 [JavaFX Application Thread] INFO  main.ChangeXML - null
+2019-12-17 16:50:47.097 [JavaFX Application Thread] INFO  main.ChangeXML - DatePicker[id=finyearId, styleClass=combo-box-base date-picker]
+2019-12-17 16:55:24.329 [JavaFX Application Thread] INFO  main.ChangeXML - 2019-12-20
+2019-12-17 16:58:21.096 [JavaFX Application Thread] INFO  main.ChangeXML - 2019-12-05
+2019-12-17 16:58:45.872 [JavaFX Application Thread] INFO  main.ChangeXML - 2019
+2019-12-17 17:00:55.335 [JavaFX Application Thread] INFO  main.ChangeXML - 2032-12-17
+2019-12-17 17:05:12.360 [JavaFX Application Thread] INFO  main.ChangeXML - 2029-12-28
 2019-12-21 15:09:45.577 [Thread-5] INFO  filezip.UnzipUtil - folderZ C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120
 folder2 patch_1.39.0.282_p3_20191120
 2019-12-21 15:09:45.600 [Thread-5] INFO  filezip.UnzipUtil - zip.size() = 623
@@ -2695,30 +2695,30 @@ folder2 patch_1.39.0.282_p3_20191120
 2019-12-21 15:10:00.507 [Thread-5] INFO  filezip.UnzipUtil - 620UnzipUtil  SQL/LOG/_13857_zholokh_npa44goodscontrol_fields.sql
 2019-12-21 15:10:00.522 [Thread-5] INFO  filezip.UnzipUtil - 621UnzipUtil  SQL/LOG/_13931_zholokh_ppchangereason_field.sql
 2019-12-21 15:10:00.522 [Thread-5] INFO  filezip.UnzipUtil - 622UnzipUtil  SQL/LOG/13851_frolovsky_congoods_nkmi.sql
-2019-12-21 15:10:00.585 [Thread-5] INFO  sample.ChangeXML - true
-2019-12-21 15:10:00.585 [Thread-5] INFO  sample.ChangeXML - 90564
-2019-12-21 15:10:00.585 [Thread-5] INFO  sample.ChangeXML - <UNIT NAME="skolkovoPurchInfo" CAPTION="Информация о закупках инновационной нанотехнологической продукции">
-2019-12-21 15:10:00.632 [Thread-5] INFO  sample.ChangeXML - true
-2019-12-21 15:10:00.632 [Thread-5] INFO  sample.ChangeXML - true
-2019-12-21 15:10:00.632 [Thread-5] INFO  sample.ChangeXML -                 <prop name="clientObj" val="REP_BEL_CONTRACT"/>
+2019-12-21 15:10:00.585 [Thread-5] INFO  main.ChangeXML - true
+2019-12-21 15:10:00.585 [Thread-5] INFO  main.ChangeXML - 90564
+2019-12-21 15:10:00.585 [Thread-5] INFO  main.ChangeXML - <UNIT NAME="skolkovoPurchInfo" CAPTION="Информация о закупках инновационной нанотехнологической продукции">
+2019-12-21 15:10:00.632 [Thread-5] INFO  main.ChangeXML - true
+2019-12-21 15:10:00.632 [Thread-5] INFO  main.ChangeXML - true
+2019-12-21 15:10:00.632 [Thread-5] INFO  main.ChangeXML -                 <prop name="clientObj" val="REP_BEL_CONTRACT"/>
               </properties>
             </object>
-2019-12-21 15:10:00.663 [Thread-5] ERROR sample.ImportRepo - java.io.FileNotFoundException: A:\testMaven_delete\target\classes (Отказано в доступе)
-2019-12-21 15:10:00.663 [Thread-5] ERROR sample.ImportRepo - java.io.FileNotFoundException: A:\testMaven_delete\target\classes (Отказано в доступе)
-2019-12-21 15:10:00.663 [Thread-5] ERROR sample.ImportRepo - java.io.FileNotFoundException: A:\testMaven_delete\target\classes (Отказано в доступе)
-2019-12-21 15:10:00.663 [Thread-5] INFO  sample.ImportRepo - report = /C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/module/bft.gz/report/
-2019-12-21 15:10:00.663 [Thread-5] INFO  sample.ImportRepo - report = /C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/module/bft.gz/reports/
-2019-12-21 15:10:00.663 [Thread-5] INFO  sample.ImportRepo - insertFile /module/bft.gz/report/  /C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/module/bft.gz/report/
-2019-12-21 15:10:00.663 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
-2019-12-21 15:10:00.663 [Thread-5] INFO  sample.ImportRepo - insertFile /module/bft.gz/reports/  /C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/module/bft.gz/reports/
-2019-12-21 15:10:00.663 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
-2019-12-21 15:10:00.678 [Thread-5] INFO  sample.ImportRepo - insertFile /module/bft.gz/report/  /C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/report/
-2019-12-21 15:10:00.678 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
-2019-12-21 15:10:00.678 [Thread-5] INFO  sample.ImportRepo - insertFile /module/bft.gz/reports/  /C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/reports/
-2019-12-21 15:10:00.678 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
-2019-12-21 15:10:00.678 [Thread-5] INFO  sample.ImportRepo - C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/client/
-2019-12-21 15:10:00.678 [Thread-5] INFO  sample.ImportRepo - insertFile /lib/  C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/client/
-2019-12-21 15:10:00.678 [Thread-5] INFO  sample.ImportRepo - insertFile arrayList []size()  0
+2019-12-21 15:10:00.663 [Thread-5] ERROR main.ImportRepo - java.io.FileNotFoundException: A:\testMaven_delete\target\classes (Отказано в доступе)
+2019-12-21 15:10:00.663 [Thread-5] ERROR main.ImportRepo - java.io.FileNotFoundException: A:\testMaven_delete\target\classes (Отказано в доступе)
+2019-12-21 15:10:00.663 [Thread-5] ERROR main.ImportRepo - java.io.FileNotFoundException: A:\testMaven_delete\target\classes (Отказано в доступе)
+2019-12-21 15:10:00.663 [Thread-5] INFO  main.ImportRepo - report = /C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/module/bft.gz/report/
+2019-12-21 15:10:00.663 [Thread-5] INFO  main.ImportRepo - report = /C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/module/bft.gz/reports/
+2019-12-21 15:10:00.663 [Thread-5] INFO  main.ImportRepo - insertFile /module/bft.gz/report/  /C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/module/bft.gz/report/
+2019-12-21 15:10:00.663 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
+2019-12-21 15:10:00.663 [Thread-5] INFO  main.ImportRepo - insertFile /module/bft.gz/reports/  /C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/module/bft.gz/reports/
+2019-12-21 15:10:00.663 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
+2019-12-21 15:10:00.678 [Thread-5] INFO  main.ImportRepo - insertFile /module/bft.gz/report/  /C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/report/
+2019-12-21 15:10:00.678 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
+2019-12-21 15:10:00.678 [Thread-5] INFO  main.ImportRepo - insertFile /module/bft.gz/reports/  /C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/apache-tomcat-6.0.29_BFT-1.0/webapps/azk/WEB-INF/module/bft.gz/reports/
+2019-12-21 15:10:00.678 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
+2019-12-21 15:10:00.678 [Thread-5] INFO  main.ImportRepo - C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/client/
+2019-12-21 15:10:00.678 [Thread-5] INFO  main.ImportRepo - insertFile /lib/  C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120/client/
+2019-12-21 15:10:00.678 [Thread-5] INFO  main.ImportRepo - insertFile arrayList []size()  0
 2019-12-21 15:17:19.304 [Thread-5] INFO  filezip.UnzipUtil - folderZ C:\Users\userBDN\Videos\patch_1.39.0.282_p3_20191120
 folder2 patch_1.39.0.282_p3_20191120
 2019-12-21 15:17:19.312 [Thread-5] INFO  filezip.UnzipUtil - zip.size() = 623
@@ -2817,3 +2817,268 @@ folder2 patch_1.39.0.282_p3_20191120
 2019-12-21 15:17:20.490 [Thread-5] INFO  filezip.UnzipUtil - 92UnzipUtil  client/OrderKernel.ocx
 2019-12-21 15:17:20.525 [Thread-5] INFO  filezip.UnzipUtil - 93UnzipUtil  ClientX/
 2019-12-21 15:17:20.526 [Thread-5] INFO  filezip.UnzipUtil - 94UnzipUtil  ClientX/full_setup.exe
+2020-03-22 21:05:08.260 [JavaFX Application Thread] INFO  main.ChangeXML - 2020-03-19
+2020-03-22 21:09:28.751 [JavaFX Application Thread] INFO  main.ChangeXML - 2020-03-21
+2020-03-22 21:09:38.116 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize_update">
+<PRL EXEC_ORDER="6" NAME="PL_DIRECTION_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLLIABILITYEXPENSE" TABLE_NAME="LIABILITYEXPENSE"/>
+<PRL EXEC_ORDER="7" NAME="INDUSTRYCODE_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINDUSTRYCODE" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="8" NAME="GRANTINVESTMENT_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLGRANTINVESTMENT" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="9" NAME="INSTITUTIONLINE_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINSTITUTIONLINE" TABLE_NAME="INSTITUTIONLINE"/>
+</RPLOBJECT>
+
+2020-03-22 21:09:38.119 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize_update">
+<PRL EXEC_ORDER="6" NAME="PL_DIRECTION_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLLIABILITYEXPENSE" TABLE_NAME="LIABILITYEXPENSE"/>
+<PRL EXEC_ORDER="7" NAME="INDUSTRYCODE_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINDUSTRYCODE" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="8" NAME="GRANTINVESTMENT_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLGRANTINVESTMENT" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="9" NAME="INSTITUTIONLINE_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINSTITUTIONLINE" TABLE_NAME="INSTITUTIONLINE"/>
+<PRL EXEC_ORDER="6" NAME="PL_DIRECTION_2_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLLIABILITYEXPENSE" TABLE_NAME="LIABILITYEXPENSE"/>
+<PRL EXEC_ORDER="7" NAME="INDUSTRYCODE_2_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINDUSTRYCODE" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="8" NAME="GRANTINVESTMENT_2_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLGRANTINVESTMENT" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="9" NAME="INSTITUTIONLINE_2_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINSTITUTIONLINE" TABLE_NAME="INSTITUTIONLINE"/>
+</RPLOBJECT>
+
+2020-03-22 21:09:47.973 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize">
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KCSR_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KCSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KADM_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KADM"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KFSR_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KFSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KVR_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KVR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KES_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KES"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KDE_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDE"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KDF_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDF"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KDR_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="PURPOSEFULGRANT_1_GZ" RPLTYPE="1" TABLE_NAME="PURPOSEFULGRANT"/>
+<PRL EXEC_ORDER="11" FIELD1_VALUE="1" NAME="PL_DIRECTION_1_GZ" RPLTYPE="1" TABLE_NAME="PL_DIRECTION"/>
+<PRL EXEC_ORDER="12" FIELD1_VALUE="1" NAME="INDUSTRYCODE_1_GZ" RPLTYPE="1" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="13" FIELD1_VALUE="1" NAME="GRANTINVESTMENT_1_GZ" RPLTYPE="1" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="7" FIELD1_VALUE="1" FILTER_CONDITION="ESTKIND_ID IN (1,5,7,8) AND Exists(SELECT null FROM OrgRoles r WHERE t.Org_ID=r.Org_ID AND r.OrgRole_ID in (0,1,4,5,18,19))   and Exists(select null from Org o where  not(o.taxcode is null or o.taxcode like '000%' )and t.org_id=o.id)" NAME="ESTIMATE_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="ESTIMATE_OFFLINE_RPL" TABLE_NAME="ESTIMATE"/>
+<PRL EXEC_ORDER="8" FIELD1_VALUE="1" FIELD2_VALUE="2" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM ExpBudget b, Estimate e WHERE b.Estimate_ID=e.ID AND e.EstKind_ID IN (1,5,7,8) AND b.Recipient_ID &gt; 0)" NAME="BUDGETLINE_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="EXPBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+<PRL EXEC_ORDER="14" FIELD1_VALUE="1" FIELD2_VALUE="4" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM AuBuBudget b, orgroles r WHERE b.Pay_ID = r.org_id and r.orgrole_id in (18,19))" NAME="INSTITUTIONLINE_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="AUBUBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+</RPLOBJECT>
+
+2020-03-22 21:09:47.979 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize">
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KCSR_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KCSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KADM_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KADM"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KFSR_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KFSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KVR_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KVR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KES_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KES"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KDE_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDE"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KDF_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDF"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="KDR_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="1" NAME="PURPOSEFULGRANT_1_GZ" RPLTYPE="1" TABLE_NAME="PURPOSEFULGRANT"/>
+<PRL EXEC_ORDER="11" FIELD1_VALUE="1" NAME="PL_DIRECTION_1_GZ" RPLTYPE="1" TABLE_NAME="PL_DIRECTION"/>
+<PRL EXEC_ORDER="12" FIELD1_VALUE="1" NAME="INDUSTRYCODE_1_GZ" RPLTYPE="1" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="13" FIELD1_VALUE="1" NAME="GRANTINVESTMENT_1_GZ" RPLTYPE="1" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="7" FIELD1_VALUE="1" FILTER_CONDITION="ESTKIND_ID IN (1,5,7,8) AND Exists(SELECT null FROM OrgRoles r WHERE t.Org_ID=r.Org_ID AND r.OrgRole_ID in (0,1,4,5,18,19))   and Exists(select null from Org o where  not(o.taxcode is null or o.taxcode like '000%' )and t.org_id=o.id)" NAME="ESTIMATE_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="ESTIMATE_OFFLINE_RPL" TABLE_NAME="ESTIMATE"/>
+<PRL EXEC_ORDER="8" FIELD1_VALUE="1" FIELD2_VALUE="2" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM ExpBudget b, Estimate e WHERE b.Estimate_ID=e.ID AND e.EstKind_ID IN (1,5,7,8) AND b.Recipient_ID &gt; 0)" NAME="BUDGETLINE_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="EXPBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+<PRL EXEC_ORDER="14" FIELD1_VALUE="1" FIELD2_VALUE="4" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM AuBuBudget b, orgroles r WHERE b.Pay_ID = r.org_id and r.orgrole_id in (18,19))" NAME="INSTITUTIONLINE_1_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="AUBUBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="2" NAME="KCSR_2_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KCSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="2" NAME="KADM_2_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KADM"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="2" NAME="KFSR_2_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KFSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="2" NAME="KVR_2_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KVR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="2" NAME="KES_2_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KES"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="2" NAME="KDE_2_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDE"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="2" NAME="KDF_2_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDF"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="2" NAME="KDR_2_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="2" NAME="PURPOSEFULGRANT_2_GZ" RPLTYPE="1" TABLE_NAME="PURPOSEFULGRANT"/>
+<PRL EXEC_ORDER="11" FIELD1_VALUE="2" NAME="PL_DIRECTION_2_GZ" RPLTYPE="1" TABLE_NAME="PL_DIRECTION"/>
+<PRL EXEC_ORDER="12" FIELD1_VALUE="2" NAME="INDUSTRYCODE_2_GZ" RPLTYPE="1" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="13" FIELD1_VALUE="2" NAME="GRANTINVESTMENT_2_GZ" RPLTYPE="1" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="7" FIELD1_VALUE="2" FILTER_CONDITION="ESTKIND_ID IN (1,5,7,8) AND Exists(SELECT null FROM OrgRoles r WHERE t.Org_ID=r.Org_ID AND r.OrgRole_ID in (0,1,4,5,18,19))   and Exists(select null from Org o where  not(o.taxcode is null or o.taxcode like '000%' )and t.org_id=o.id)" NAME="ESTIMATE_2_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="ESTIMATE_OFFLINE_RPL" TABLE_NAME="ESTIMATE"/>
+<PRL EXEC_ORDER="8" FIELD1_VALUE="2" FIELD2_VALUE="2" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM ExpBudget b, Estimate e WHERE b.Estimate_ID=e.ID AND e.EstKind_ID IN (1,5,7,8) AND b.Recipient_ID &gt; 0)" NAME="BUDGETLINE_2_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="EXPBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+<PRL EXEC_ORDER="14" FIELD1_VALUE="2" FIELD2_VALUE="4" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM AuBuBudget b, orgroles r WHERE b.Pay_ID = r.org_id and r.orgrole_id in (18,19))" NAME="INSTITUTIONLINE_2_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="AUBUBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+</RPLOBJECT>
+
+2020-03-22 21:11:43.954 [JavaFX Application Thread] INFO  main.ChangeXML - 2020-03-13
+2020-03-22 21:11:46.419 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize_update">
+<PRL EXEC_ORDER="6" NAME="PL_DIRECTION_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLLIABILITYEXPENSE" TABLE_NAME="LIABILITYEXPENSE"/>
+<PRL EXEC_ORDER="7" NAME="INDUSTRYCODE_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINDUSTRYCODE" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="8" NAME="GRANTINVESTMENT_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLGRANTINVESTMENT" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="9" NAME="INSTITUTIONLINE_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINSTITUTIONLINE" TABLE_NAME="INSTITUTIONLINE"/>
+</RPLOBJECT>
+
+2020-03-22 21:11:46.422 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize_update">
+<PRL EXEC_ORDER="6" NAME="PL_DIRECTION_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLLIABILITYEXPENSE" TABLE_NAME="LIABILITYEXPENSE"/>
+<PRL EXEC_ORDER="7" NAME="INDUSTRYCODE_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINDUSTRYCODE" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="8" NAME="GRANTINVESTMENT_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLGRANTINVESTMENT" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="9" NAME="INSTITUTIONLINE_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINSTITUTIONLINE" TABLE_NAME="INSTITUTIONLINE"/>
+<PRL EXEC_ORDER="6" NAME="PL_DIRECTION_2_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLLIABILITYEXPENSE" TABLE_NAME="LIABILITYEXPENSE"/>
+<PRL EXEC_ORDER="7" NAME="INDUSTRYCODE_2_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINDUSTRYCODE" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="8" NAME="GRANTINVESTMENT_2_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLGRANTINVESTMENT" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="9" NAME="INSTITUTIONLINE_2_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINSTITUTIONLINE" TABLE_NAME="INSTITUTIONLINE"/>
+</RPLOBJECT>
+
+2020-03-22 21:11:46.424 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize_update">
+<PRL EXEC_ORDER="6" NAME="PL_DIRECTION_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLLIABILITYEXPENSE" TABLE_NAME="LIABILITYEXPENSE"/>
+<PRL EXEC_ORDER="7" NAME="INDUSTRYCODE_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINDUSTRYCODE" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="8" NAME="GRANTINVESTMENT_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLGRANTINVESTMENT" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="9" NAME="INSTITUTIONLINE_1_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINSTITUTIONLINE" TABLE_NAME="INSTITUTIONLINE"/>
+<PRL EXEC_ORDER="6" NAME="PL_DIRECTION_2_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLLIABILITYEXPENSE" TABLE_NAME="LIABILITYEXPENSE"/>
+<PRL EXEC_ORDER="7" NAME="INDUSTRYCODE_2_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINDUSTRYCODE" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="8" NAME="GRANTINVESTMENT_2_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLGRANTINVESTMENT" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="9" NAME="INSTITUTIONLINE_2_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINSTITUTIONLINE" TABLE_NAME="INSTITUTIONLINE"/>
+<PRL EXEC_ORDER="6" NAME="PL_DIRECTION_3_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLLIABILITYEXPENSE" TABLE_NAME="LIABILITYEXPENSE"/>
+<PRL EXEC_ORDER="7" NAME="INDUSTRYCODE_3_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINDUSTRYCODE" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="8" NAME="GRANTINVESTMENT_3_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLGRANTINVESTMENT" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="9" NAME="INSTITUTIONLINE_3_GZ" RPLTYPE="1" RPL_ACTIVE="1" SERVERPROCESSOR_NAME="RPLINSTITUTIONLINE" TABLE_NAME="INSTITUTIONLINE"/>
+</RPLOBJECT>
+
+2020-03-22 21:28:48.071 [JavaFX Application Thread] INFO  main.ChangeXML - 2020-03-06
+2020-03-22 21:29:32.186 [JavaFX Application Thread] INFO  main.ChangeXML - 2020-03-05
+2020-03-22 21:29:46.285 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize">
+<PRL EXEC_ORDER="1" FIELD1_VALUE="555555" NAME="KCSR_555555_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KCSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="555555" NAME="KADM_555555_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KADM"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="555555" NAME="KFSR_555555_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KFSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="555555" NAME="KVR_555555_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KVR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="555555" NAME="KES_555555_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KES"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="555555" NAME="KDE_555555_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDE"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="555555" NAME="KDF_555555_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDF"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="555555" NAME="KDR_555555_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="555555" NAME="PURPOSEFULGRANT_555555_GZ" RPLTYPE="1" TABLE_NAME="PURPOSEFULGRANT"/>
+<PRL EXEC_ORDER="11" FIELD1_VALUE="555555" NAME="PL_DIRECTION_555555_GZ" RPLTYPE="1" TABLE_NAME="PL_DIRECTION"/>
+<PRL EXEC_ORDER="12" FIELD1_VALUE="555555" NAME="INDUSTRYCODE_555555_GZ" RPLTYPE="1" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="13" FIELD1_VALUE="555555" NAME="GRANTINVESTMENT_555555_GZ" RPLTYPE="1" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="7" FIELD1_VALUE="555555" FILTER_CONDITION="ESTKIND_ID IN (1,5,7,8) AND Exists(SELECT null FROM OrgRoles r WHERE t.Org_ID=r.Org_ID AND r.OrgRole_ID in (0,1,4,5,18,19))   and Exists(select null from Org o where  not(o.taxcode is null or o.taxcode like '000%' )and t.org_id=o.id)" NAME="ESTIMATE_555555_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="ESTIMATE_OFFLINE_RPL" TABLE_NAME="ESTIMATE"/>
+<PRL EXEC_ORDER="8" FIELD1_VALUE="555555" FIELD2_VALUE="2" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM ExpBudget b, Estimate e WHERE b.Estimate_ID=e.ID AND e.EstKind_ID IN (1,5,7,8) AND b.Recipient_ID &gt; 0)" NAME="BUDGETLINE_555555_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="EXPBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+<PRL EXEC_ORDER="14" FIELD1_VALUE="555555" FIELD2_VALUE="4" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM AuBuBudget b, orgroles r WHERE b.Pay_ID = r.org_id and r.orgrole_id in (18,19))" NAME="INSTITUTIONLINE_555555_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="AUBUBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+</RPLOBJECT>
+
+2020-03-22 22:03:36.897 [main] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize">
+<PRL EXEC_ORDER="1" FIELD1_VALUE="" NAME="__GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KCSR"/>
+</RPLOBJECT>
+
+2020-03-22 22:22:55.027 [main] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<TASK>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize"/>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize"/>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize">
+<PRL EXEC_ORDER="1" FIELD1_VALUE="" NAME="__GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KCSR"/>
+</RPLOBJECT>
+</TASK>
+
+2020-03-22 22:24:02.155 [main] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<TASK>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize"/>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize"/>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize">
+<PRL EXEC_ORDER="1" FIELD1_VALUE="" NAME="__GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KCSR"/>
+</RPLOBJECT>
+</TASK>
+
+2020-03-22 22:25:22.002 [main] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<TASK>
+<RPLOBJECT CLIENT_ID="0"/>
+<RPLOBJECT MASTER_ID="600"/>
+<RPLOBJECT action="synchronize">
+<PRL EXEC_ORDER="1" FIELD1_VALUE="" NAME="__GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KCSR"/>
+</RPLOBJECT>
+</TASK>
+
+2020-03-22 22:30:29.523 [main] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<TASK>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize">
+<PRL EXEC_ORDER="1" FIELD1_VALUE="" NAME="__GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KCSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="" NAME="__GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KADM"/>
+</RPLOBJECT>
+</TASK>
+
+2020-03-22 23:02:06.663 [JavaFX Application Thread] INFO  main.ChangeXML - 2020-03-12
+2020-03-22 23:03:31.309 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<TASK>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize">
+<RPL EXEC_ORDER="2" NAME="BANK_GZ" RPLTYPE="1" TABLE_NAME="BANK"/>
+<RPL EXEC_ORDER="5" FIELD1_VALUE="0" FILTER_CONDITION="EXISTS (SELECT null FROM OrgRoles r WHERE r.Org_ID=t.Org_ID AND r.OrgRole_ID in (0,1,4,5,18,19)) AND t.OrgAccType_ID in (1,2,5,6,7,8,9)" NAME="ORGACCOUNT_GZ" RPLTYPE="1" TABLE_NAME="ORGACCOUNT"/>
+<RPL EXEC_ORDER="9" NAME="PLAN_DIRECT_GROUP" RPLTYPE="1" TABLE_NAME="PLAN_DIRECT_GROUP"/>
+<RPL EXEC_ORDER="10" NAME="PL_PERMISSION" RPLTYPE="1" SERVERPROCESSOR_NAME="PLPERMISSIONGZRPLPROCESSOR" TABLE_NAME="PL_PERMISSION"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="4444" NAME="KCSR_4444_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KCSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="4444" NAME="KADM_4444_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KADM"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="4444" NAME="KFSR_4444_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KFSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="4444" NAME="KVR_4444_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KVR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="4444" NAME="KES_4444_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KES"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="4444" NAME="KDE_4444_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDE"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="4444" NAME="KDF_4444_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDF"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="4444" NAME="KDR_4444_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="4444" NAME="PURPOSEFULGRANT_4444_GZ" RPLTYPE="1" TABLE_NAME="PURPOSEFULGRANT"/>
+<PRL EXEC_ORDER="11" FIELD1_VALUE="4444" NAME="PL_DIRECTION_4444_GZ" RPLTYPE="1" TABLE_NAME="PL_DIRECTION"/>
+<PRL EXEC_ORDER="12" FIELD1_VALUE="4444" NAME="INDUSTRYCODE_4444_GZ" RPLTYPE="1" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="13" FIELD1_VALUE="4444" NAME="GRANTINVESTMENT_4444_GZ" RPLTYPE="1" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="7" FIELD1_VALUE="4444" FILTER_CONDITION="ESTKIND_ID IN (1,5,7,8) AND Exists(SELECT null FROM OrgRoles r WHERE t.Org_ID=r.Org_ID AND r.OrgRole_ID in (0,1,4,5,18,19))   and Exists(select null from Org o where  not(o.taxcode is null or o.taxcode like '000%' )and t.org_id=o.id)" NAME="ESTIMATE_4444_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="ESTIMATE_OFFLINE_RPL" TABLE_NAME="ESTIMATE"/>
+<PRL EXEC_ORDER="8" FIELD1_VALUE="4444" FIELD2_VALUE="2" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM ExpBudget b, Estimate e WHERE b.Estimate_ID=e.ID AND e.EstKind_ID IN (1,5,7,8) AND b.Recipient_ID &gt; 0)" NAME="BUDGETLINE_4444_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="EXPBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+<PRL EXEC_ORDER="14" FIELD1_VALUE="4444" FIELD2_VALUE="4" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM AuBuBudget b, orgroles r WHERE b.Pay_ID = r.org_id and r.orgrole_id in (18,19))" NAME="INSTITUTIONLINE_4444_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="AUBUBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+</RPLOBJECT>
+</TASK>
+
+2020-03-22 23:04:38.303 [JavaFX Application Thread] INFO  main.ChangeXML - 2020-03-05
+2020-03-22 23:05:20.728 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<TASK>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize">
+<RPL EXEC_ORDER="2" NAME="BANK_GZ" RPLTYPE="1" TABLE_NAME="BANK"/>
+<RPL EXEC_ORDER="5" FIELD1_VALUE="0" FILTER_CONDITION="EXISTS (SELECT null FROM OrgRoles r WHERE r.Org_ID=t.Org_ID AND r.OrgRole_ID in (0,1,4,5,18,19)) AND t.OrgAccType_ID in (1,2,5,6,7,8,9)" NAME="ORGACCOUNT_GZ" RPLTYPE="1" TABLE_NAME="ORGACCOUNT"/>
+<RPL EXEC_ORDER="9" NAME="PLAN_DIRECT_GROUP" RPLTYPE="1" TABLE_NAME="PLAN_DIRECT_GROUP"/>
+<RPL EXEC_ORDER="10" NAME="PL_PERMISSION" RPLTYPE="1" SERVERPROCESSOR_NAME="PLPERMISSIONGZRPLPROCESSOR" TABLE_NAME="PL_PERMISSION"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KCSR_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KCSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KADM_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KADM"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KFSR_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KFSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KVR_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KVR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KES_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KES"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KDE_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDE"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KDF_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDF"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KDR_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="PURPOSEFULGRANT_600000003368_GZ" RPLTYPE="1" TABLE_NAME="PURPOSEFULGRANT"/>
+<PRL EXEC_ORDER="11" FIELD1_VALUE="600000003368" NAME="PL_DIRECTION_600000003368_GZ" RPLTYPE="1" TABLE_NAME="PL_DIRECTION"/>
+<PRL EXEC_ORDER="12" FIELD1_VALUE="600000003368" NAME="INDUSTRYCODE_600000003368_GZ" RPLTYPE="1" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="13" FIELD1_VALUE="600000003368" NAME="GRANTINVESTMENT_600000003368_GZ" RPLTYPE="1" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="7" FIELD1_VALUE="600000003368" FILTER_CONDITION="ESTKIND_ID IN (1,5,7,8) AND Exists(SELECT null FROM OrgRoles r WHERE t.Org_ID=r.Org_ID AND r.OrgRole_ID in (0,1,4,5,18,19))   and Exists(select null from Org o where  not(o.taxcode is null or o.taxcode like '000%' )and t.org_id=o.id)" NAME="ESTIMATE_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="ESTIMATE_OFFLINE_RPL" TABLE_NAME="ESTIMATE"/>
+<PRL EXEC_ORDER="8" FIELD1_VALUE="600000003368" FIELD2_VALUE="2" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM ExpBudget b, Estimate e WHERE b.Estimate_ID=e.ID AND e.EstKind_ID IN (1,5,7,8) AND b.Recipient_ID &gt; 0)" NAME="BUDGETLINE_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="EXPBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+<PRL EXEC_ORDER="14" FIELD1_VALUE="600000003368" FIELD2_VALUE="4" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM AuBuBudget b, orgroles r WHERE b.Pay_ID = r.org_id and r.orgrole_id in (18,19))" NAME="INSTITUTIONLINE_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="AUBUBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+</RPLOBJECT>
+</TASK>
+
+2020-03-22 23:05:20.735 [JavaFX Application Thread] INFO  annualUpgradeBudget.RplObjectForGZ - <?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<TASK>
+<RPLOBJECT CLIENT_ID="0" MASTER_ID="600" action="synchronize">
+<RPL EXEC_ORDER="2" NAME="BANK_GZ" RPLTYPE="1" TABLE_NAME="BANK"/>
+<RPL EXEC_ORDER="5" FIELD1_VALUE="0" FILTER_CONDITION="EXISTS (SELECT null FROM OrgRoles r WHERE r.Org_ID=t.Org_ID AND r.OrgRole_ID in (0,1,4,5,18,19)) AND t.OrgAccType_ID in (1,2,5,6,7,8,9)" NAME="ORGACCOUNT_GZ" RPLTYPE="1" TABLE_NAME="ORGACCOUNT"/>
+<RPL EXEC_ORDER="9" NAME="PLAN_DIRECT_GROUP" RPLTYPE="1" TABLE_NAME="PLAN_DIRECT_GROUP"/>
+<RPL EXEC_ORDER="10" NAME="PL_PERMISSION" RPLTYPE="1" SERVERPROCESSOR_NAME="PLPERMISSIONGZRPLPROCESSOR" TABLE_NAME="PL_PERMISSION"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KCSR_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KCSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KADM_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KADM"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KFSR_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KFSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KVR_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KVR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KES_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KES"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KDE_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDE"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KDF_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDF"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="KDR_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003368" NAME="PURPOSEFULGRANT_600000003368_GZ" RPLTYPE="1" TABLE_NAME="PURPOSEFULGRANT"/>
+<PRL EXEC_ORDER="11" FIELD1_VALUE="600000003368" NAME="PL_DIRECTION_600000003368_GZ" RPLTYPE="1" TABLE_NAME="PL_DIRECTION"/>
+<PRL EXEC_ORDER="12" FIELD1_VALUE="600000003368" NAME="INDUSTRYCODE_600000003368_GZ" RPLTYPE="1" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="13" FIELD1_VALUE="600000003368" NAME="GRANTINVESTMENT_600000003368_GZ" RPLTYPE="1" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="7" FIELD1_VALUE="600000003368" FILTER_CONDITION="ESTKIND_ID IN (1,5,7,8) AND Exists(SELECT null FROM OrgRoles r WHERE t.Org_ID=r.Org_ID AND r.OrgRole_ID in (0,1,4,5,18,19))   and Exists(select null from Org o where  not(o.taxcode is null or o.taxcode like '000%' )and t.org_id=o.id)" NAME="ESTIMATE_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="ESTIMATE_OFFLINE_RPL" TABLE_NAME="ESTIMATE"/>
+<PRL EXEC_ORDER="8" FIELD1_VALUE="600000003368" FIELD2_VALUE="2" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM ExpBudget b, Estimate e WHERE b.Estimate_ID=e.ID AND e.EstKind_ID IN (1,5,7,8) AND b.Recipient_ID &gt; 0)" NAME="BUDGETLINE_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="EXPBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+<PRL EXEC_ORDER="14" FIELD1_VALUE="600000003368" FIELD2_VALUE="4" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM AuBuBudget b, orgroles r WHERE b.Pay_ID = r.org_id and r.orgrole_id in (18,19))" NAME="INSTITUTIONLINE_600000003368_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="AUBUBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003370" NAME="KCSR_600000003370_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KCSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003370" NAME="KADM_600000003370_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KADM"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003370" NAME="KFSR_600000003370_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KFSR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003370" NAME="KVR_600000003370_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KVR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003370" NAME="KES_600000003370_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KES"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003370" NAME="KDE_600000003370_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDE"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003370" NAME="KDF_600000003370_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDF"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003370" NAME="KDR_600000003370_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="PERIODIC_VS_NOT_PERIODIC_KBK_RPL" TABLE_NAME="KDR"/>
+<PRL EXEC_ORDER="1" FIELD1_VALUE="600000003370" NAME="PURPOSEFULGRANT_600000003370_GZ" RPLTYPE="1" TABLE_NAME="PURPOSEFULGRANT"/>
+<PRL EXEC_ORDER="11" FIELD1_VALUE="600000003370" NAME="PL_DIRECTION_600000003370_GZ" RPLTYPE="1" TABLE_NAME="PL_DIRECTION"/>
+<PRL EXEC_ORDER="12" FIELD1_VALUE="600000003370" NAME="INDUSTRYCODE_600000003370_GZ" RPLTYPE="1" TABLE_NAME="INDUSTRYCODE"/>
+<PRL EXEC_ORDER="13" FIELD1_VALUE="600000003370" NAME="GRANTINVESTMENT_600000003370_GZ" RPLTYPE="1" TABLE_NAME="GRANTINVESTMENT"/>
+<PRL EXEC_ORDER="7" FIELD1_VALUE="600000003370" FILTER_CONDITION="ESTKIND_ID IN (1,5,7,8) AND Exists(SELECT null FROM OrgRoles r WHERE t.Org_ID=r.Org_ID AND r.OrgRole_ID in (0,1,4,5,18,19))   and Exists(select null from Org o where  not(o.taxcode is null or o.taxcode like '000%' )and t.org_id=o.id)" NAME="ESTIMATE_600000003370_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="ESTIMATE_OFFLINE_RPL" TABLE_NAME="ESTIMATE"/>
+<PRL EXEC_ORDER="8" FIELD1_VALUE="600000003370" FIELD2_VALUE="2" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM ExpBudget b, Estimate e WHERE b.Estimate_ID=e.ID AND e.EstKind_ID IN (1,5,7,8) AND b.Recipient_ID &gt; 0)" NAME="BUDGETLINE_600000003370_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="EXPBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+<PRL EXEC_ORDER="14" FIELD1_VALUE="600000003370" FIELD2_VALUE="4" FILTER_CONDITION="ID IN (SELECT BudgetLine_ID FROM AuBuBudget b, orgroles r WHERE b.Pay_ID = r.org_id and r.orgrole_id in (18,19))" NAME="INSTITUTIONLINE_600000003370_GZ" RPLTYPE="1" SERVERPROCESSOR_NAME="AUBUBUDEGETLINERPL" TABLE_NAME="BUDGETLINE"/>
+</RPLOBJECT>
+</TASK>
+

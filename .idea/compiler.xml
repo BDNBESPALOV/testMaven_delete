@@ -6,8 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="testMaven_delete2" />
         <module name="testMaven_delete" />
+        <module name="testMaven_delete2" />
+        <module name="testMaven_delete1" />
       </profile>
     </annotationProcessing>
   </component>

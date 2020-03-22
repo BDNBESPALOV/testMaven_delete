@@ -1,3 +1,6 @@
 # Project exclude paths
 /target/
 /archive.zip
+/RPLOBJECT_FOR_FIN/RPLOBJECT_FOR_FIN.xml
+/RPLOBJECT_FOR_GZ/RPLOBJECT_FOR_GZ.xml
+/KVFO/

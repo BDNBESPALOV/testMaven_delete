@@ -1,4 +1,4 @@
-package sample;
+package main;
 
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;

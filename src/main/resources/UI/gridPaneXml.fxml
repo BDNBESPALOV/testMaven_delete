@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="CENTER" hgap="10.0" prefHeight="191.96091542968497" prefWidth="280.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller3">
+<GridPane alignment="CENTER" hgap="10.0" prefHeight="191.96091542968497" prefWidth="280.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="main.Controller3">
   <children>
     <Pane cache="true" cacheHint="DEFAULT" disable="false" focusTraversable="false" prefHeight="191.0" prefWidth="280.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
       <children>

@@ -1,11 +1,9 @@
-package sample;
+package main;
 
 import org.slf4j.Logger;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Scanner;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
