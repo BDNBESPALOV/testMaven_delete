@@ -3,6 +3,7 @@
     <property name="createdBy">Eclipse BIRT Designer Version 3.7.2.v20120213 Build &lt;3.7.2.v20120214-1408></property>
     <property name="units">in</property>
     <method name="initialize"><![CDATA[CustomFunctions.BindParameters(this.reportContext);]]></method>
+    <method name="beforeFactory"><![CDATA[ ]]></method>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">auto layout</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -71,10 +72,10 @@
                     <name>disabledContentBidiFormatStr</name>
                 </ex-property>
             </list-property>
-            <property name="odaDriverClass">oracle.jdbc.driver.OracleDriver</property>
-            <property name="odaURL">jdbc:oracle:thin:@localhost:1523:azk</property>
-            <property name="odaUser">GZ_BELGOBL1</property>
-            <encrypted-property name="odaPassword" encryptionID="base64">R1pfQkVMR09CTDE=</encrypted-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://172.28.176.11:5432/gz_belgobl</property>
+            <property name="odaUser">postgres</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">cG9zdGdyZXM=</encrypted-property>
         </oda-data-source>
     </data-sources>
     <data-sets>
@@ -1054,33 +1055,38 @@ on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">ID</property>
-                    <text-property name="displayName">ID</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ID"]</expression>
+                    <text-property name="displayName">id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
                     <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">CUSTOMERNAME</property>
-                    <text-property name="displayName">CUSTOMERNAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                    <text-property name="displayName">customername</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["customername"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">DOC_NUMBER</property>
-                    <text-property name="displayName">DOC_NUMBER</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["DOC_NUMBER"]</expression>
+                    <text-property name="displayName">doc_number</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["doc_number"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">STATUS</property>
-                    <text-property name="displayName">STATUS</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["STATUS"]</expression>
+                    <text-property name="displayName">status</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["status"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">KOD</property>
-                    <text-property name="displayName">KOD</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["KOD"]</expression>
+                    <text-property name="displayName">kod</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["kod"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
             </list-property>
             <column id="1164"/>
@@ -1154,9 +1160,10 @@ on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,
                             <list-property name="boundDataColumns">
                                 <structure>
                                     <property name="name">OOS_DOC_NUMBER</property>
-                                    <text-property name="displayName">OOS_DOC_NUMBER</text-property>
-                                    <expression name="expression" type="javascript">dataSetRow["OOS_DOC_NUMBER"]</expression>
+                                    <text-property name="displayName">oos_doc_number</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["oos_doc_number"]</expression>
                                     <property name="dataType">string</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                             </list-property>
                             <column id="1431"/>
@@ -1199,24 +1206,39 @@ on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,
                             <list-property name="boundDataColumns">
                                 <structure>
                                     <property name="name">SUM_AMOUN_PAY</property>
-                                    <text-property name="displayName">SUM_AMOUN_PAY</text-property>
-                                    <expression name="expression" type="javascript">dataSetRow["SUM_AMOUN_PAY"]</expression>
+                                    <text-property name="displayName">sum_amoun_pay</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["sum_amoun_pay"]</expression>
                                     <property name="dataType">decimal</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">PAYDATE</property>
-                                    <text-property name="displayName">PAYDATE</text-property>
-                                    <expression name="expression" type="javascript">dataSetRow["PAYDATE"]</expression>
+                                    <text-property name="displayName">paydate</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["paydate"]</expression>
                                     <property name="dataType">date-time</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">CONTRACT_ID</property>
-                                    <text-property name="displayName">CONTRACT_ID</text-property>
-                                    <expression name="expression" type="javascript">dataSetRow["CONTRACT_ID"]</expression>
+                                    <text-property name="displayName">contract_id</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["contract_id"]</expression>
                                     <property name="dataType">decimal</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">Aggregation</property>
+                                    <property name="dataType">float</property>
+                                    <property name="aggregateFunction">SUM</property>
+                                    <list-property name="arguments">
+                                        <structure>
+                                            <property name="name">Expression</property>
+                                            <expression name="value" type="javascript">dataSetRow["SUM_AMOUN_PAY"]</expression>
+                                        </structure>
+                                    </list-property>
+                                    <property name="allowExport">true</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Aggregation_1</property>
                                     <property name="dataType">float</property>
                                     <property name="aggregateFunction">SUM</property>
                                     <list-property name="arguments">
@@ -1258,8 +1280,8 @@ on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,
                                         </label>
                                     </cell>
                                     <cell id="1188">
-                                        <data id="1198">
-                                            <property name="resultSetColumn">Aggregation</property>
+                                        <data id="1444">
+                                            <property name="resultSetColumn">Aggregation_1</property>
                                         </data>
                                     </cell>
                                     <cell id="1189"/>
@@ -1290,33 +1312,38 @@ on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">ID</property>
-                    <text-property name="displayName">ID</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ID"]</expression>
+                    <text-property name="displayName">id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
                     <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">CUSTOMERNAME</property>
-                    <text-property name="displayName">CUSTOMERNAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                    <text-property name="displayName">customername</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["customername"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">DOC_NUMBER</property>
-                    <text-property name="displayName">DOC_NUMBER</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["DOC_NUMBER"]</expression>
+                    <text-property name="displayName">doc_number</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["doc_number"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">STATUS</property>
-                    <text-property name="displayName">STATUS</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["STATUS"]</expression>
+                    <text-property name="displayName">status</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["status"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">KOD</property>
-                    <text-property name="displayName">KOD</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["KOD"]</expression>
+                    <text-property name="displayName">kod</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["kod"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
             </list-property>
             <column id="1267"/>
@@ -1390,9 +1417,10 @@ on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,
                             <list-property name="boundDataColumns">
                                 <structure>
                                     <property name="name">OOS_DOC_NUMBER</property>
-                                    <text-property name="displayName">OOS_DOC_NUMBER</text-property>
-                                    <expression name="expression" type="javascript">dataSetRow["OOS_DOC_NUMBER"]</expression>
+                                    <text-property name="displayName">oos_doc_number</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["oos_doc_number"]</expression>
                                     <property name="dataType">string</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                             </list-property>
                             <column id="1436"/>
@@ -1435,24 +1463,39 @@ on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,
                             <list-property name="boundDataColumns">
                                 <structure>
                                     <property name="name">SUM_AMOUN_PAY</property>
-                                    <text-property name="displayName">SUM_AMOUN_PAY</text-property>
-                                    <expression name="expression" type="javascript">dataSetRow["SUM_AMOUN_PAY"]</expression>
+                                    <text-property name="displayName">sum_amoun_pay</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["sum_amoun_pay"]</expression>
                                     <property name="dataType">decimal</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">PAYDATE</property>
-                                    <text-property name="displayName">PAYDATE</text-property>
-                                    <expression name="expression" type="javascript">dataSetRow["PAYDATE"]</expression>
+                                    <text-property name="displayName">paydate</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["paydate"]</expression>
                                     <property name="dataType">date-time</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">CONTRACT_ID</property>
-                                    <text-property name="displayName">CONTRACT_ID</text-property>
-                                    <expression name="expression" type="javascript">dataSetRow["CONTRACT_ID"]</expression>
+                                    <text-property name="displayName">contract_id</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["contract_id"]</expression>
                                     <property name="dataType">decimal</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">Aggregation</property>
+                                    <property name="dataType">float</property>
+                                    <property name="aggregateFunction">SUM</property>
+                                    <list-property name="arguments">
+                                        <structure>
+                                            <property name="name">Expression</property>
+                                            <expression name="value" type="javascript">dataSetRow["SUM_AMOUN_PAY"]</expression>
+                                        </structure>
+                                    </list-property>
+                                    <property name="allowExport">true</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Aggregation_1</property>
                                     <property name="dataType">float</property>
                                     <property name="aggregateFunction">SUM</property>
                                     <list-property name="arguments">
@@ -1494,8 +1537,8 @@ on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,
                                         </label>
                                     </cell>
                                     <cell id="1291">
-                                        <data id="1366">
-                                            <property name="resultSetColumn">Aggregation</property>
+                                        <data id="1445">
+                                            <property name="resultSetColumn">Aggregation_1</property>
                                         </data>
                                     </cell>
                                     <cell id="1292"/>
@@ -1526,33 +1569,38 @@ on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">ID</property>
-                    <text-property name="displayName">ID</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ID"]</expression>
+                    <text-property name="displayName">id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["id"]</expression>
                     <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">CUSTOMERNAME</property>
-                    <text-property name="displayName">CUSTOMERNAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
+                    <text-property name="displayName">customername</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["customername"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">DOC_NUMBER</property>
-                    <text-property name="displayName">DOC_NUMBER</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["DOC_NUMBER"]</expression>
+                    <text-property name="displayName">doc_number</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["doc_number"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">STATUS</property>
-                    <text-property name="displayName">STATUS</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["STATUS"]</expression>
+                    <text-property name="displayName">status</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["status"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">KOD</property>
-                    <text-property name="displayName">KOD</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["KOD"]</expression>
+                    <text-property name="displayName">kod</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["kod"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
             </list-property>
             <column id="1336"/>
@@ -1628,9 +1676,10 @@ on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,
                             <list-property name="boundDataColumns">
                                 <structure>
                                     <property name="name">OOS_DOC_NUMBER</property>
-                                    <text-property name="displayName">OOS_DOC_NUMBER</text-property>
-                                    <expression name="expression" type="javascript">dataSetRow["OOS_DOC_NUMBER"]</expression>
+                                    <text-property name="displayName">oos_doc_number</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["oos_doc_number"]</expression>
                                     <property name="dataType">string</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                             </list-property>
                             <column id="1441"/>
@@ -1673,21 +1722,24 @@ on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,
                             <list-property name="boundDataColumns">
                                 <structure>
                                     <property name="name">SUM_AMOUN_PAY</property>
-                                    <text-property name="displayName">SUM_AMOUN_PAY</text-property>
-                                    <expression name="expression" type="javascript">dataSetRow["SUM_AMOUN_PAY"]</expression>
+                                    <text-property name="displayName">sum_amoun_pay</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["sum_amoun_pay"]</expression>
                                     <property name="dataType">decimal</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">PAYDATE</property>
-                                    <text-property name="displayName">PAYDATE</text-property>
-                                    <expression name="expression" type="javascript">dataSetRow["PAYDATE"]</expression>
+                                    <text-property name="displayName">paydate</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["paydate"]</expression>
                                     <property name="dataType">date-time</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">CONTRACT_ID</property>
-                                    <text-property name="displayName">CONTRACT_ID</text-property>
-                                    <expression name="expression" type="javascript">dataSetRow["CONTRACT_ID"]</expression>
+                                    <text-property name="displayName">contract_id</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["contract_id"]</expression>
                                     <property name="dataType">decimal</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">Aggregation</property>
@@ -1696,7 +1748,7 @@ on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,
                                     <list-property name="arguments">
                                         <structure>
                                             <property name="name">Expression</property>
-                                            <expression name="value" type="javascript">row["SUM_AMOUN_PAY"]</expression>
+                                            <expression name="value" type="javascript">row["sum_amoun_pay"]</expression>
                                         </structure>
                                     </list-property>
                                     <property name="allowExport">true</property>

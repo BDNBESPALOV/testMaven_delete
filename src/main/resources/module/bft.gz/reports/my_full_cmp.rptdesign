@@ -54,28 +54,6 @@
         </scalar-parameter>
     </parameters>
     <data-sources>
-        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
-            <list-property name="privateDriverProperties">
-                <ex-property>
-                    <name>metadataBidiFormatStr</name>
-                    <value>ILYNN</value>
-                </ex-property>
-                <ex-property>
-                    <name>disabledMetadataBidiFormatStr</name>
-                </ex-property>
-                <ex-property>
-                    <name>contentBidiFormatStr</name>
-                    <value>ILYNN</value>
-                </ex-property>
-                <ex-property>
-                    <name>disabledContentBidiFormatStr</name>
-                </ex-property>
-            </list-property>
-            <property name="odaDriverClass">oracle.jdbc.driver.OracleDriver</property>
-            <property name="odaURL">jdbc:oracle:thin:@localhost:1523:azk</property>
-            <property name="odaUser">STEND_GZ_BELGOBL1</property>
-            <encrypted-property name="odaPassword" encryptionID="base64">U1RFTkRfR1pfQkVMR09CTDE=</encrypted-property>
-        </oda-data-source>
         <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Real_GZ_BELGOBL1" id="1776">
             <list-property name="privateDriverProperties">
                 <ex-property>
@@ -93,10 +71,10 @@
                     <name>disabledContentBidiFormatStr</name>
                 </ex-property>
             </list-property>
-            <property name="odaDriverClass">oracle.jdbc.OracleDriver</property>
-            <property name="odaURL">jdbc:oracle:thin:@localhost:1523:azk</property>
-            <property name="odaUser">GZ_BELGOBL1</property>
-            <encrypted-property name="odaPassword" encryptionID="base64">R1pfQkVMR09CTDE=</encrypted-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://172.28.176.11:5432/stend_gz_belgobl</property>
+            <property name="odaUser">postgres</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">cG9zdGdyZXM=</encrypted-property>
         </oda-data-source>
     </data-sources>
     <data-sets>
@@ -239,38 +217,44 @@
                 <structure>
                     <property name="position">1</property>
                     <property name="name">COSTNAME</property>
-                    <property name="nativeName">COSTNAME</property>
+                    <property name="nativeName">costname</property>
                     <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">2</property>
                     <property name="name">ITOG_SUM_P</property>
-                    <property name="nativeName">ITOG_SUM_P</property>
+                    <property name="nativeName">itog_sum_p</property>
                     <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">3</property>
                     <property name="name">ITOG_SUM_PO</property>
-                    <property name="nativeName">ITOG_SUM_PO</property>
+                    <property name="nativeName">itog_sum_po</property>
                     <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">4</property>
                     <property name="name">ITOG_SUMM_PP</property>
-                    <property name="nativeName">ITOG_SUMM_PP</property>
+                    <property name="nativeName">itog_summ_pp</property>
                     <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">5</property>
                     <property name="name">P5</property>
-                    <property name="nativeName">P5</property>
+                    <property name="nativeName">p5</property>
                     <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">6</property>
                     <property name="name">CUSTOMER_ID</property>
-                    <property name="nativeName">CUSTOMER_ID</property>
+                    <property name="nativeName">customer_id</property>
                     <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
                 </structure>
             </list-property>
             <xml-property name="queryText"><![CDATA[WITH Inc_Out AS 
@@ -306,20 +290,16 @@ Inc_Out_docflag_227 AS (
 select f.document_id from docflag f where f.docflagtype_id in (227)
 )
 
-
-
 select  (select description from org where id=C.customer_id ) as costname, C.itog_Sum_P ,   D.itog_Sum_PO, itog_Summ_Pp, (  100 * (itog_Sum_PO + 
 (
-case  when EXISTS (select * from dual where itog_Summ_Pp is null ) then 0 else itog_Summ_Pp end
+case  when EXISTS (select itog_Summ_Pp is null ) then 0 else itog_Summ_Pp end
 )
 ) / itog_Sum_P ) as p5, C.customer_id  from 
  
  
  -------------СССССССССССССССССССССССССССССССССССССССССССССССССССССССССССС
  (
-select sum(sum_amoun_P) as itog_Sum_P, customer_id  from (
-
-select sum(sum_amoun_pay) as sum_amoun_P,paydate,contract_id,doc_number,status,kod,customer_id from (
+select  (case when sum(sum_amoun_P)>0 then sum(sum_amoun_P) else 1 end )  as itog_Sum_P, customer_id  from ( select sum(sum_amoun_pay) as sum_amoun_P,paydate,contract_id,doc_number,status,kod,customer_id from (
 
 select sum(amount) as sum_amoun_pay,paydate,contract_id from CONPAYFACT where contract_id in 
 (select id from contractdoc where id in (  select id from Inc_Out_PURCHASEMODE__115 )  and document_id not in (select document_id from Inc_Out )
@@ -342,7 +322,7 @@ JOIN BUDGET bydget
 and dispstatus_id not in (-1,11,24,7,9)
 ) and paydate  BETWEEN ? AND ?   group by paydate,contract_id)
 ) B
-on A.contract_id = B.id group by A.contract_id,paydate,contract_id,doc_number,status,kod,customer_id ) 
+on A.contract_id = B.id group by A.contract_id,paydate,contract_id,doc_number,status,kod,customer_id ) h /*where h.sum_amoun_P>0*/
 group by customer_id
 ) C join 
 -------------СССССССССССССССССССССССССССССССССССССССССССССССССССССССССССС
@@ -374,7 +354,7 @@ and document_id in (select  document_id from Inc_Out_docflag)
 
 and dispstatus_id not in (-1,11,24,7,9)
 ) and paydate  BETWEEN ? AND ?  group by paydate,contract_id
-) B on A.id=B.contract_id  group by paydate,contract_id,doc_number,status,kod,customer_id ) group by customer_id
+) B on A.id=B.contract_id  group by paydate,contract_id,doc_number,status,kod,customer_id ) H2 group by customer_id
 
 ) D on C.customer_id = D.customer_id  
 -------------DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
@@ -407,14 +387,11 @@ and document_id in (select  document_id from Inc_Out_docflag_227)
 
 and dispstatus_id not in (-1,11,24,7,9)
 ) and paydate  BETWEEN ? AND ?   group by paydate,contract_id
-) B on A.id=B.contract_id  group by paydate,contract_id,doc_number,status,kod,customer_id ) group by  customer_id
+) B on A.id=B.contract_id  group by paydate,contract_id,doc_number,status,kod,customer_id ) H3 group by  customer_id
 ) F on F.customer_id = C.customer_id 
  where C.customer_id in (select distinct customer_id from contractdoc where budget_id in (select id from budget where caption not like '%223%') and customer_id in (select id from  org where close_date is null and name is not null ))
  and C.customer_id not in (select id from org where description like '%автоном%' or description like '%Автоном%' or description like '%АВТОНОМ%') 
- order by costname
-
-
-]]></xml-property>
+ order by costname]]></xml-property>
         </oda-data-set>
         <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="test1" id="1781">
             <property name="nullsOrdering">nulls lowest</property>
@@ -569,38 +546,44 @@ and dispstatus_id not in (-1,11,24,7,9)
                 <structure>
                     <property name="position">1</property>
                     <property name="name">CUSTOMERNAME</property>
-                    <property name="nativeName">CUSTOMERNAME</property>
+                    <property name="nativeName">customername</property>
                     <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">2</property>
                     <property name="name">ITOG_SUM_P</property>
-                    <property name="nativeName">ITOG_SUM_P</property>
+                    <property name="nativeName">itog_sum_p</property>
                     <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">3</property>
                     <property name="name">ITOG_SUM_PO</property>
-                    <property name="nativeName">ITOG_SUM_PO</property>
+                    <property name="nativeName">itog_sum_po</property>
                     <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">4</property>
                     <property name="name">ITOG_SUMM_PP</property>
-                    <property name="nativeName">ITOG_SUMM_PP</property>
+                    <property name="nativeName">itog_summ_pp</property>
                     <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">5</property>
                     <property name="name">P5</property>
-                    <property name="nativeName">P5</property>
+                    <property name="nativeName">p5</property>
                     <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">6</property>
                     <property name="name">CUSTOMER_ID</property>
-                    <property name="nativeName">CUSTOMER_ID</property>
+                    <property name="nativeName">customer_id</property>
                     <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
                 </structure>
             </list-property>
             <xml-property name="queryText"><![CDATA[WITH Inc_Out AS 
@@ -612,7 +595,7 @@ Inc_Out_PURCHASEMODE_CAPTION AS (
   select id from contractdoc where (PURCHASEMODE_CAPTION in ('Открытый конкурс','Запрос котировок',
 'Электронный аукцион','Конкурс с ограниченным участием','Двухэтапный конкурс','Запрос предложений','Открытый конкурс в электронной форме',
 'Открытый конкурс с ограниченным участием в электронной форме','Двухэтапный конкурс в электронной форме','Запрос котировок в электронной форме','Запрос предложений в электронной форме')
-or SINGLECUSTOMERREASON_ID in (select id from CONTRACTREASON where code in (20230,20240,20250,20260,20280,20290, 20231,20241,20251,20281,20291,20270))
+or SINGLECUSTOMERREASON_ID in (select id from CONTRACTREASON where code in ('20230','20240','20250','20260','20280','20290', '20231','20241','20251','20281','20291','20270'))
 )
 ), 
 
@@ -628,7 +611,7 @@ select f.document_id from docflag f where f.docflagtype_id in (227)
 
 select D.customername , itog_Sum_P ,   itog_Sum_PO, itog_Summ_Pp, (  100 * (itog_Sum_PO + 
 (
-case  when EXISTS (select * from dual where itog_Summ_Pp is null ) then 0 else itog_Summ_Pp end
+case  when EXISTS (select  itog_Summ_Pp is null ) then 0 else itog_Summ_Pp end
 )
 ) / itog_Sum_P ) as p5, C.customer_id  from (
 
@@ -659,7 +642,7 @@ JOIN BUDGET bydget
 and dispstatus_id not in (-1,11,24,7,9)
 ) and paydate  BETWEEN ? AND ?   group by paydate,contract_id)
 ) B
-on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,doc_number,status,kod,customer_id ) group by customer_id,customername
+on A.contract_id = B.id group by A.contract_id,paydate,contract_id,customername,doc_number,status,kod,customer_id ) h1 group by customer_id,customername
 ) C join 
 (
 select sum(sum_amoun_P_o) as itog_Sum_PO, customer_id, customername from (
@@ -688,7 +671,7 @@ and document_id in (select  document_id from Inc_Out_docflag)
 
 and dispstatus_id not in (-1,11,24,7,9)
 ) and paydate  BETWEEN ? AND ?  group by paydate,contract_id
-) B on A.id=B.contract_id  group by paydate,contract_id,customername,doc_number,status,kod,customer_id ) group by customer_id, customername
+) B on A.id=B.contract_id  group by paydate,contract_id,customername,doc_number,status,kod,customer_id ) h2 group by customer_id, customername
 
 ) D on C.customer_id = D.customer_id  and C.customername = D.customername and D.customer_id in (select c.child_id from orgchild c where c.org_id = ?) 
 --------------------------------------pp--------------------------------------------------------------
@@ -720,7 +703,7 @@ and document_id in (select  document_id from Inc_Out_docflag_227)
 
 and dispstatus_id not in (-1,11,24,7,9)
 ) and paydate  BETWEEN ? AND ?   group by paydate,contract_id
-) B on A.id=B.contract_id  group by paydate,contract_id,customername,doc_number,status,kod,customer_id ) group by customername, customer_id
+) B on A.id=B.contract_id  group by paydate,contract_id,customername,doc_number,status,kod,customer_id ) h3 group by customername, customer_id
 ) F on F.customer_id = D.customer_id and F.customername = D.customername and D.customer_id in (select c.child_id from orgchild c where c.org_id = ?)
  where D.customer_id in (select distinct customer_id from contractdoc where budget_id in (select id from budget where caption not like '%223%') and customer_id in (select id from  org where close_date is null and name is not null ))
    and C.customer_id not in (select id from org where description like '%автоном%' or description like '%Автоном%' or description like '%АВТОНОМ%') 
