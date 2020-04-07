@@ -3,6 +3,7 @@
     <property name="createdBy">Eclipse BIRT Designer Version 3.7.2.v20120213 Build &lt;3.7.2.v20120214-1408></property>
     <property name="units">in</property>
     <method name="initialize"><![CDATA[CustomFunctions.BindParameters(this.reportContext);]]></method>
+    <method name="beforeFactory"><![CDATA[ ]]></method>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">auto layout</property>
     <property name="bidiLayoutOrientation">ltr</property>
@@ -42,44 +43,26 @@
                     <name>disabledContentBidiFormatStr</name>
                 </ex-property>
             </list-property>
-            <property name="odaDriverClass">oracle.jdbc.driver.OracleDriver</property>
-            <property name="odaURL">jdbc:oracle:thin:@localhost:1523:azk</property>
-            <property name="odaUser">STEND_GZ_BELGOBL1</property>
-            <encrypted-property name="odaPassword" encryptionID="base64">U1RFTkRfR1pfQkVMR09CTDE=</encrypted-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://172.28.176.11:5432/stend_gz_belgobl</property>
+            <property name="odaUser">postgres</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">cG9zdGdyZXM=</encrypted-property>
         </oda-data-source>
     </data-sources>
     <data-sets>
         <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="8">
             <list-property name="columnHints">
                 <structure>
-                    <property name="columnName">ROW#</property>
+                    <property name="columnName">row</property>
                     <property name="analysis">measure</property>
-                    <text-property name="displayName">ROW#</text-property>
-                    <text-property name="heading">ROW#</text-property>
+                    <text-property name="displayName">row</text-property>
+                    <text-property name="heading">row</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">ID</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">ID</text-property>
-                    <text-property name="heading">ID</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">CAPTION</property>
+                    <property name="columnName">conserviceinfo</property>
                     <property name="analysis">dimension</property>
-                    <text-property name="displayName">CAPTION</text-property>
-                    <text-property name="heading">CAPTION</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">CONSERVICEINFO</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">CONSERVICEINFO</text-property>
-                    <text-property name="heading">CONSERVICEINFO</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">PROPFORM_ID</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">PROPFORM_ID</text-property>
-                    <text-property name="heading">PROPFORM_ID</text-property>
+                    <text-property name="displayName">conserviceinfo</text-property>
+                    <text-property name="heading">conserviceinfo</text-property>
                 </structure>
             </list-property>
             <list-property name="parameters"/>
@@ -87,7 +70,7 @@
                 <list-property name="resultSet">
                     <structure>
                         <property name="position">1</property>
-                        <property name="name">ROW#</property>
+                        <property name="name">row</property>
                         <property name="dataType">decimal</property>
                     </structure>
                     <structure>
@@ -102,7 +85,7 @@
                     </structure>
                     <structure>
                         <property name="position">4</property>
-                        <property name="name">CONSERVICEINFO</property>
+                        <property name="name">conserviceinfo</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
@@ -116,41 +99,41 @@
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
-                    <property name="name">ROW#</property>
-                    <property name="nativeName">ROW#</property>
+                    <property name="name">row</property>
+                    <property name="nativeName">row</property>
                     <property name="dataType">decimal</property>
-                    <property name="nativeDataType">2</property>
+                    <property name="nativeDataType">-5</property>
                 </structure>
                 <structure>
                     <property name="position">2</property>
                     <property name="name">ID</property>
-                    <property name="nativeName">ID</property>
+                    <property name="nativeName">id</property>
                     <property name="dataType">decimal</property>
                     <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">3</property>
                     <property name="name">CAPTION</property>
-                    <property name="nativeName">CAPTION</property>
+                    <property name="nativeName">caption</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">4</property>
-                    <property name="name">CONSERVICEINFO</property>
-                    <property name="nativeName">CONSERVICEINFO</property>
+                    <property name="name">conserviceinfo</property>
+                    <property name="nativeName">conserviceinfo</property>
                     <property name="dataType">string</property>
-                    <property name="nativeDataType">2005</property>
+                    <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">5</property>
                     <property name="name">PROPFORM_ID</property>
-                    <property name="nativeName">PROPFORM_ID</property>
+                    <property name="nativeName">propform_id</property>
                     <property name="dataType">decimal</property>
                     <property name="nativeDataType">2</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[select ROW_NUMBER() OVER(ORDER BY id ASC) AS Row#, id,caption,conserviceinfo,PROPFORM_ID from org where 
+            <xml-property name="queryText"><![CDATA[select ROW_NUMBER() OVER(ORDER BY id ASC) AS Row, id,caption,conserviceinfo,PROPFORM_ID from org where 
 close_date is  null and id in (select org_id from  PERSONAL where id in (select personal_id from ORGPERSONAL ))
  
  /* BIND AND PROPFORM_ID IN ($ORGFORM_ID_LIST) */]]></xml-property>
@@ -209,51 +192,57 @@ close_date is  null and id in (select org_id from  PERSONAL where id in (select 
                 <structure>
                     <property name="position">1</property>
                     <property name="name">LASTNAME</property>
-                    <property name="nativeName">LASTNAME</property>
+                    <property name="nativeName">lastname</property>
                     <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">2</property>
                     <property name="name">FIRSTNAME</property>
-                    <property name="nativeName">FIRSTNAME</property>
+                    <property name="nativeName">firstname</property>
                     <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">3</property>
                     <property name="name">PATRONYMIC</property>
-                    <property name="nativeName">PATRONYMIC</property>
+                    <property name="nativeName">patronymic</property>
                     <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">4</property>
                     <property name="name">APPOINTMENT</property>
-                    <property name="nativeName">APPOINTMENT</property>
+                    <property name="nativeName">appointment</property>
                     <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">5</property>
                     <property name="name">ISTRAINEDFOR44FZ</property>
-                    <property name="nativeName">ISTRAINEDFOR44FZ</property>
+                    <property name="nativeName">istrainedfor44fz</property>
                     <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">6</property>
                     <property name="name">P21</property>
-                    <property name="nativeName">P21</property>
+                    <property name="nativeName">p21</property>
                     <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">7</property>
                     <property name="name">ID</property>
-                    <property name="nativeName">ID</property>
+                    <property name="nativeName">id</property>
                     <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
                 </structure>
             </list-property>
             <xml-property name="queryText"><![CDATA[select p.lastname,p.firstname,p.patronymic,p.appointment,p.istrainedfor44fz, 
 
 case 
-when EXISTS  (select 1 from  PERSONAL pl where pl.id in 
-(select personal_id from ORGPERSONAL where org_id = p.org_id) and pl.istrainedfor44fz=1)
+when p.istrainedfor44fz=1
 then
 'Да'
 else 'Нет'
@@ -329,15 +318,17 @@ from  PERSONAL p where p.id in
                 </structure>
                 <structure>
                     <property name="name">CONSERVICEINFO</property>
-                    <text-property name="displayName">CONSERVICEINFO</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CONSERVICEINFO"]</expression>
+                    <text-property name="displayName">conserviceinfo</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["conserviceinfo"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">ROW#</property>
-                    <text-property name="displayName">ROW#</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ROW#"]</expression>
+                    <text-property name="displayName">row</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["row"]</expression>
                     <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">PROPFORM_ID</property>
@@ -477,36 +468,42 @@ from  PERSONAL p where p.id in
                                     <text-property name="displayName">LASTNAME</text-property>
                                     <expression name="expression" type="javascript">dataSetRow["LASTNAME"]</expression>
                                     <property name="dataType">string</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">FIRSTNAME</property>
                                     <text-property name="displayName">FIRSTNAME</text-property>
                                     <expression name="expression" type="javascript">dataSetRow["FIRSTNAME"]</expression>
                                     <property name="dataType">string</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">PATRONYMIC</property>
                                     <text-property name="displayName">PATRONYMIC</text-property>
                                     <expression name="expression" type="javascript">dataSetRow["PATRONYMIC"]</expression>
                                     <property name="dataType">string</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">APPOINTMENT</property>
                                     <text-property name="displayName">APPOINTMENT</text-property>
                                     <expression name="expression" type="javascript">dataSetRow["APPOINTMENT"]</expression>
                                     <property name="dataType">string</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">ISTRAINEDFOR44FZ</property>
                                     <text-property name="displayName">ISTRAINEDFOR44FZ</text-property>
                                     <expression name="expression" type="javascript">dataSetRow["ISTRAINEDFOR44FZ"]</expression>
                                     <property name="dataType">decimal</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                                 <structure>
                                     <property name="name">P21</property>
                                     <text-property name="displayName">P21</text-property>
                                     <expression name="expression" type="javascript">dataSetRow["P21"]</expression>
                                     <property name="dataType">string</property>
+                                    <property name="allowExport">true</property>
                                 </structure>
                             </list-property>
                             <column id="69">
