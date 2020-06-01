@@ -1,6 +1,29 @@
                  <prop name="clientObj" val="REP_BEL_CONTRACT"/>
               </properties>
             </object>
+
+
+	  
+		  <object name="repo_bft2" caption="Кто нашкодил?" stype="5">
+              <properties>
+                <prop name="lic_modules" val="beloblrep"/>
+                <prop name="form" val="app:report/repo_bft2.form"/>
+                <prop name="data" val="app:report/repo_bft2.data"/>
+                <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+                <prop name="template" val="app:reports/report_bft2.rptdesign"/>
+              </properties>
+            </object> 
+
+			
+		 <object name="my_request_alekseevka" caption="Информация о заявках поступивших на согласование с Главой (Алексеевского городского округа)" stype="5">
+              <properties>
+               <prop name="lic_modules" val="beloblrep"/>
+               <prop name="data" val="app:report/my_request_alekseevka.data"/>
+               <prop name="form" val="app:report/my_request_alekseevka.form"/>
+               <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+               <prop name="template" val="app:reports/my_request_alekseevka.rptdesign"/>
+              </properties>
+             </object>
 			
 			<object name="my_rep" caption="Информация по продукции в заключенных контрактах(Белгородская область)" stype="5">
                <properties>
