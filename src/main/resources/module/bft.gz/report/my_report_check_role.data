@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<object name="test" lname="Мониторинг ролей">
+  <field name="role_id" type="long" required="true" lname="Форма отчета"/>
+   <field name="__output_format" lname="Тип отчета" type="string" persisted="true" default="doc">
+    <value caption="xls">xls</value>
+    <value caption="doc">doc</value>
+    <value caption="pdf">pdf</value>
+    <value caption="html">html</value>
+  </field>
+</object>

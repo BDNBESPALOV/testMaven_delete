@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<repform xmlns="http://www.bftcom.com/gepard/ui/gul" id="my_report_check_role"
+         title="Мониторинг ролей"
+         onvalidate="validate(event)">
+  <fieldbox>
+	<combobox field="role_id" id="role_id" label="Выбор пользовательской роли" flex="1" editable="false">
+		<item label="Роль администратора" value="2"/>
+		<item label="Администратор БФТ" value="176"/>
+		<item label="Освобождение резерва лимитов ДФБП" value="2491"/>	
+	</combobox>
+    
+    
+  </fieldbox>
+
+  <script src="app:/core/formsLib.js"/>
+  <script>
+    <![CDATA[
+      function validate(event) {
+    }
+    ]]>
+  </script>
+</repform>

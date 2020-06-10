@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="testMaven_delete" />
+        <module name="POMO" />
         <module name="testMaven_delete2" />
         <module name="testMaven_delete1" />
       </profile>
