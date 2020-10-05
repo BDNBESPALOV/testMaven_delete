@@ -3,7 +3,7 @@
             </object>
 
 
-	  
+
  		<object name="my_report_check_role" caption="Мониторинг ролей" stype="5">
               <properties>
                <prop name="lic_modules" val="beloblrep"/>
@@ -12,7 +12,28 @@
                <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
                <prop name="template" val="app:reports/my_report_check_role.rptdesign"/>
               </properties>
-             </object> 
+             </object>
+
+
+       <object name="my_check_release_line" caption="Мониторинг освобождения лимитов" stype="5">
+                 <properties>
+                     <prop name="lic_modules" val="beloblrep"/>
+                     <prop name="data" val="app:report/my_check_release_line.data"/>
+                     <prop name="form" val="app:report/my_check_release_line.form"/>
+                     <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+                     <prop name="template" val="app:reports/my_check_release_line.rptdesign"/>
+              </properties>
+       </object>
+
+       <object name="my_reestor_role" caption="Реестр_ролей_АЦКГЗ" stype="5">
+                 <properties>
+                     <prop name="lic_modules" val="beloblrep"/>
+                     <prop name="data" val="app:report/my_reestor_role.data"/>
+                     <prop name="form" val="app:report/my_reestor_role.form"/>
+                     <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+                     <prop name="template" val="app:reports/my_reestor_role.rptdesign"/>
+                 </properties>
+        </object>
 
 			
 		 <object name="my_request_alekseevka" caption="Информация о заявках поступивших на согласование с Главой (Алексеевского городского округа)" stype="5">

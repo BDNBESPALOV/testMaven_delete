@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<object name="Monitoring_the_release_of_limits" lname="Мониторинг освобождения лимитов">
+<!-- Здесь должны быть описания полей -->
+<field name="MIN" type="date" lname="Дата выполнения действия с"/>
+<field name="MAX" type="date" lname="Дата выполнения действия по"/>
+<field name="budget_id" type="string" required="true" lname="Бюджет"/>
+<field name="__output_format" lname="Тип отчета" type="string" persisted="true" default="xls">
+<value caption="xls">xls</value>
+<value caption="doc">doc</value>
+<value caption="pdf">pdf</value>
+<value caption="html">html</value>
+</field>
+</object>
