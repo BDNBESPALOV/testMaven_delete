@@ -37,6 +37,21 @@
                 <property name="category">Unformatted</property>
             </structure>
         </scalar-parameter>
+        <scalar-parameter name="docStatus2" id="128">
+            <text-property name="promptText">Статусы дополнительных сценариев</text-property>
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">multi-value</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
     </parameters>
     <data-sources>
         <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
@@ -57,7 +72,7 @@
                 </ex-property>
             </list-property>
             <property name="odaDriverClass">org.postgresql.Driver</property>
-            <property name="odaURL">jdbc:postgresql://172.28.176.11:5432/gz_belgobl</property>
+            <property name="odaURL">jdbc:postgresql://172.28.176.28:5432/gz_belgobl_prod</property>
             <property name="odaUser">postgres</property>
             <encrypted-property name="odaPassword" encryptionID="base64">cG9zdGdyZXM=</encrypted-property>
         </oda-data-source>
@@ -118,10 +133,21 @@
 (select de.caption from docevent de where de.id = rolvi.docevent_id) as vel
 from roleeventview rolvi WHERE 
 rolvi.userrole_id in (select userrole_id from userroles where sysuser_id in (select id from sysuser where user_type = 0) ) 
-/* BIND and rolvi.dispstatus_id IN ($docStatus) */ 
-/* BIND AND rolvi.documentclass_id IN ($documentClass) */
-) n
+/* BIND AND  rolvi.documentclass_id IN ($documentClass)  */
+/* BIND AND  rolvi.dispstatus_id IN ($docStatus)  */ ) n 
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  /* select 
 (select r.name from userrole r where r.id = rolvi.userrole_id),
 (select docc.caption from documentclass docc where docc.id = rolvi.documentclass_id ),

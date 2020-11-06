@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <repform xmlns="http://www.bftcom.com/gepard/ui/gul" id="Реестр_ролей_АЦКГЗ"
-         title="Реестр_ролей_АЦКГЗ"
+         title="Реестр_ролей_АЦКГЗ(дополнительных сценариев)"
          onvalidate="validate(event)">
   <fieldbox>
     <!-- Тут должны быть описания нужных полей  -->
 	
-		<referencebox refappobj="core.dispstatus" refonly="true" buttons="select,clean" label="Статусы документов" info="CAPTION"
-              mode="multi" editable="true">
-			<field name="ID" datafield="docStatus"/>
-			<field name="CAPTION"/>
-	</referencebox>
-<!-- 			<referencebox refappobj="core.pardispstatus" refonly="true" buttons="select,clean" label="Статусы дополнительных сценариев" info="CAPTION"
+<!-- 		<referencebox refappobj="core.dispstatus" refonly="true" buttons="select,clean" label="Статусы документов" info="CAPTION"
               mode="multi" editable="true">
 			<field name="ID" datafield="docStatus"/>
 			<field name="CAPTION"/>
 	</referencebox> -->
+	<referencebox refappobj="core.pardispstatus" refonly="true" buttons="select,clean" label="Статусы дополнительных сценариев" info="CAPTION"
+              mode="multi" editable="true">
+			<field name="ID" datafield="docStatus"/>
+			<field name="CAPTION"/>
+	</referencebox>
 	<referencebox refappobj="core.documentClass" refonly="true" buttons="select,clean" label="Классы документов" info="CAPTION"
               mode="multi" editable="true">
 			<field name="ID" datafield="documentClass"/>

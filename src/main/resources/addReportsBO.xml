@@ -34,6 +34,15 @@
                      <prop name="template" val="app:reports/my_reestor_role.rptdesign"/>
                  </properties>
         </object>
+        <object name="my_reestor_role_more" caption="Реестр_ролей_АЦКГЗ (с добавлением дополнительных сценариев)" stype="5">
+        <properties>
+               <prop name="lic_modules" val="beloblrep"/>
+               <prop name="data" val="app:report/my_reestor_role_more.data"/>
+               <prop name="form" val="app:report/my_reestor_role_more.form"/>
+               <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+               <prop name="template" val="app:reports/my_reestor_role.rptdesign"/>
+        </properties>
+        </object>
 
 			
 		 <object name="my_request_alekseevka" caption="Информация о заявках поступивших на согласование с Главой (Алексеевского городского округа)" stype="5">

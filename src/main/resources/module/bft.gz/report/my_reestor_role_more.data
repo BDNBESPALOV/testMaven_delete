@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="windows-1251" ?>
-<object name="Реестр_ролей_АЦКГЗD" lname="Реестр_ролей_АЦКГЗD">
+<object name="Реестр_ролей_АЦКГЗD(дополнительных сценариев)" lname="Реестр_ролей_АЦКГЗD(дополнительных сценариев)">
   <!-- Здесь должны быть описания полей -->
   <field name="documentClass" type="string" required="true" lname="Классы документов"/>
-  <field name="docStatus" type="string" required="false" lname="Статусы документов"/>
-  <field name="docStatus2" type="string" required="false" lname="Статусы дополнительных сценариев"/>
+ <!--  <field name="docStatus" type="string" required="false" lname="Статусы документов"/> -->
+  <field name="docStatus" type="string" required="true" lname="Статусы дополнительных сценариев"/>
   <field name="__output_format" lname="Тип отчета" type="string" persisted="true" default="xls">
     <value caption="xls">xls</value>
     <value caption="doc">doc</value>
