@@ -72,7 +72,7 @@
                 </ex-property>
             </list-property>
             <property name="odaDriverClass">org.postgresql.Driver</property>
-            <property name="odaURL">jdbc:postgresql://172.28.176.11:5432/stend_gz_belgobl</property>
+            <property name="odaURL">jdbc:postgresql://172.28.176.28:5432/stend_gz_belgobl</property>
             <property name="odaUser">postgres</property>
             <encrypted-property name="odaPassword" encryptionID="base64">cG9zdGdyZXM=</encrypted-property>
         </oda-data-source>
@@ -80,6 +80,44 @@
     <data-sets>
         <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="test" id="1780">
             <property name="nullsOrdering">nulls lowest</property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">costname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">costname</text-property>
+                    <text-property name="heading">costname</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">itog_sum_p</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">itog_sum_p</text-property>
+                    <text-property name="heading">itog_sum_p</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">itog_sum_po</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">itog_sum_po</text-property>
+                    <text-property name="heading">itog_sum_po</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">itog_summ_pp</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">itog_summ_pp</text-property>
+                    <text-property name="heading">itog_summ_pp</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">p5</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">p5</text-property>
+                    <text-property name="heading">p5</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">customer_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">customer_id</text-property>
+                    <text-property name="heading">customer_id</text-property>
+                </structure>
+            </list-property>
             <list-property name="parameters">
                 <structure>
                     <property name="name">param_2</property>
@@ -182,32 +220,32 @@
                 <list-property name="resultSet">
                     <structure>
                         <property name="position">1</property>
-                        <property name="name">COSTNAME</property>
+                        <property name="name">costname</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">2</property>
-                        <property name="name">ITOG_SUM_P</property>
+                        <property name="name">itog_sum_p</property>
                         <property name="dataType">decimal</property>
                     </structure>
                     <structure>
                         <property name="position">3</property>
-                        <property name="name">ITOG_SUM_PO</property>
+                        <property name="name">itog_sum_po</property>
                         <property name="dataType">decimal</property>
                     </structure>
                     <structure>
                         <property name="position">4</property>
-                        <property name="name">ITOG_SUMM_PP</property>
+                        <property name="name">itog_summ_pp</property>
                         <property name="dataType">decimal</property>
                     </structure>
                     <structure>
                         <property name="position">5</property>
-                        <property name="name">P5</property>
+                        <property name="name">p5</property>
                         <property name="dataType">decimal</property>
                     </structure>
                     <structure>
                         <property name="position">6</property>
-                        <property name="name">CUSTOMER_ID</property>
+                        <property name="name">customer_id</property>
                         <property name="dataType">decimal</property>
                     </structure>
                 </list-property>
@@ -216,42 +254,42 @@
             <list-property name="resultSet">
                 <structure>
                     <property name="position">1</property>
-                    <property name="name">COSTNAME</property>
+                    <property name="name">costname</property>
                     <property name="nativeName">costname</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">2</property>
-                    <property name="name">ITOG_SUM_P</property>
+                    <property name="name">itog_sum_p</property>
                     <property name="nativeName">itog_sum_p</property>
                     <property name="dataType">decimal</property>
                     <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">3</property>
-                    <property name="name">ITOG_SUM_PO</property>
+                    <property name="name">itog_sum_po</property>
                     <property name="nativeName">itog_sum_po</property>
                     <property name="dataType">decimal</property>
                     <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">4</property>
-                    <property name="name">ITOG_SUMM_PP</property>
+                    <property name="name">itog_summ_pp</property>
                     <property name="nativeName">itog_summ_pp</property>
                     <property name="dataType">decimal</property>
                     <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">5</property>
-                    <property name="name">P5</property>
+                    <property name="name">p5</property>
                     <property name="nativeName">p5</property>
                     <property name="dataType">decimal</property>
                     <property name="nativeDataType">2</property>
                 </structure>
                 <structure>
                     <property name="position">6</property>
-                    <property name="name">CUSTOMER_ID</property>
+                    <property name="name">customer_id</property>
                     <property name="nativeName">customer_id</property>
                     <property name="dataType">decimal</property>
                     <property name="nativeDataType">2</property>
@@ -287,12 +325,12 @@ select f.document_id from docflag f where f.docflagtype_id in (115)
 ),
 
 Inc_Out_docflag_227 AS (
-select f.document_id from docflag f where f.docflagtype_id in (227)
+select f.document_id from docflag f where f.docflagtype_id in (227,301)
 )
 
 select  (select description from org where id=C.customer_id ) as costname, C.itog_Sum_P ,   D.itog_Sum_PO, itog_Summ_Pp, (  100 * (itog_Sum_PO + 
 (
-case  when EXISTS (select itog_Summ_Pp is null ) then 0 else itog_Summ_Pp end
+case  when  itog_Summ_Pp is null  then 0 else itog_Summ_Pp end
 )
 ) / itog_Sum_P ) as p5, C.customer_id  from 
  
@@ -604,14 +642,14 @@ select f.document_id from docflag f where f.docflagtype_id in (115)
 ),
 
 Inc_Out_docflag_227 AS (
-select f.document_id from docflag f where f.docflagtype_id in (227)
+select f.document_id from docflag f where f.docflagtype_id in (227,301)
 )
 
 
 
 select D.customername , itog_Sum_P ,   itog_Sum_PO, itog_Summ_Pp, (  100 * (itog_Sum_PO + 
 (
-case  when EXISTS (select  itog_Summ_Pp is null ) then 0 else itog_Summ_Pp end
+case  when   itog_Summ_Pp is null  then 0 else itog_Summ_Pp end
 )
 ) / itog_Sum_P ) as p5, C.customer_id  from (
 
@@ -764,39 +802,45 @@ and dispstatus_id not in (-1,11,24,7,9)
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">COSTNAME</property>
-                    <text-property name="displayName">COSTNAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["COSTNAME"]</expression>
+                    <text-property name="displayName">costname</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["costname"]</expression>
                     <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">ITOG_SUM_P</property>
-                    <text-property name="displayName">ITOG_SUM_P</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ITOG_SUM_P"]</expression>
+                    <text-property name="displayName">itog_sum_p</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["itog_sum_p"]</expression>
                     <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">ITOG_SUM_PO</property>
-                    <text-property name="displayName">ITOG_SUM_PO</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ITOG_SUM_PO"]</expression>
+                    <text-property name="displayName">itog_sum_po</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["itog_sum_po"]</expression>
                     <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">ITOG_SUMM_PP</property>
-                    <text-property name="displayName">ITOG_SUMM_PP</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ITOG_SUMM_PP"]</expression>
+                    <text-property name="displayName">itog_summ_pp</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["itog_summ_pp"]</expression>
                     <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">P5</property>
-                    <text-property name="displayName">P5</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["P5"]</expression>
+                    <text-property name="displayName">p5</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["p5"]</expression>
                     <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
                 </structure>
                 <structure>
                     <property name="name">CUSTOMER_ID</property>
-                    <text-property name="displayName">CUSTOMER_ID</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CUSTOMER_ID"]</expression>
+                    <text-property name="displayName">customer_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["customer_id"]</expression>
                     <property name="dataType">decimal</property>
+                    <property name="allowExport">true</property>
                 </structure>
             </list-property>
             <column id="1870">

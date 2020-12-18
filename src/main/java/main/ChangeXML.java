@@ -60,7 +60,7 @@ public class ChangeXML   {
 
 
 
-  /////////////////////////////////////////////////////////////
+  //////////////////////////////appobj///////////////////////////////
 
         InputStream addReportsBO  = getClass().getResourceAsStream("/addReportsBO.xml"); /*new FileInputStream("skolkovo.xml"); *///текст перед которым будет втавка
         InputStream appobjInput = new FileInputStream(appobj); //исходный файл
