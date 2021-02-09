@@ -25,6 +25,16 @@
               </properties>
        </object>
 
+       <object name="my_check_release_line_if" caption="Спец.отчет ДФБП (Мониторинг освобождения лимитов)" stype="5">
+            <properties>
+                     <prop name="lic_modules" val="beloblrep"/>
+                     <prop name="data" val="app:report/my_check_release_line_if.data"/>
+                     <prop name="form" val="app:report/my_check_release_line_if.form"/>
+                     <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+                     <prop name="template" val="app:reports/my_check_release_line_if.rptdesign"/>
+            </properties>
+       </object>
+
        <object name="my_reestor_role" caption="Реестр_ролей_АЦКГЗ" stype="5">
                  <properties>
                      <prop name="lic_modules" val="beloblrep"/>

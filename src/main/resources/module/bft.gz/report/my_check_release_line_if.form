@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<repform xmlns="http://www.bftcom.com/gepard/ui/gul" id="Monitoring_the_release_of_limits_form"
+title="Спец.отчет ДФБП (Мониторинг освобождения лимитов)"
+onvalidate="validate(event)">
+<fieldbox>
+<!-- Тут должны быть описания нужных полей -->
+
+
+<datepicker field="MIN"/>
+<datepicker field="MAX"/>
+<referencebox refappobj="bft.gz.budget" refonly="true" buttons="select,clean" label="Бюджет" info="CAPTION"
+mode="multi" editable="true">
+<field name="ID" datafield="budget_id"/>
+<field name="CAPTION"/>
+</referencebox>
+
+           
+
+</fieldbox>
+<script src="app:/core/formsLib.js"/>
+<script>
+<![CDATA[
+function validate(event) {
+}
+]]>
+</script>
+</repform>
