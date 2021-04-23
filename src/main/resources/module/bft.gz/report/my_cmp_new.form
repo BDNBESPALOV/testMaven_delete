@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<repform xmlns="http://www.bftcom.com/gepard/ui/gul"  id="NEW_belContractsRep1" title="NEW_Детальный отчет по СМП Белгородской области" onvalidate="submit(event);">
+    <fieldbox >
+
+                <datepicker field="MIN"/>
+                <datepicker field="MAX"/>
+ 
+                <referencebox refappobj="bft.dict.org" refonly="true" buttons="select,clean" label="Заказчик"
+				info="CAPTION" mode="multi" editable="true" hardfilter="SHOW_CLOSED_ORG='1'">
+                    <field name="ID" datafield="CUST_ID" />
+                    <field name="CAPTION" />
+                </referencebox>
+     
+             </fieldbox>
+			 
+			 
+			 
+			 
+    <script src="app:/core/formsLib.js"/>
+
+  <script>
+        <![CDATA[
+
+                   function submit(event) {
+                         event.fields.__output_format = "xls";
+                                             
+                       } 
+	
+	
+	
+	                ]]>
+    </script>
+</repform>

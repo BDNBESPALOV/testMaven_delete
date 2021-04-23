@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 3.7.2.v20120213 Build &lt;3.7.2.v20120214-1408></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">144</property>
+    <parameters>
+        <scalar-parameter name="MIN" id="39">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">dateTime</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="MAX" id="40">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">date</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="concealValue">false</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://172.28.176.28:5432/gz_belgobl_prod</property>
+            <property name="odaUser">postgres</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">Tmp1akdmaGprbQ==</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="ДоляСМП" id="38">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">sum_sgozminusexclusions</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">sum_sgozminusexclusions</text-property>
+                    <text-property name="heading">sum_sgozminusexclusions</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">sum_cmprestriction</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">sum_cmprestriction</text-property>
+                    <text-property name="heading">sum_cmprestriction</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">sum_smp</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">sum_smp</text-property>
+                    <text-property name="heading">sum_smp</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">costname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">costname</text-property>
+                    <text-property name="heading">costname</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters">
+                <structure>
+                    <property name="name">param_1</property>
+                    <property name="paramName">MIN</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">93</property>
+                    <property name="position">1</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+                <structure>
+                    <property name="name">param_2</property>
+                    <property name="paramName">MAX</property>
+                    <property name="nativeName"></property>
+                    <property name="dataType">date</property>
+                    <property name="nativeDataType">93</property>
+                    <property name="position">2</property>
+                    <property name="isOptional">false</property>
+                    <property name="isInput">true</property>
+                    <property name="isOutput">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">sum_sgozminusexclusions</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">sum_cmprestriction</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">sum_smp</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">costname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">sum_sgozminusexclusions</property>
+                    <property name="nativeName">sum_sgozminusexclusions</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">sum_cmprestriction</property>
+                    <property name="nativeName">sum_cmprestriction</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">sum_smp</property>
+                    <property name="nativeName">sum_smp</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">costname</property>
+                    <property name="nativeName">costname</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[WITH SGOZminusEXCLUSIONS AS (
+
+SELECT DOC_NUMBER, CONTRACTDOC.ID, CONPAYFACT.AMOUNT, CUSTOMER_ID
+FROM CONTRACTDOC JOIN CONPAYFACT ON CONTRACT_ID = CONTRACTDOC.ID
+WHERE (PURCHASEMODE_ID IN (SELECT ID  FROM PURCHASEMODE WHERE OOS_CODE IN ('OK44','ZK44','EA44','OKU44','OKD44','ZP44','OK504','OKU504','OKD504','ZK504','ZP504') ) 
+OR CONTRACTDOC.ID IN ( SELECT ID FROM CONTRACTDOC WHERE PURCHASEMODE_ID IN (SELECT ID  FROM PURCHASEMODE WHERE OOS_CODE = 'EP44' ) 
+AND SINGLECUSTOMERREASON_ID IN (
+    SELECT ID  FROM CONTRACTREASON WHERE 
+	pointlaw = 'Часть 1 пункт 25 статьи 93' OR
+	pointlaw = 'Часть 1 пункт 25.1 статьи 93' OR
+	pointlaw = 'Часть 1 пункт 25.2 статьи 93' OR
+	pointlaw = 'Часть 1 пункт 25.3 статьи 93' ) ) )   
+	AND /* только 44 фз */
+	BUDGET_ID IN (SELECT ID FROM BUDGET WHERE CAPTION NOT LIKE '%223%')
+	AND /* отбрасываем контракты на статсах: "Удален" "Отказан" "Отказан ФО" "Перерегистрирован" "Перерегистрация"*/
+	DISPSTATUS_ID NOT IN (-1,11,24,7,9) 
+	AND /* отбрасываем контракты по "Контракт на оказание услуг по предоставлению кредитов" "Контракт на выполнение работ в области использования атомной энергии" "Контракт, заключаемый для обеспечения обороны страны и безопасности государства"*/
+	DOCUMENT_ID NOT IN (SELECT DOCUMENT_ID FROM DOCFLAG WHERE DOCFLAGTYPE_ID IN (213,214,307))
+	AND /* фильтрация по датам платежа */
+	CONTRACTDOC.ID IN (SELECT CONTRACT_ID FROM CONPAYFACT WHERE PAYDATE  BETWEEN ? AND ? ) 
+	AND /* отбрасываем автономные */
+	CUSTOMER_ID NOT IN (SELECT ID FROM ORG WHERE DESCRIPTION LIKE '%автоном%' OR DESCRIPTION LIKE '%Автоном%' OR DESCRIPTION LIKE '%АВТОНОМ%')
+	
+	)
+	
+,
+CMPRestriction AS (
+SELECT DOC_NUMBER, CONTRACTDOC.ID, CONPAYFACT.AMOUNT, CONPAYFACT.PAYDATE, CUSTOMER_ID 
+FROM CONTRACTDOC JOIN CONPAYFACT ON CONTRACT_ID = CONTRACTDOC.ID
+WHERE DOCUMENT_ID IN 
+(SELECT F.DOCUMENT_ID FROM DOCFLAG F WHERE F.DOCFLAGTYPE_ID IN (115))
+AND CONTRACTDOC.ID IN (SELECT ID FROM SGOZminusEXCLUSIONS)
+),
+SMPattraction AS (
+SELECT CONTRACTDOC.SUBCONTRACTORSSUMINRUB,  CUSTOMER_ID
+FROM CONTRACTDOC 
+WHERE DOCUMENT_ID IN 
+(SELECT F.DOCUMENT_ID FROM DOCFLAG F WHERE F.DOCFLAGTYPE_ID IN (227,301))
+AND CONTRACTDOC.ID IN (SELECT ID FROM SGOZminusEXCLUSIONS)	
+)
+
+
+
+
+SELECT sum_SGOZminusEXCLUSIONS, sum_CMPRestriction, SUM_SMP, (SELECT ORG.DESCRIPTION FROM ORG WHERE ORG.ID = SGOZ.CUSTOMER_ID) AS COSTNAME  FROM 	
+(SELECT SUM(AMOUNT) AS sum_SGOZminusEXCLUSIONS, CUSTOMER_ID  FROM SGOZminusEXCLUSIONS GROUP BY CUSTOMER_ID) SGOZ
+LEFT JOIN 
+(SELECT SUM(AMOUNT) AS sum_CMPRestriction, CUSTOMER_ID  FROM CMPRestriction GROUP BY CUSTOMER_ID) CMPR
+ON CMPR.CUSTOMER_ID = SGOZ.CUSTOMER_ID
+LEFT JOIN 
+(SELECT SUM(SUBCONTRACTORSSUMINRUB) AS SUM_SMP, CUSTOMER_ID FROM  SMPattraction GROUP BY CUSTOMER_ID) SMP
+ON SMP.CUSTOMER_ID = SGOZ.CUSTOMER_ID
+ORDER BY COSTNAME
+--WHERE SGOZ.CUSTOMER_ID = 851
+
+
+
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <DataSetParameters>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>1</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+    <parameter>
+      <design:ParameterDefinition>
+        <design:inOutMode>In</design:inOutMode>
+        <design:attributes>
+          <design:identifier>
+            <design:name></design:name>
+            <design:position>2</design:position>
+          </design:identifier>
+          <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+          <design:precision>0</design:precision>
+          <design:scale>0</design:scale>
+          <design:nullability>Unknown</design:nullability>
+        </design:attributes>
+      </design:ParameterDefinition>
+    </parameter>
+  </DataSetParameters>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <text id="8">
+            <property name="textAlign">center</property>
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[Объем закупок у субъектов малого предпринимательства, социально-ориентированных некоммерческих организаций]]></text-property>
+        </text>
+        <table id="9">
+            <property name="dataSet">ДоляСМП</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">costname</property>
+                    <text-property name="displayName">costname</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["costname"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">sum_sgozminusexclusions</property>
+                    <text-property name="displayName">sum_sgozminusexclusions</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["sum_sgozminusexclusions"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">sum_cmprestriction</property>
+                    <text-property name="displayName">sum_cmprestriction</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["sum_cmprestriction"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">sum_smp</property>
+                    <text-property name="displayName">sum_smp</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["sum_smp"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <column id="28"/>
+            <column id="29"/>
+            <column id="30"/>
+            <column id="31"/>
+            <column id="32"/>
+            <header>
+                <row id="10">
+                    <property name="height">4.666666666666667in</property>
+                    <cell id="11">
+                        <text id="33">
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Наименование органа исполнительной власти, государственного органа]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="12">
+                        <text id="34">
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Совокупный годовой объем закупок, рассчитанный за вычетом закупок, предусмотренных частью 1.1 статьи 30 Федерального закона (тыс. рублей)]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="13">
+                        <text id="35">
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Объем закупок в отчетном году, осуществленных по результатам процедур определения поставщика (подрядчика, исполнителя), в извещении об осуществлении которых было установлено ограничение в отношении участников закупок, которыми могли быть только СМП и СОНО                           (тыс. рублей)]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="14">
+                        <text id="36">
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Объем привлечения в отчетном году субподрядчиков и соисполнителей из числа СМП и СОНО к исполнению контрактов, заключенных по результатам определений поставщиков (подрядчиков, исполнителей), в извещениях об осуществлении которых было установлено требование к поставщику (подрядчику, исполнителю), не являющемуся СМП или СОНО, о привлечении к исполнению контракта субподрядчиков (соисполнителей) из числа СМП и СОНО (тыс. рублей)]]></text-property>
+                        </text>
+                    </cell>
+                    <cell id="15">
+                        <text id="37">
+                            <property name="contentType">auto</property>
+                            <text-property name="content"><![CDATA[Доля закупок, которые заказчик осуществил у СМП и СОНО в отчетном году, в совокупном годовом объеме закупок, за исключением объема закупок, сведения о которых составляют государственную тайну и за вычетом закупок, предусмотренных частью 1.1 статьи 30 Федерального закона (процент)]]></text-property>
+                        </text>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="16">
+                    <property name="height">0.5625in</property>
+                    <cell id="17">
+                        <data id="111">
+                            <property name="resultSetColumn">costname</property>
+                        </data>
+                    </cell>
+                    <cell id="18">
+                        <data id="107">
+                            <property name="resultSetColumn">sum_sgozminusexclusions</property>
+                        </data>
+                    </cell>
+                    <cell id="19">
+                        <data id="108">
+                            <property name="resultSetColumn">sum_cmprestriction</property>
+                        </data>
+                    </cell>
+                    <cell id="20">
+                        <data id="110">
+                            <property name="resultSetColumn">sum_smp</property>
+                        </data>
+                    </cell>
+                    <cell id="21">
+                        <text-data id="112">
+                            <expression name="valueExpr">100 * (row["sum_cmprestriction"] + row["sum_smp"] )  /  row["sum_sgozminusexclusions"]</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="22">
+                    <cell id="23"/>
+                    <cell id="24"/>
+                    <cell id="25"/>
+                    <cell id="26"/>
+                    <cell id="27"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

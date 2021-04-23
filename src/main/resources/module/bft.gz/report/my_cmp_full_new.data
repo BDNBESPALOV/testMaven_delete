@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+    <object name="NEW_my_cmd_full" class="" lnama="NEW_Отчет по СМП Белгородской области" >
+    <field name="MIN" type="date" required="true" lname="Дата оплаты, от:"/>
+    <field name="MAX" type="date" required="true" lname="Дата оплаты, до"/>
+     <field name="__output_format" type="string"/>
+ 
+</object>

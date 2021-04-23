@@ -14,6 +14,25 @@
               </properties>
              </object>
 
+                 <object name="NEW_my_cmd" caption="NEW_Детальный отчет по СМП Белгородской области" stype="5">
+                 <properties>
+                     <prop name="lic_modules" val="beloblrep"/>
+                     <prop name="form" val="app:report/my_cmp_new.form"/>
+                     <prop name="data" val="app:report/my_cmp_new.data"/>
+                     <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+                     <prop name="template" val="app:reports/my_cmp_new.rptdesign"/>
+                 </properties>
+                 </object>
+
+                 <object name="NEW_my_cmd_full" caption="NEW_Отчет по СМП Белгородской области" stype="5">
+                 <properties>
+                     <prop name="lic_modules" val="beloblrep"/>
+                     <prop name="form" val="app:report/my_cmp_full_new.form"/>
+                     <prop name="data" val="app:report/my_cmp_full_new.data"/>
+                     <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+                     <prop name="template" val="app:reports/my_full_cmp_new.rptdesign"/>
+                 </properties>
+                 </object>
 
        <object name="my_check_release_line" caption="Мониторинг освобождения лимитов" stype="5">
                  <properties>
@@ -34,6 +53,25 @@
                      <prop name="template" val="app:reports/my_check_release_line_if.rptdesign"/>
             </properties>
        </object>
+                 <object name="NEW_my_cmd" caption="NEW_Детальный отчет по СМП Белгородской области" stype="5">
+                 <properties>
+                     <prop name="lic_modules" val="beloblrep"/>
+                     <prop name="form" val="app:report/my_cmp_new.form"/>
+                     <prop name="data" val="app:report/my_cmp_new.data"/>
+                     <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+                     <prop name="template" val="app:reports/my_cmp_new.rptdesign"/>
+                 </properties>
+                 </object>
+
+                 <object name="NEW_my_cmd_full" caption="NEW_Отчет по СМП Белгородской области" stype="5">
+                 <properties>
+                     <prop name="lic_modules" val="beloblrep"/>
+                     <prop name="form" val="app:report/my_cmp_full_new.form"/>
+                     <prop name="data" val="app:report/my_cmp_full_new.data"/>
+                     <prop name="handler" val="java:com.bftcom.common.report.BftGzReportHandler"/>
+                     <prop name="template" val="app:reports/my_full_cmp_new.rptdesign"/>
+                 </properties>
+                 </object>
 
        <object name="my_reestor_role" caption="Реестр_ролей_АЦКГЗ" stype="5">
                  <properties>

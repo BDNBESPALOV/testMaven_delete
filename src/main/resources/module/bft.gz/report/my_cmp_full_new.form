@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<repform xmlns="http://www.bftcom.com/gepard/ui/gul"  id="NEW_belContractsRep_my_cmd_full" title="NEW_Отчет по СМП Белгородской области" onvalidate="submit(event);">
+    <fieldbox >
+                <datepicker field="MIN"/>
+                <datepicker field="MAX"/>
+  </fieldbox>
+ 
+    <script src="app:/core/formsLib.js"/>
+
+  <script>
+        <![CDATA[
+
+                   function submit(event) {
+                         event.fields.__output_format = "xls";
+                                             
+                       }
+ 
+	                ]]>
+    </script>
+</repform>
